@@ -1,0 +1,4 @@
+Este es un archivo de texto que se usa para la priea de apertura de archivos en Python.
+eres libre de moduificarlo ccuando quieras,
+pero recuerda conervar más de una línea de código por propósitos educativos del código por el cual fue creado este archivo
+gracias.
