@@ -36,14 +36,17 @@ def registrar(serial,log):
 
 def validar(log): #terminar esta función
     i = 0
-    j = 0
-    while i < len(log) - 1:
-        while j < len(log) - 1: 
-            if log[0] == log[i + 1]:
-                print("elementos repetidos")
+    while i < len(log):
+        j = i + 1
+        while j <= len(log):
+            if log[i] == log[j]:
+                print("Elementos repetidos")
             else:
-                print("No hay repeditos")
+                print("Elementos diferentes")
+            j = j + 1
         i = i + 1
+
+
 
 
 
@@ -68,14 +71,17 @@ z = x + y
 """
 robots = []  #lista vacía. Se puede ir llenando con nuevos elementos
 #print("la longitud de la lista es {x}".format(x=len(robots)))
-z = gen_password(2,2)
+#z = gen_password(2,2)
 #robots = z
 #print(robots)
-z2 = gen_password(5,1)
+#z2 = gen_password(5,1)
 #print(z2)
 #robots = robots + z2
 #print(robots) # se imprimen todos los elementos de la lista sin espacios.
+z = "hola"
+z2 = "hola_"
+z3 = "galleta"
 registrar(z,robots)
 registrar(z2,robots)
-registrar(z2,robots)
+registrar(z3,robots)
 validar(robots)
