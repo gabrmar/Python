@@ -7,9 +7,7 @@ def contadorCaracteres(texto,caracter):
             cont +=1
     return cont
 
-
-
-nombreArchivo = input("ingrese el nombre del arhivo de texto a analizar:")
+nombreArchivo = input("ingrese el nombre del arhcivo de texto a analizar:")
 nombreArchivo = nombreArchivo.lower()
 if nombreArchivo == "texto": 
     archivo = open("Texto.txt")
