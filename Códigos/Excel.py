@@ -7,6 +7,10 @@ ws2.title = "My edited name sheet" #cambiar el nombre de las hojas de cálculo.
 print(wb.sheetnames) #imprimir los nombres de las hojas 
 ws.sheet_properties.tabColor = "1072BA" #Color de la pestaña
 ws3 = wb["My sheet hello"] #esta variable aparentemente está asignando el contenido de la hoja que
-#se llama como he descrito. Puedes hacer búsquedas en una hoja de cálculo de excel usando
+#se llama como he descrito. Puedes hacer búsquedas en libro de cálculo de Excel usando
 # el nombre de sus pestañas como índice.
 print(ws3)
+for sheet in wb: #los libros de cálculo son interables
+    print(sheet.title) # imprimiendo título de hoja uno a la vez
+source = wb.active #...
+target = wb.copy_worksheet(source) #Copiando un libro de cálculo.
