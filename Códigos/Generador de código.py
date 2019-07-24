@@ -36,15 +36,20 @@ def registrar(serial,log):
 
 def validar(log): #terminar esta función
     i = 0
+    r = 0 #contador de elemntos repetidos
     while i < len(log):
         j = i + 1
-        while j <= len(log):
+        while j < len(log):
             if log[i] == log[j]:
-                print("Elementos repetidos")
+                r = r + 1
             else:
                 print("Elementos diferentes")
             j = j + 1
         i = i + 1
+    if r > 0:
+        print("Elementos repetidos")
+        print("Coincidencias encontradas:{x}".format(x =r))
+            
 
 
 
@@ -79,8 +84,8 @@ robots = []  #lista vacía. Se puede ir llenando con nuevos elementos
 #robots = robots + z2
 #print(robots) # se imprimen todos los elementos de la lista sin espacios.
 z = "hola"
-z2 = "hola_"
-z3 = "galleta"
+z2 = "hola"
+z3 = "hola"
 registrar(z,robots)
 registrar(z2,robots)
 registrar(z3,robots)
