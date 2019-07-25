@@ -20,3 +20,7 @@ print(c) #imprimiendo celda
 ws0["A4"] = 4 #asignando un nuevo valor a la celda A4 de la hoja ws0
 c = ws0["A4"] #Reasignando el valor de c 
 print(c) #imprime la celda
+d = ws0.cell(row=1,column=1,value=2) #También se puede acceder a las celdas por este medio
+print(d) #imprimiendo la celda
+e = ws0.cell(5,6,10) #fila 5, columna 6 y valor 10
+print(e) #imprimiendo la celda
