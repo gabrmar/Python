@@ -1,8 +1,8 @@
 import math, os
-A = 1
-f = 30
+A = 5
+f = 0.5  
 w = 2*math.pi*f
-ph = 0
+ph = 30
 csv = ""
 n = 256
 archivo = open("señal.txt","w")

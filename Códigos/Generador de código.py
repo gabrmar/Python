@@ -34,7 +34,7 @@ def registrar(serial,log):
     print("Registro completo. Serie {a} fue añadido a la lista".format(a = serial))
     print(log)
 
-def corregir(log,match)#Trabajar en esta función   
+def corregir(log,match):#Trabajar en esta función   
 
 def validar(log):
     i = 0
