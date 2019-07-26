@@ -1,9 +1,10 @@
 import math, os
 A = 1
-w = 1
+f = 30
+w = 2*math.pi*f
 ph = 0
 csv = ""
-n = 360
+n = 256
 archivo = open("señal.txt","w")
 for i in range(n):
     sin = A*math.sin(math.radians(w*i + ph))
