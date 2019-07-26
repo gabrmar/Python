@@ -32,4 +32,4 @@ print(e)  # imprimiendo la celda
 cell_range = ws0["A1":"C2"]  # Aisgnar un rango de Excel a una variable
 # Nota: Rangos en diagonal como el descrito arriba representan todas las filas y columnas
 # contenidas entre los extremos colocados.
-print(cell_range)  # Imprimiendo rangos.
+print(cell_range)  # Imprimiendo rangos.    

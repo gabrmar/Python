@@ -12,7 +12,7 @@ miArchivo.close() #cerrar el archivo
 print("Abriendo el archivo por partes")
 """
 La apertura por bytes te permite ir accediendo al conteido del archivo por pedazos.
-el usuaruo establece cuántos bytes quieren ser leidos. Cada vez que solicita más bytes
+el usuario establece cuántos bytes quieren ser leidos. Cada vez que solicita más bytes
 por medio de más files.read(), se entregará contenido del archivo desde donde termnó el
 fragmento del contenido solicitado anterior.
 """
