@@ -34,14 +34,18 @@ def registrar(serial,log):
     print("Registro completo. Serie {a} fue añadido a la lista".format(a = serial))
     print(log)
 
-def validar(log): #terminar esta función
+def corregir(log,match)#Trabajar en esta función   
+
+def validar(log):
     i = 0
     r = 0 #contador de elemntos repetidos
+    match = [] #lista de posiciones de coincidencias
     while i < len(log):
         j = i + 1
         while j < len(log):
             if log[i] == log[j]:
                 r = r + 1
+                match.append(i)
             else:
                 print("Elementos diferentes")
             j = j + 1
@@ -49,6 +53,9 @@ def validar(log): #terminar esta función
     if r > 0:
         print("Elementos repetidos")
         print("Coincidencias encontradas:{x}".format(x =r))
+        print("Posiciones con coincidencias:{x}".format(x = match))
+        print("Reportando coincidencias para cambio de contraseñas")
+        #corregir()
             
 
 
