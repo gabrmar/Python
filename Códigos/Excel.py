@@ -29,7 +29,26 @@ d = ws0.cell(row=1, column=1, value=2)
 print(d)  # imprimiendo la celda
 e = ws0.cell(5, 6, 10)  # fila 5, columna 6 y valor 10
 print(e)  # imprimiendo la celda
-cell_range = ws0["A1":"C2"]  # Aisgnar un rango de Excel a una variable
+cell_range = ws0["A1":"C5"]  # Aisgnar un rango de Excel a una variable
 # Nota: Rangos en diagonal como el descrito arriba representan todas las filas y columnas
 # contenidas entre los extremos colocados.
-print(cell_range)  # Imprimiendo rangos.    
+print(cell_range)  #Imprimiendo rangos.
+cell_range = ws0["A1":"C8"] # Usar esto para aumentar la cantidad de elementos en C
+# en la línea siguiente  
+colC = ws0["C"] #Asignar columna C 
+print(colC) #Imprimir columna (la cantidad de elementos impresos depende las celdas que han sido
+#Creadas en memoria).
+col_range = ws0["C:D"]
+print(col_range) #Imprimir columnas. Se crea un mínimo de 5 elementos en la columna D ya que
+#no se habían creado elementos en D hasta entonces 
+cell_range = ws0["A1":"D8"] #Ahora sí se define la cantidad de elementos en D (8 elementos).
+print(cell_range) #En este rango se verán los 8 elementos de D.
+row10 = ws0[10] #Creación rango basados en los elementos de  la fila 10
+#Ésta fila no había sido usada hasta ahora, por lo que se crea una canidad
+#de elementos por defecto en dicha  fila.
+cell_range = ws0["A10":"I10"] #Esto aumenta la cantidad de elementos creados en la línea siguiente
+row10 = ws0[10] #Creación rango basados en los elementos de  la fila 10
+print(row10) #imprimir rango de fila.
+row_range = ws0["5":"10"] #rango entre los elementos de la fila 5 hasta la fila 10
+print(row_range) #imprimir rango de filas 
+
