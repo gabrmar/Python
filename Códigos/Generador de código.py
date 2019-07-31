@@ -28,6 +28,8 @@ def gen_password(s, d):
     return z
 
 # creación de rutina para almacenar los nombres creados en una lista (array/vector)
+
+
 def registrar(serial, log):
     log.append(serial)  # Adjunta elementos a una lista
     print(
