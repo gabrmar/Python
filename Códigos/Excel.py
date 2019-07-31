@@ -69,3 +69,6 @@ for fila in ws0.iter_rows(min_row=1, max_col=4, max_row=5):
 print(fila) #Acá sólo se ven los úlrimos elementos de las filas
 # pero se tiene acceso por medio de ciclos a cada una e las 
 # celdas contenidas en las filas.
+for col in ws0.iter_cols(min_row=1, max_col=3, max_row=2):
+        for celda in col:
+                print(celda)
