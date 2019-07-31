@@ -36,10 +36,6 @@ def registrar(serial, log):
         "Registro completo. Serie {a} fue añadido a la lista".format(a=serial))
     print(log)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 23f26e2b3d2aeb73f340e608b5a9e9993a971817
 
 def validar(log):
     i = 0
@@ -58,18 +54,8 @@ def validar(log):
         print("Coincidencias encontradas:{x}".format(x=r))
         print("Posiciones con coincidencias:{x}".format(x=match))
         print("Reportando coincidencias para cambio de contraseñas")
-<<<<<<< HEAD
-    #Rutina de correción
-    i = 0
-    while i < len(match) - 1:
-        log[match[i]] = gen_password(5,1)
-    print(log)     
-            
-
-=======
     else:
         print("No se encontraron coincidencias.\nTodo en orden")
->>>>>>> 23f26e2b3d2aeb73f340e608b5a9e9993a971817
 
     # Corrección de la lista.
     i = 0
