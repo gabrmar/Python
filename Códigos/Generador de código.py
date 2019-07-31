@@ -34,7 +34,7 @@ def registrar(serial,log):
     print("Registro completo. Serie {a} fue añadido a la lista".format(a = serial))
     print(log)
 
-def corregir(log,match):#Trabajar en esta función   
+
 
 def validar(log):
     i = 0
@@ -55,7 +55,11 @@ def validar(log):
         print("Coincidencias encontradas:{x}".format(x =r))
         print("Posiciones con coincidencias:{x}".format(x = match))
         print("Reportando coincidencias para cambio de contraseñas")
-        #corregir()
+    #Rutina de correción
+    i = 0
+    while i < len(match) - 1:
+        log[match[i]] = gen_password(5,1)
+    print(log)     
             
 
 
@@ -75,12 +79,11 @@ letter6 = letter4 + letter5
 print(letter6)
 """
 #num = string.digits #Todos los dígitos decimales
-"""
 x = gen_Letras(3)
 print(x)
 y = gen_numeros(2)
-z = x + y
-"""
+a = x + y
+print(a)
 robots = []  #lista vacía. Se puede ir llenando con nuevos elementos
 #print("la longitud de la lista es {x}".format(x=len(robots)))
 #z = gen_password(2,2)
@@ -97,3 +100,4 @@ registrar(z,robots)
 registrar(z2,robots)
 registrar(z3,robots)
 validar(robots)
+print(robots)
