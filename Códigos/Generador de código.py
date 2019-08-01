@@ -77,43 +77,5 @@ registrar(z3, robots)
 print(robots)  # se imprimen todos los elementos de la lista sin espacios.
 validar(robots)
 
-<<<<<<< HEAD
-"""
-letter = string.ascii_letters #todo elalfabeto en mayúsculas y minúsculas
-letter2 = string.ascii_lowercase #todo el alfabeto en minúscula
-letter3 = string.ascii_uppercase # todo el alfabeto en mayúscula
-print(letter+" "+letter2+" "+letter3)
-letter4 = random.choice(letter) # elección al azar de un elemento de la variable letter
-letter5 = random.choice(letter)
-print(letter4)
-print(letter5)
-letter6 = letter4 + letter5
-print(letter6)
-"""
-#num = string.digits #Todos los dígitos decimales
-x = gen_Letras(3)
-print(x)
-y = gen_numeros(2)
-a = x + y
-print(a)
-robots = []  #lista vacía. Se puede ir llenando con nuevos elementos
-#print("la longitud de la lista es {x}".format(x=len(robots)))
-#z = gen_password(2,2)
-#robots = z
-#print(robots)
-#z2 = gen_password(5,1)
-#print(z2)
-#robots = robots + z2
-#print(robots) # se imprimen todos los elementos de la lista sin espacios.
-z = "hola"
-z2 = "hola"
-z3 = "hola"
-registrar(z,robots)
-registrar(z2,robots)
-registrar(z3,robots)
-validar(robots)
-print(robots)
-=======
 # Realizar código de prueba definitivo
 # Organizar comentarios
->>>>>>> 23f26e2b3d2aeb73f340e608b5a9e9993a971817
