@@ -42,8 +42,8 @@ class SpecialString:
       print(result)
 
 """
-Se puede definir por medio de la sobrecarga de operaciones si lso objetos pueden se indexables, iterables
-y hasta suceptubles a funciones de variables string, teniendo la libertad de rededefinir las operaciones
+Se puede definir por medio de la sobrecarga de operaciones si los objetos pueden se indexables, iterables
+y hasta suceptubles a funciones de variables string, teniendo la libertad de redefinir las operaciones
 de estas funciones predefinidas según la necesidd
 """
 

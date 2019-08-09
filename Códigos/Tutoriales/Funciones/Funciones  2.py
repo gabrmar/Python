@@ -1,6 +1,6 @@
 """
-Por medio de la de la declaración *args, defines que la fución trabajará+
-con argumentos variables, es  decir que no siemopre uesará la misma cantidad
+Por medio de la de la declaración *args, defines que la fución trabajará
+con argumentos variables, es  decir que no siempre uesará la misma cantidad
 de argumentos para operar.
 
 el nombre args es sólo una convención; puedes usar otro nombre
@@ -8,7 +8,7 @@ el nombre args es sólo una convención; puedes usar otro nombre
 def function(named_arg, *args): #*args se coloca luego de los arugmentos
    print(named_arg) # acá se refiere a los argumentos fijos
    # con los que normalmente trabaja la función
-   print(args) #acá se refiere a los argumentos adicoanles
+   print(args) #acá se refiere a los argumentos adicionales
    # ellos son tratados como tuplas
 
 """

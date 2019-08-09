@@ -50,12 +50,12 @@ print(felix.color)
 print(felix.piernas)
 felix.maullar() 
 print("La especie de {g} es {e}".format(g = felix.nombre,e = felix.especie))
-#print(felix.edad)# este atributo noha sido definido, por eso habilitarlo
+#print(felix.edad)# este atributo no ha sido definido, por eso habilitarlo
 # genera un error de atributo
 felix_jr.esconder()
 felix_jr.maullar()
 
-persona = métodos()
+persona = métodos() #Variable persona recibe los métodos de la clase métodos
 persona.saludo()
 persona.halago()
 persona.despedida()

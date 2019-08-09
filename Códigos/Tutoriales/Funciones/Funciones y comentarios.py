@@ -64,11 +64,3 @@ multi(2,2)
 print("Activando multiFunción")
 x = multiFunción(uniónPalabras,multiplicar,división,"hola"," programa",3,3,8,4) #nombres de funciones sin paréntesis
 print(x)
-
-
-
-
-
-
-
-
