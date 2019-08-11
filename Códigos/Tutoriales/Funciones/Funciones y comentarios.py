@@ -25,6 +25,7 @@ def uniónPalabras(word,word2): #No es necesario definir el tipo de arugmento de
 def multiplicar(num1,num2):
     mul = num1*num2
     print(mul)
+    
 
 def división(num1,num2): # funciones con return
     quotient = num1/num2
