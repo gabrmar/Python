@@ -6,7 +6,4 @@ def Dosxuno(*args):
         print("One for {x}, one for me".format(x=args))
 
 Dosxuno()
-Dosxuno("Pablo")
-
-        
-        
+Dosxuno("Pablo")        
