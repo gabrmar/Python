@@ -6,7 +6,8 @@ tupla = ("galleta","pollo",3.14632)
 tupla2 = "hola",3,2,-1 #se puede crear tuplas sin paréntesis
 print(tupla)
 print(tupla2)
-#tupla[0] = 20 #quita el comentario de esta línea y tendrás un error de tipo
+#tupla[0] = 20 #quita el comentario de esta línea y tendrás un error de tipo porque no se pueden asginar elementos
+# a una tupla luego de su creación
 tupla3 = () #tupla vacía
 print(tupla3)
 
