@@ -4,6 +4,3 @@ def Dosxuno(*args):
     else:
         print("one for {x}, one for you".format(x=args[0]))
 
-
-Dosxuno()
-Dosxuno("Galleta")
