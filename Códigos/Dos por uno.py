@@ -1,9 +1,11 @@
 def Dosxuno(name = "you"):
-    if len(name) == "you":
-        print("One for you, one for me")
+    if isinstance(name, str) == True:
+        if len(name) == "you":
+            print("One for you, one for me")
+        else:
+            print("one for {x}, one for you".format(x=name))
     else:
-        print("one for {x}, one for you".format(x=name))
-
+        print("Wrong variable")
 
 Dosxuno()
 Dosxuno("Galleta")
