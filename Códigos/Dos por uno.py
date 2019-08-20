@@ -5,7 +5,9 @@ def Dosxuno(name = "you"):
         else:
             print("one for {x}, one for you".format(x=name))
     else:
-        print("Wrong variable")
+        print("Wrong variable. This methods work with string variables only")
 
 Dosxuno()
 Dosxuno("Galleta")
+Dosxuno(1)
+Dosxuno(True)
