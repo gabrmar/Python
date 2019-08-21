@@ -9,3 +9,4 @@ def Dosxuno(name = "you"):
 
 Dosxuno()
 Dosxuno("Galleta")
+Dosxuno(3)
