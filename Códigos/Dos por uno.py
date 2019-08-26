@@ -1,5 +1,5 @@
-def Dosxuno(name = "you"):
-    if isinstance(name, str) == True:
+def Dosxuno(name="you"):
+    if isinstance(name, str):
         if len(name) == "you":
             print("One for you, one for me")
         else:
