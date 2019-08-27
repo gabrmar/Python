@@ -1,9 +1,6 @@
 def Dosxuno(name="you"):
     if isinstance(name, str):
-        if len(name) == "you":
-            print("One for you, one for me")
-        else:
-            print("one for {x}, one for you".format(x=name))
+        print("one for {x}, one for you".format(x=name))
     else:
         print("Wrong variable. This method work with string variables only")
 
