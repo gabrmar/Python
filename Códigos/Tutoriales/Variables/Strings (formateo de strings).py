@@ -44,16 +44,3 @@ string4 = string4.upper() #convertir string a mayúscula
 print(string4)
 string = string.split(",")# opuesto a join, separa una string en elementos de una lista por medio de un separador
 print(string)
-
-
-
-
-
-
-
-
-
-
-
-
-    
