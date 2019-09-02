@@ -29,9 +29,16 @@ print(x[::-1])#Pidiendo string desde el principio hasta el final con pasos negat
 # de -1. Esto isgnifica que se entrega la cadena de caracteres invertida
 
 
-### ----- No entiendo que pasa acá ------####
-### Resolver duda en foro #####
+### ----- IMPORTANTE lo que pasa acá ------####
 for i in range(20000):
     if i == "h":
         break
-print(i)
+print(i)    
+"""Se puede probar con cualquier número en range() y el resultado siempre será el mismo:
+la condición nunca se cumple puesto que no hay forma en que la compración entre un número
+entero y un caracter o una string de verdadero ya que no es posible que sean iguales, por
+lo cual el valor siempre es falso. Lo interesante es que comparar dos datos de tipos tan
+diferentes no genera errores en Python porque no es un lenguaje de tipado fuerte, es decir
+que las variables no están ligadas a una defición que condiciona el tipo de datos que ellas
+manejan sino que su uso dentro del código es mucho más dinámico y hay que tener cuidado con
+ello para que no ocurran funcionamientos inesperados como el mencionado anteriormente."""
