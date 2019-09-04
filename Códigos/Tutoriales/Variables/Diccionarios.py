@@ -23,7 +23,7 @@ vacío = {} #diccionario vacío
 #print(vacío[0]) #se produce error de llave porque no existen llaves en este diccionario
 
 #los diccionarios no pueden usar listas como llaves. Eso produce un error de tipo
-# los diccionarios tampoco pueden ser usados como llavesde otros diccionarios
+# los diccionarios tampoco pueden ser usados como llaves de otros diccionarios
 
 edadPablo = int(input("Falta agregar la edad de Pablo en la lsita. ¿Cuántos años tiene? "))
 edades["Pablo"] =edadPablo #puedes seguir agregando elementos al diccionario. Estos quedarán al final del mismo
