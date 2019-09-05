@@ -42,13 +42,32 @@ if "Marcos" not in edades: # Si la llave "Marcos" no está en el diccionario
     print("Marcos ha sido agregado")
 print(edades)
 
-while 1:
+i = 0
+while i < 2: #Puedes usar While 1 o While True si quieres que el ciclo sea infinito
     print("Puedes pregutar por la edad de cualquiera de las personas registradas")
     nombre = input("coloca el nombre y recibe su edad ")
     consulta = edades.get(nombre, "nombre no encontrado. Pregunta de nuevo. ") #get busca la llave que corresponde a la colocada en argumentos
     # y muesta el valor que le corresponde. similar a haber sado edades[nombre]; la diferencia radica en la capcidad de colocar un valor
     # personalizado en caso de que la llave no sea encontrada (el valor por defecto es None, pero puede ajustarse para colocar strings u otros datos
     print(consulta)
+    i = i + 1
+
+#------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
+Platzi = {} #Creación  de diccionario vacío
+Platzi["Llave 1"] = 10 # puedes asignar los elementos del diccionario uno poruno
+Platzi["Llave 2"] = 8
+Platzi["Llave 3"] = 11
+Platzi["Llave 4"] = 15
+for key in Platzi: # se recorre el diccionario usando las llaves como interable (puede llamarse key o como el programador quiera) 
+    print(key)
+for valores in Platzi.values(): # También se puede recorrer el diccionario usando los valores como interables. Aprentemente los
+    # imprime en el orden en el que fueron asignados al diccionario, pero lo que he visto hasta ahora que los diccionarios son
+    # estrucutras de datos que pueden imprimirse de forma desordenada.
+    print(valores)
+for k, v in Platzi.items(): # Se puede hace runa iteración con dos contadores al tiempo para poder tanto las llaves como los valores
+    # durante el ciclo.1
+    print("Llave:{} , Valor:{}".format(k,v))
+#------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
 
 
 
