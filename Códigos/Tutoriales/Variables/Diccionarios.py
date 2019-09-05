@@ -67,6 +67,7 @@ for valores in Platzi.values(): # También se puede recorrer el diccionario usan
 for k, v in Platzi.items(): # Se puede hace runa iteración con dos contadores al tiempo para poder tanto las llaves como los valores
     # durante el ciclo.1
     print("Llave:{} , Valor:{}".format(k,v))
+print(len(Platzi)) #Len() también se puede usar para calcular la longitud de diccionarios 
 #------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
 
 
