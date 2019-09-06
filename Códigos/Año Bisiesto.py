@@ -2,11 +2,13 @@ def Esbisiesto(año):
         if año % 4 == 0:
            if año % 100 == 0:
                 if año % 400 == 0:
-                        print("Es bisiesto")
+                       ans = True
                 else:
-                        print("No es bisiesto 1")
+                        ans = False
         else:
-                print("No es bisiesto 2")
+                ans = False
+        return ans
         
                 
-Esbisiesto(2000)
+ans = Esbisiesto(2000)
+print(ans)
