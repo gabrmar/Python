@@ -1,33 +1,26 @@
 def Esbisiesto(año):
-        ans = False
-        # Resolver problema con el uso del condicional
-        if isinstance(año,(int)):
+        if isinstance(año,(int,float)) == True:
                 año = int(año)
                 if año % 4 == 0:
                         if año % 100 == 0:
                                 if año % 400 == 0:
                                         ans = True
-                                        print("Hola")
                                 else:
                                         ans = False
-                                        print("hola2")
+                        else:
+                                ans = True
                 else:
                         ans = False
-                        print("Hola3")
         else:
                 raise TypeError("Please add a valid year")
         return ans
         
                 
-X = Esbisiesto(2020)
+X = Esbisiesto(1996)
 print(X)
-X = Esbisiesto(2024)
+X = Esbisiesto(1997)
 print(X)
-X = Esbisiesto(2028)
+X = Esbisiesto(1900)
 print(X)
-X = Esbisiesto(1956)
-print(X)
-X = Esbisiesto(1)
-print(X)
-X = Esbisiesto(501)
+X = Esbisiesto(2000)
 print(X)
