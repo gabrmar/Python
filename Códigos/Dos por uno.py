@@ -1,9 +1,5 @@
 def Dosxuno(name="you"):
-        if isinstance(name, str):
-            word = "one for " + str(name) +", one for me"
-        else:
-            raise TypeError("Invalid parameter supplied, this function accepts only string as a parameter.")
-        return word
+        return "one for {}, one for me".format(name) 
 
 hola = Dosxuno()
 print(hola)
