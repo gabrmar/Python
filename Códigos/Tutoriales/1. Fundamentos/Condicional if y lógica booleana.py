@@ -6,7 +6,7 @@ Aspectos por mejorar:
 1) Leve descripción teórica o al menos refencias  sobre operadores lógicos
 2) Teoría sobre  el condicional if
 3) Cambio de variables por nombres menos personales
-    -Modificar el nombre de gabriel por una variable - En progreso
+    -Modificar el nombre de gabriel por una variable - Listo
 4) Descripción de los códigos presentes en este archivo
 
 """
@@ -32,7 +32,7 @@ if edad >= 18:
     else:
        print("Bienvenido usuario")     
 else: # la declaración if y su declaración else deben tener la mísma sangría(indentation) para que la sintaxis sea correcta
-        print("eres menor de edad.\nTe faltan "+ str(18-edad) + " años para llegar a los 18")
+        print("eres menor de edad.\nTe faltan "+ str(18-edad) + " años para llegar a los 18.")
         gusto = input("¿te gusta la música instrumental? ")
         if gusto == "Sí":
          print("¡que buen gusto tienes!")
