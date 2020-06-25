@@ -6,6 +6,7 @@ Aspectos por mejorar:
 1) Leve descripción teórica o al menos refencias  sobre operadores lógicos
 2) Teoría sobre  el condicional if
 3) Cambio de variables por nombres menos personales
+    -Modificar el nombre de gabriel por una variable - En progreso
 4) Descripción de los códigos presentes en este archivo
 
 """
@@ -13,19 +14,19 @@ Aspectos por mejorar:
 año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
 if edad >= 18:
-    print("eres mayor de edad")
+    print("Eres mayor de edad")
     nombre = input("¿Cuál  es tu nombre? ") #Python reconoce caractéres de otros idiomas en su texto como lo son las tíldes 
     año_nacimiento = int(input("¿En qué año naciste? "))
-    edad_gabriel = año - año_nacimiento
-    if not edad == edad_gabriel: # operador lógico Not. La condición se cumple si la edad no es igual a la edad calculada 
+    edad_usuario = año - año_nacimiento
+    if not edad == edad_usuario: # operador lógico Not. La condición se cumple si la edad no es igual a la edad calculada 
           print("mmmm...algo extraño pasa. Vamos a confirmar")
           edad = int(input("ingresa tu edad: "))
-    if nombre == "Gabriel" or nombre == "gabriel" and año_nacimiento == 1992 and edad == edad_gabriel: # operador lógico Or y operador lógico And
-        print("Bienvenido Gabriel, programador de este código")
+    if nombre == "Carlos" or nombre == "carlos" and año_nacimiento == 1990 and edad == edad_usuario: # operador lógico Or y operador lógico And
+        print("Bienvenido Carlos, programador de este código")
         print("Ahora debes responder una pregunta de autenticación")
         respuesta = input("¿Cuál fue el primer sobrenombre que te pusiste? " )
-        if respuesta == "Leirbag" or respuesta == "leirbag": 
-            print("¡perfecto¡ Definitvamente eres Gabriel")
+        if respuesta == "Gohan" or respuesta == "gohan": 
+            print("¡perfecto¡ Definitvamente eres Carlos")
         else:
             print("Confirmación reprobada.")
     else:
