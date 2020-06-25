@@ -1,15 +1,26 @@
-# condicional if y operadores lógicos (and, or y not)
-año = int(input("¿En qué año estamos? "))
+# condicional if y operadores lógicos (And, Or y Not)
+
+"""
+Aspectos por mejorar:
+
+1) Leve descripción teórica o al menos refencias  sobre operadores lógicos
+2) Teoría sobre  el condicional if
+3) Cambio de variables por nombres menos personales
+4) Descripción de los códigos presentes en este archivo
+
+"""
+
+año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
 if edad >= 18:
-    print("eres maayor de edad")
-    nombre = input("¿cuál  es tu nombre? ")
+    print("eres mayor de edad")
+    nombre = input("¿Cuál  es tu nombre? ") #Python reconoce caractéres de otros idiomas en su texto como lo son las tíldes 
     año_nacimiento = int(input("¿En qué año naciste? "))
     edad_gabriel = año - año_nacimiento
-    if not edad == edad_gabriel: # operador lógico not 
+    if not edad == edad_gabriel: # operador lógico Not. La condición se cumple si la edad no es igual a la edad calculada 
           print("mmmm...algo extraño pasa. Vamos a confirmar")
           edad = int(input("ingresa tu edad: "))
-    if nombre == "Gabriel" or nombre == "gabriel" and año_nacimiento == 1992 and edad == edad_gabriel: # operador lógico or y operador lógico and
+    if nombre == "Gabriel" or nombre == "gabriel" and año_nacimiento == 1992 and edad == edad_gabriel: # operador lógico Or y operador lógico And
         print("Bienvenido Gabriel, programador de este código")
         print("Ahora debes responder una pregunta de autenticación")
         respuesta = input("¿Cuál fue el primer sobrenombre que te pusiste? " )
@@ -36,3 +47,5 @@ else: # la declaración if y su declaración else deben tener la mísma sangría
              print("lástima :(")
         elif gusto == "no":
             print("lástima")
+
+"""Incluir referencias sobre operadores lógicos en español"""
