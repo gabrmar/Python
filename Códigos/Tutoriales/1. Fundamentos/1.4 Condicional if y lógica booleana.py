@@ -1,14 +1,6 @@
 # condicional if y operadores lógicos (And, Or y Not)
 
 """
-Aspectos por mejorar:
-
-1) Leve descripción teórica o al menos referencias  sobre operadores lógicos - Listo
-2) Teoría sobre  el condicional if - Listo
-3) Cambio de variables por nombres menos personales - Listo
-4) Descripción de los códigos presentes en este archivo - Listo
-"""
-"""
 El condicional if (si) es una  forma de hacer control a las instrucciones del progromama. Por medio de de la sentencia if es posible decidir
 cuáles instrucciones y cuales no dependiendo de una o varias condiciones. El siguiente programa sirve para elaborar un bot simple con el que
 puedes dialogar dependiendo de lo que respondas. En este código no sólo se muestra cómo usar el condicional if sino como  pedir datos y 
@@ -25,17 +17,19 @@ Y                 And             Edad es mayor a 20 y edad es menor a 50       
 O                 Or              Color es negro o color es gris                  El color puede ser negro o rojo o bien tener ambos colores                 
 No                Not             El número de carros rojos no es 3               Sólo cuando el número de carros no es 3
 
+Acá les dejo un buen enlace si quieren más información sobre operadores lógicos:
 
+https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
 
 No siendo más, comencemos.
 
 """
 
-#Bot Simple
+# Bot Simple
 
-#Este bot fue creado por Carlos, así que puede identificarlo a través de algunas preguntas, pero también puede comunicarse con otros usuarios.
-#Este bot es un poco culto, así que le gusta hacer algunas preguntas sobre música y escritura.
-#PD: No le gustan mucho los niños.
+# Este bot fue creado por Carlos, así que puede identificarlo a través de algunas preguntas, pero también puede comunicarse con otros usuarios.
+# Este bot es un poco culto, así que le gusta hacer algunas preguntas sobre música y escritura.
+# PD: No le gustan mucho los niños.
 
 año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
