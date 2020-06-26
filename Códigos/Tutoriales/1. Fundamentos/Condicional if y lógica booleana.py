@@ -6,7 +6,7 @@ Aspectos por mejorar:
 1) Leve descripción teórica o al menos referencias  sobre operadores lógicos - Listo
 2) Teoría sobre  el condicional if - Listo
 3) Cambio de variables por nombres menos personales - Listo
-4) Descripción de los códigos presentes en este archivo
+4) Descripción de los códigos presentes en este archivo - Listo
 """
 """
 El condicional if (si) es una  forma de hacer control a las instrucciones del progromama. Por medio de de la sentencia if es posible decidir
@@ -48,20 +48,25 @@ if edad >= 18: # Si el la edad es mayor o igual a 18 años, entonces el bot preg
           print("mmmm...algo extraño pasa. Vamos a confirmar")
           edad = int(input("ingresa tu edad: ")) # Pregunta de nuevo la edad para corroborar
     if nombre == "Carlos" or nombre == "carlos" and año_nacimiento == 1990 and edad == edad_usuario: #operador lógico Or y operador lógico And
+    # El bot reconoce a Carlos cuando se cumplen tres condiciones: el nombre, que el año sea 1990 y que la edad registrada coincida con el 
+    # Cálculo de edad del bot. En caso del nombre, el bot puede reconocer a Carlos sin importar la mayúscula inicial. Esto se debe al uso del
+    # or indicando que la condición se puede cumplir si el nombre es escrito con mayúscula inicial o no.    
         print("Bienvenido Carlos, programador de este código")
-        print("Ahora debes responder una pregunta de autenticación")
+        print("Ahora debes responder una pregunta de autenticación") 
         respuesta = input("¿Cuál fue el primer sobrenombre que te pusiste? " )
-        if respuesta == "Gohan" or respuesta == "gohan": 
-            print("¡perfecto¡ Definitvamente eres Carlos")
+        if respuesta == "Gohan" or respuesta == "gohan": #Si aciertas en el apodo, el bot estará seguro que eres Carlos, sino te tratará como
+            # un usuario 
+            print("¡Perfecto¡ Definitvamente eres Carlos")
         else:
-            print("Confirmación reprobada.")
+            print("Confirmación reprobada. Usted no es Carlos.")
             print("Bienvenido usuario")
     else:
        print("Bienvenido usuario")
+    # A partir de este momento el bot inicia una pequeña charla con el usuario. Sus respuestas dependen de las respuestas del usuario 
     gusto = input("¿te gusta la música instrumental? ")
     if gusto == "Sí":
         print("¡que buen gusto tienes!")
-        #la delcaración elif es la forma que se usa en Python para escribir "Else If"
+        # la delcaración elif es la forma que se usa en Python para escribir "Else If"
         # no es necesario usarlo, ya que bien puedes colocar en una línea la delcaración Else y en la siguente el condicional If
     elif gusto == "sí": 
         print("¡que buen gusto tienes!")
