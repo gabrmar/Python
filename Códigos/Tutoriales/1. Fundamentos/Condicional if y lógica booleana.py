@@ -20,10 +20,12 @@ Un aspecto a tener en cuenta antes de empezar con el código, es un concepto con
 que usamos en nuestro día a día para conectar ideas y en la programación los podemos usar para hacer condiciones más específicas. Los operado-
 res más comunes son los siguientes:
 
-Operador Lógico   Python
-Y                 And
-O                 Or
-No                Not
+Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
+Y                 And             Edad es mayor a 20 y edad es menor a 50         Tanto la edad debe ser mayor a 20 y menor 50. Ej: 35
+O                 Or              Color es negro o color es gris                  El color puede ser negro o rojo o bien tener ambos colores                 
+No                Not             El número de carros rojos no es 3               Sólo cuando el número de carros no es 3
+
+
 
 No siendo más, comencemos.
 
@@ -37,15 +39,15 @@ No siendo más, comencemos.
 
 año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
-if edad >= 18: # Si el la edad es mayor o igual a 18 años, entonces 
+if edad >= 18: # Si el la edad es mayor o igual a 18 años, entonces el bot pregutará por el nombre del usuario. Sino, no lo hará 
     print("Eres mayor de edad")
     nombre = input("¿Cuál  es tu nombre? ") #Python reconoce caractéres de otros idiomas en su texto como lo son las tíldes 
     año_nacimiento = int(input("¿En qué año naciste? "))
-    edad_usuario = año - año_nacimiento
+    edad_usuario = año - año_nacimiento #El bot corroborará si le estás diciendo la verdad calculando la edad por su cuenta
     if not edad == edad_usuario: # operador lógico Not. La condición se cumple si la edad no es igual a la edad calculada 
           print("mmmm...algo extraño pasa. Vamos a confirmar")
-          edad = int(input("ingresa tu edad: "))
-    if nombre == "Carlos" or nombre == "carlos" and año_nacimiento == 1990 and edad == edad_usuario: # operador lógico Or y operador lógico And
+          edad = int(input("ingresa tu edad: ")) # Pregunta de nuevo la edad para corroborar
+    if nombre == "Carlos" or nombre == "carlos" and año_nacimiento == 1990 and edad == edad_usuario: #operador lógico Or y operador lógico And
         print("Bienvenido Carlos, programador de este código")
         print("Ahora debes responder una pregunta de autenticación")
         respuesta = input("¿Cuál fue el primer sobrenombre que te pusiste? " )
