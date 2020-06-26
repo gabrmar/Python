@@ -3,10 +3,9 @@
 """
 Aspectos por mejorar:
 
-1) Leve descripción teórica o al menos refencias  sobre operadores lógicos
-2) Teoría sobre  el condicional if
-3) Cambio de variables por nombres menos personales
-    -Modificar el nombre de gabriel por una variable - Listo
+1) Leve descripción teórica o al menos referencias  sobre operadores lógicos - Listo
+2) Teoría sobre  el condicional if - Listo
+3) Cambio de variables por nombres menos personales - Listo
 4) Descripción de los códigos presentes en este archivo
 """
 """
@@ -34,11 +33,11 @@ No siendo más, comencemos.
 
 #Este bot fue creado por Carlos, así que puede identificarlo a través de algunas preguntas, pero también puede comunicarse con otros usuarios.
 #Este bot es un poco culto, así que le gusta hacer algunas preguntas sobre música y escritura.
- 
+#PD: No le gustan mucho los niños.
 
 año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
-if edad >= 18:
+if edad >= 18: # Si el la edad es mayor o igual a 18 años, entonces 
     print("Eres mayor de edad")
     nombre = input("¿Cuál  es tu nombre? ") #Python reconoce caractéres de otros idiomas en su texto como lo son las tíldes 
     año_nacimiento = int(input("¿En qué año naciste? "))
@@ -54,24 +53,26 @@ if edad >= 18:
             print("¡perfecto¡ Definitvamente eres Carlos")
         else:
             print("Confirmación reprobada.")
+            print("Bienvenido usuario")
     else:
-       print("Bienvenido usuario")     
+       print("Bienvenido usuario")
+    gusto = input("¿te gusta la música instrumental? ")
+    if gusto == "Sí":
+        print("¡que buen gusto tienes!")
+        #la delcaración elif es la forma que se usa en Python para escribir "Else If"
+        # no es necesario usarlo, ya que bien puedes colocar en una línea la delcaración Else y en la siguente el condicional If
+    elif gusto == "sí": 
+        print("¡que buen gusto tienes!")
+    elif gusto == "si":
+        print("¡que buen gusto tienes, pero no olvides la tilde diacrítica!")
+    elif gusto == "Si":
+        print("¡que buen gusto tienes, pero no olvides la tilde diacrítica!")
+    elif gusto == "No":
+        print("lástima :(")
+    elif gusto == "no":
+        print("lástima")
+         
 else: # la declaración if y su declaración else deben tener la mísma sangría(indentation) para que la sintaxis sea correcta
-        print("eres menor de edad.\nTe faltan "+ str(18-edad) + " años para llegar a los 18.")
-        gusto = input("¿te gusta la música instrumental? ")
-        if gusto == "Sí":
-         print("¡que buen gusto tienes!")
-         #la delcaración elif es la forma que se usa en Python para escribir "Else If"
-         # no es necesario usarlo, ya que bien puedes colocar en una línea la delcaración Else y en la siguente el condicional If
-        elif gusto == "sí": 
-            print("¡que buen gusto tienes!")
-        elif gusto == "si":
-            print("¡que buen gusto tienes, pero no olvides la tilde diacrítica!")
-        elif gusto == "Si":
-             print("¡que buen gusto tienes, pero no olvides la tilde diacrítica!")
-        elif gusto == "No":
-             print("lástima :(")
-        elif gusto == "no":
-            print("lástima")
+        print("eres menor de edad.\nTe faltan "+ str(18-edad) + " años para llegar a los 18. El bot para niños está en otro repositorio.")
 
 """Incluir referencias sobre operadores lógicos en español"""
