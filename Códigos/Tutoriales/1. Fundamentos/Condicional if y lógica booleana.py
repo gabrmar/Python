@@ -8,8 +8,33 @@ Aspectos por mejorar:
 3) Cambio de variables por nombres menos personales
     -Modificar el nombre de gabriel por una variable - Listo
 4) Descripción de los códigos presentes en este archivo
+"""
+"""
+El condicional if (si) es una  forma de hacer control a las instrucciones del progromama. Por medio de de la sentencia if es posible decidir
+cuáles instrucciones y cuales no dependiendo de una o varias condiciones. El siguiente programa sirve para elaborar un bot simple con el que
+puedes dialogar dependiendo de lo que respondas. En este código no sólo se muestra cómo usar el condicional if sino como  pedir datos y 
+guardarlos en variables. 
+
+Operadores lógicos
+
+Un aspecto a tener en cuenta antes de empezar con el código, es un concepto conocido como los operadores lógicos. Ellos no son más que palabras
+que usamos en nuestro día a día para conectar ideas y en la programación los podemos usar para hacer condiciones más específicas. Los operado-
+res más comunes son los siguientes:
+
+Operador Lógico   Python
+Y                 And
+O                 Or
+No                Not
+
+No siendo más, comencemos.
 
 """
+
+#Bot Simple
+
+#Este bot fue creado por Carlos, así que puede identificarlo a través de algunas preguntas, pero también puede comunicarse con otros usuarios.
+#Este bot es un poco culto, así que le gusta hacer algunas preguntas sobre música y escritura.
+ 
 
 año = int(input("¿En qué año estamos? ")) #Pedir entrada y tratar el dato como valor entéro
 edad = int(input("ingresa tu edad: "))
