@@ -1,3 +1,15 @@
+
+"""
+Aspectos por mejorar:
+
+    -Un poco de teoría sobre el ciclo while
+    -Pulir los comentarios qie ya exísten en el código
+    -Definir lo que hace este código
+    -un poco de la teoría de los caracteres de escape prefriblemente español
+
+"""
+
+
 print("Uso del ciclo para (while).\nElige un númnero desde el cual iniciará un conteo descendente")
 conteo = int(input("Número de inicio: "))
 while conteo > 0: #importante escribir los dos puntos al final de la condición
