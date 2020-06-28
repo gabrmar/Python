@@ -3,12 +3,17 @@
 Aspectos por mejorar:
 
     -Un poco de teoría sobre el ciclo while
-    -Pulir los comentarios qie ya exísten en el código
-    -Definir lo que hace este código
     -un poco de la teoría de los caracteres de escape prefriblemente español
+    -Pulir los comentarios qie ya exísten en el código
+    -Definir lo que hace este código 
 
 """
-
+"""
+Además del condicional if, otras de las formas de controlar cuáles instrucciones se ejecutan dentro de tu código. Una de ellas es indicando
+que ciertos comandos se ejecuten cierto número de veces  hasta que se hayan repeetido cierto número de veces o hasta que una condición
+se haya cumplido. A este tipo de ejecución repetiva se le concen como ciclos (loops en inglés). Uno de los ciclos básicos en la programación
+es el ciclo while (mientras que). 
+"""
 
 print("Uso del ciclo para (while).\nElige un númnero desde el cual iniciará un conteo descendente")
 conteo = int(input("Número de inicio: "))
