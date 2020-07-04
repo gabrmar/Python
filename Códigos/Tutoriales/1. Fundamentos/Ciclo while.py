@@ -10,9 +10,12 @@ Aspectos por mejorar:
 """
 """
 Además del condicional if, otras de las formas de controlar cuáles instrucciones se ejecutan dentro de tu código. Una de ellas es indicando
-que ciertos comandos se ejecuten cierto número de veces  hasta que se hayan repeetido cierto número de veces o hasta que una condición
+que ciertos comandos se ejecuten cierto número de veces  hasta que se hayan repetido cierto número de veces o hasta que una condición
 se haya cumplido. A este tipo de ejecución repetiva se le concen como ciclos (loops en inglés). Uno de los ciclos básicos en la programación
 es el ciclo while (mientras que). 
+
+Un Ciclo while ejecuta instrucciones dentro de su ciclo hasta que su condición deje de ser cierta. De ahí viene el nombre. es un ciclo
+que funciona mientras que su condición sea cierta. El código a continuación muestra varios ciclos while.
 """
 
 print("Uso del ciclo para (while).\nElige un númnero desde el cual iniciará un conteo descendente")
