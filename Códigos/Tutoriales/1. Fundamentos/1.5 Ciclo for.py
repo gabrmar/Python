@@ -1,4 +1,9 @@
-# Ciclo for
+""" Ciclo for
+
+Además del condicional if, existen otras formas de controlar cuáles instrucciones se ejecutan dentro de tu código. Una de ellas es indicando
+que ciertos comandos se ejecuten cierto número de veces hasta que se hayan repetido dicha cantidad de repeticiones. A este tipo de ejecución 
+repetiva se le concen como ciclos (loops en inglés).
+"""
 palabras = ["hola.","¿Cómo","estás?"]
 palabra = "string"
 for word in palabras:
