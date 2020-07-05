@@ -8,3 +8,4 @@ variable_2 = True
 print(variable == variable_2)
 print (variable != variable_2)
 
+
