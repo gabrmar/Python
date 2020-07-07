@@ -8,4 +8,7 @@ variable_2 = True
 print(variable == variable_2)
 print (variable != variable_2)
 
-
+"""
+Operadores booleanos en Python: https://www.mclibre.org/consultar/python/lecciones/python-booleanos.html
+ 
+"""
