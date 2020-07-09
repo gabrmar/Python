@@ -15,9 +15,9 @@ def mensajeDeEntrada():
     cada línea de comentario.
 
     Es importante tener en cuenta que estas documentaciones sí son compiladas como parte del código (consumen espacio).
-    Sé conciso.
+    Sé conciso. Ellas son tratadas como parte del código
     """
-    print("Este es un mensaje de prueba de una función sin argumentos de entrada")
+    print("""Este es un mensaje de prueba de una función sin argumentos de entrada""") 
 
 def uniónPalabras(word,word2): #No es necesario definir el tipo de arugmento de entrada para la función
     print(word+" "+word2)
