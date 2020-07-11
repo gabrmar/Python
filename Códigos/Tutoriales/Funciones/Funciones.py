@@ -1,21 +1,19 @@
-#Funciones en Python y comentarios
+#Funciones en Python
 
 def saludo(): # toda funciópn comienza con la declaración def
     # es necesario terminar la linea donde está def con dos puntos.
     print("bienvenido a  tu primera función hecha en Python")
 
-#Justo como en C++,las funciones deben ser definidas antes
-# de ser llamadas, es decir que escriben primero antes del código donde
-# son llamadas.
+# Justo como en otros lenguajes de programación como en  C++, las funciones deben ser definidas antes de ser llamadas, es decir 
+# que escriben primero antes del código donde son llamadas.
 
 def mensajeDeEntrada():
     """
-    las Strings de documentación son una forma de realizar comentarios más
-    extensos. De esta manera se evita la necesidad uusar el símbolo numeral para
-    cada línea de comentario.
+    las Strings de documentación (comilla triple) son una forma de realizar comentarios más extensos. De esta manera se evita la necesidad 
+    de uusar el símbolo numeral para cada línea de comentario.
 
-    Es importante tener en cuenta que estas documentaciones sí son compiladas como parte del código (consumen espacio).
-    Sé conciso. Ellas son tratadas como parte del código
+    Es importante tener en cuenta que estas documentaciones sí son compiladas como parte del código (consumen espacio). Sé conciso.
+     Ellas son tratadas como parte del código
     """
     print("""Este es un mensaje de prueba de una función sin argumentos de entrada""") 
 
@@ -26,7 +24,6 @@ def multiplicar(num1,num2):
     mul = num1*num2
     print(mul)
     
-
 def división(num1,num2): # funciones con return
     quotient = num1/num2
     return quotient # colocar un return antes del fin de un función impide que se ejecute todo el código que sigue despúes de él
