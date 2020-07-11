@@ -76,4 +76,4 @@ if edad >= 18: # Si el la edad es mayor o igual a 18 años, entonces el bot preg
 else: # la declaración if y su declaración else deben tener la mísma sangría(indentation) para que la sintaxis sea correcta
         print("eres menor de edad.\nTe faltan "+ str(18-edad) + " años para llegar a los 18. El bot para niños está en otro repositorio.")
 
-"""Incluir referencias sobre operadores lógicos en español"""
+

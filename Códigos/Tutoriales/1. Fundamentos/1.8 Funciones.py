@@ -10,8 +10,6 @@ como listas. Al final del código hay un enlace con más información sobre las 
 
 """
 
-
-
 def saludo(): # toda funciópn comienza con la declaración def
     # es necesario terminar la linea donde está def con dos puntos.
     print("bienvenido a  tu primera función hecha en Python")
@@ -79,10 +77,12 @@ print("El resultado de la división es: " + str(cociente))
 las funciones en Python tiene la habilidad de ser tratadas en algunos casos como variables.
 Esto se puede aprovechar para renomrar las funciones según conveniencia.
 """
-multi = multiplicar #Renombre de la función multiplicar. Nótese que no es necesario colocar los paréntesis de las funciones
-multi(2,2)
+multi = multiplicar #Renombre de la función multiplicar. Nótese que el nombre de la función  va sin paréntesis cuando se le va a renombrar.
+# De lo contrario se generará un error a la hora de correr el código. 
+multi(2,2) # De esta manera se les puede dar apodos a las funciones y utilizaros para llamarlos en vez de sus nombres originales
 print("Activando multiFunción")
-x = multiFunción(uniónPalabras,multiplicar,división,"hola"," programa",3,3,8,4) #nombres de funciones sin paréntesis
+x = multiFunción(uniónPalabras,multiplicar,división,"hola"," programa",3,3,8,4) #nombres de funciones sin paréntesis. También se generará
+# un error en el código si se les coloca los paréntesis.
 print(x)
 
 
