@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*- 
-#La línea 1 escribe sólo en el caso de que python
-# no reconozca caracteres como la tilde.
 
 import turtle # Módulo pra hacer gráficos 
 
