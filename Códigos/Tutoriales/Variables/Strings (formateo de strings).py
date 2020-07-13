@@ -40,6 +40,8 @@ if string3.endswith("Cartagena") == True: # pregunta si el string termina con ua
 string4 = "GaLleTa CON queso"
 string4 = string4.lower() #convertir string a minúscula
 print(string4)
+string4 = string4.capitalize() # Convertir la primera letra del string en mayúscula
+print(string4)
 string4 = string4.upper() #convertir string a mayúscula
 print(string4)
 string = string.split(",")# opuesto a join, separa una string en elementos de una lista por medio de un separador
