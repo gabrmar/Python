@@ -22,6 +22,8 @@ print("los números para esta prueba son {s1} y {s2}".format(s1=10,s2=115)) #tam
 #funciones básicas de Strings para Python
 
 lista = ["ella", "tú", "nosotros"]
+l = len(lista) # Ésta función almacena el largo de la lista (cantidad de elementos) en una variable.
+print(l)
 string = ",".join(lista)  # transforma listas de strings en una sola por medio de un seperador (la coma esta vez)
 # se puede usar cualquer caracter como separador entre los elementos de la lista
 print(string)
