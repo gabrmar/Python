@@ -15,7 +15,7 @@ NOTA: es importante resaltar que una letra en miníscula tiene un valor ASCII di
 al de su versión en mayúscula.
 """
 x = "Galaeta"
-#Se pueden crear substrings por medio de lo que se llama en inglés como string slicing
+#Se pueden crear substrings por medio de lo que se llama en inglés como string slicing (slices)
 #Es la manera en que se pueden extraer pedazos de un cadena de caracteres en Python.
 print(x[0]) #Puedes pedir un caracter por medio de un índice (empiezan desde cero).
 print (x[0:2]) #pidiendo espacio desde la posición 0 hasta la 2. el elemento 0
