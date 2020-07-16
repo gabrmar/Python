@@ -22,6 +22,6 @@ def run():
     """
     print('')
 
-if __name__ == '__main__': #el código empieza a ejecutarse aquí
+if __name__ == '__main__': #el código empieza a ejecutarse aquí. Es punto de partida para empezara leer código de Python.
     run()
     print('Final {}')
