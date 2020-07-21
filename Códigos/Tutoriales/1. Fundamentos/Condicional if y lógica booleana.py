@@ -1,11 +1,6 @@
-# condicional if y operadores lógicos (And, Or y Not)
+# Operadores lógicos (And, Or y Not)
 
 """
-El condicional if (si) es una  forma de hacer control a las instrucciones del progromama. Por medio de de la sentencia if es posible decidir
-cuáles instrucciones y cuales no dependiendo de una o varias condiciones. El siguiente programa sirve para elaborar un bot simple con el que
-puedes dialogar dependiendo de lo que respondas. En este código no sólo se muestra cómo usar el condicional if sino como  pedir datos y 
-guardarlos en variables. 
-
 Operadores lógicos
 
 Un aspecto a tener en cuenta antes de empezar con el código, es un concepto conocido como los operadores lógicos. Ellos no son más que palabras
