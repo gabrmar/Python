@@ -16,3 +16,19 @@ else:
 La primera parte expresa qué condición queremos evaluar con el if y las instrucciones a ejecutar si al condición es cierta. En caso de que sea
 falsa, entonces se ejecutan las instruccciones de la sección else.
 """
+
+
+Nombre = input("¿Cuál es tu nombre? ") # por medio de la función input() podemos pedir datos a un usuario
+print("Hola "+ Nombre + "." + " Bienvenido") # Puedes usar el símbolo + para unir varias palabras en una sola frase que se puede mostrar 
+# en consola
+Respuesta = input("¿Tienes experiencia programando? Sí/No: ")
+if Respuesta == "Sí": # Si lo es que escribe el usuario es Sí, entonces  se ejecurará la línea de abajo 
+    print("Bueno, creo que Python no será desafío para tí") # Respuesta si el usuario escribe "Sí". Primero debe colocarse 4 espacios, también
+    #  conocida como una sangría para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
+else: # La parte del else se usa para definir lo que se va a ejecutar en caso de que el programador no escriba "Sí"
+    print("No te preocupes. Python es un lenguaje excelente para empezar") # Lo que sigue debajo del else también necesita de 4 espacios, es 
+    # decir una sangría, para indicar de que  éstas instrucciones dependen de que la condición del if sea falsa.
+
+print("") # Espacio en blanco
+print("Sigamos aprendiendo Python. Nos vemos pronto") # Como esta instrucción no tiene espacios al inicio, entonces se está dejando claro que
+ # esta instrucción no depende de la condición if.
