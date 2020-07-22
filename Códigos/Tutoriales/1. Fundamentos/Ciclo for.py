@@ -23,6 +23,7 @@ for i in range(10): # La función range nos permite crear una lista formada por 
     # lista de números enteros que va desde cero hasta 9.
     print("iteración número " + str(i)) # para mostrar una variable, puedes agregarla como una suma y coloarla dentro del str(variable) para
     # que sea tratada como texto, no como número.
+    # range(i,x) define un iterable que empieza desde el número i y termina en el número x-1.
 
 for x in palabra:
  print(x)
