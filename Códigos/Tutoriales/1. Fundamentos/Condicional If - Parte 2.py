@@ -15,17 +15,26 @@ if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, l
     print("Bueno, creo que Python no será desafío para tí") # Recuerda que primero debe colocarse los 4 espacios (la sangría)
     #  para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
 else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni "Sí" o "Si"
-    print("No te preocupes. Python es un lenguaje excelente para empezar") # Lo que sigue debajo del else también necesita de 4 espacios, es 
-    # decir una sangría, para indicar de que  éstas instrucciones dependen de que la condición del if sea falsa.
+    print("No te preocupes. Python es un lenguaje excelente para empezar") # No olvides que lo que sigue debajo del else también necesita de 
+    # 4 espacios, es decir una sangría, para indicar de que éstas instrucciones dependen de que la condición del if sea falsa.
 
-print("") # Espacio en blanco
-print("Sigamos aprendiendo Python. Nos vemos pronto") # Como esta instrucción no tiene espacios al inicio, entonces se está dejando claro que
- # esta instrucción no depende de la condición if.
+print("") 
+print("Sigamos aprendiendo Python. Nos vemos pronto") # Las instrucciones que no tiene espacios al inicio no dependen de una condición if
+# para ser ejecutadas
 
 
 """
-Como verás, este código no es perfecto. Por ejemplo, que pasa si no escribes "Sí" con la mayúscula inicial? el código actualmente no podrá 
-detectar eso como un Sí y de una aplicará las instrucciones del else, es decir que sólo si se escribe exactamente Sí es que se cumple la
-condición. ¿Cómo se puede mejorar el código entonces? Puedes hacer tus propias propuestas, sin embargo la solución la explicaremos en los 
-próximos códigos.
+El operador lógico OR permite unir dos condiciones para formar una condición más grande. Ésta condición se considera verdadera con que una de
+Las condiciones sea verdadera. En el caso de que las dos condiciones sean verdaderas, también la condición en general se considera verdadera,
+es decir que una condición  formada por condiciones conectadas por medio de un OR sólo se considera falsa cuando ambas condiciones que la
+integran son falsas.  Esta tabla resume todo lo relacionado con el operador OR:
+
+Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
+O                 Or              El carro es de color es negro o de              Si el carro es gris, entonces es verdad. Si el carro es  
+                                  color es gris                                   negro, también es verdad; y sí el carro tiene tanto gris
+                                                                                  como negro, entonces también es verdad.
+
+
+
+
 """
