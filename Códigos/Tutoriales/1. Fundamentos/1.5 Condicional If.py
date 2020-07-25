@@ -25,7 +25,7 @@ Respuesta = input("¿Tienes experiencia programando? Sí/No: ")
 if Respuesta == "Sí": # Si lo es que escribe el usuario es Sí, entonces  se ejecurará la línea de abajo 
     print("Bueno, creo que Python no será desafío para tí") # Respuesta si el usuario escribe "Sí". Primero debe colocarse 4 espacios, también
     #  conocida como una sangría para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
-else: # La parte del else se usa para definir lo que se va a ejecutar en caso de que el programador no escriba "Sí"
+else: # La parte del else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba "Sí"
     print("No te preocupes. Python es un lenguaje excelente para empezar") # Lo que sigue debajo del else también necesita de 4 espacios, es 
     # decir una sangría, para indicar de que  éstas instrucciones dependen de que la condición del if sea falsa.
 

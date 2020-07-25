@@ -8,14 +8,13 @@ hacer condiciones más específicas. En este caso usaremos el operador OR (O en 
 """
 
 
-Nombre = input("¿Cuál es tu nombre? ") 
-print("Hola "+ Nombre + "." + " Bienvenido") # Puedes usar el símbolo + para unir varias palabras en una sola frase que se puede mostrar 
-# en consola
+Nombre = input("¿Cuál es tu nombre? ") # Ingresando nombre 
+print("Hola "+ Nombre + "." + " Bienvenido") # Bienvenida del usuario
 Respuesta = input("¿Tienes experiencia programando? Sí/No: ")
-if Respuesta == "Sí": # Si lo es que escribe el usuario es Sí, entonces  se ejecurará la línea de abajo 
-    print("Bueno, creo que Python no será desafío para tí") # Respuesta si el usuario escribe "Sí". Primero debe colocarse 4 espacios, también
-    #  conocida como una sangría para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
-else: # La parte del else se usa para definir lo que se va a ejecutar en caso de que el programador no escriba "Sí"
+if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, la condición será verdadera 
+    print("Bueno, creo que Python no será desafío para tí") # Recuerda que primero debe colocarse los 4 espacios (la sangría)
+    #  para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
+else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni "Sí" o "Si"
     print("No te preocupes. Python es un lenguaje excelente para empezar") # Lo que sigue debajo del else también necesita de 4 espacios, es 
     # decir una sangría, para indicar de que  éstas instrucciones dependen de que la condición del if sea falsa.
 
