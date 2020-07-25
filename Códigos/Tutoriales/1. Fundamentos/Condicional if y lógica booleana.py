@@ -9,7 +9,7 @@ res más comunes son los siguientes:
 
 Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
 Y                 And             Edad es mayor a 20 y edad es menor a 50         Tanto la edad debe ser mayor a 20 y menor 50. Ej: 35
-O                 Or              Color es negro o color es gris                  El color puede ser negro o gris o bien tener ambos colores                 
+O                 Or              Color es negro o color es gris                  El color puede ser negro o gris        o bien tener ambos colores                 
 No                Not             El número de carros rojos no es 3               Sólo cuando el número de carros no es 3
 
 Acá les dejo un buen enlace si quieren más información sobre operadores lógicos:
