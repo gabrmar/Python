@@ -23,7 +23,12 @@ if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, l
         print("Sin duda ya no eres un novato.")
     else:
         print("Bueno, ya comenzaste. Pronto perderás la cuenta de la cantidad de códigos que habrás hecho.")
-    # Sección de código para preguntar por algo más complejo que servirá de base para realizar el operador lógico AND.    
+    # Sección de código para preguntar por algo más complejo que servirá de base para realizar el operador lógico AND. 
+Respuesta2 = input("Tengo algo de curiosidad. ¿De causualidad alguno de los códigos que has realizado tiene que ver con inteligencia artificial? Sí/No: " )   
+if Respuesta2 == "Sí" or Respuesta2 == "Si" and Codigos > 60:
+    print("Vaya, vaya. Parece que estoy hablando con un veterano de la programación...")
+    print("Déjame decirte que si hay un lenguaje idea para crear inteligencias artificales, ese es Python.")
+    
 
 else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni "Sí" o "Si"
     print("No te preocupes. Python es un lenguaje excelente para empezar") # No olvides que lo que sigue debajo del else también necesita de 
