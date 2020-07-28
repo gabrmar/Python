@@ -51,6 +51,8 @@ anexo = float(input("Agregue un número flotante aquí: "))
 anexo2 = input("Agruegue una variable String aquí: ")
 vector.append(anexo) #método append (adjuntar) permite agregar nuevos elementos a los vectores aumentando su tamaño
 vector2.append(anexo2)#Se puede adjuntar cualquier tipo de datos
+vector2.pop(0) # Método pop (reventar) permte remover elementos a la lista reduciendo su tamaño. "hola" desaparece al estar en la posición 0
+print(vector2) #Recuerda que se pueden imprimir los vectores(listas) directamente
 print(vector) #Recuerda que se pueden imprimir los vectores(listas) directamente
 print(vector2) #Recuerda que se pueden imprimir los vectores(listas) directamente
 longitud = len(vector4) #función para obtener la longitud de una lista (vector) o String
