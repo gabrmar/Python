@@ -1,10 +1,12 @@
 # Condificional If
 
 """
-Para hacer que el código no se vea afectado por el tema de las tildes podemos hacer que la condición sea un poco más detallada. por ejemplo,
-Podemos hacer que si el usuario escriba "Sí" o "Si", ambas opciones ejecuten las mismas instrucciones. Para ello se utiliza un concepto conocido
-como los operadores lógicos. Ellos no son más que palabras que usamos en nuestro día a día para conectar ideas y en la programación los podemos 
-usar para hacer condiciones más específicas. En este caso usaremos el operador OR (O en español). Revisemos el código del bot simple: 
+Aspectos a incluir:
+
+    -Aplicación con operador AND
+    -Explicación del operador AND
+    -Uso de condicionales anidados por medio del else if y el elif 
+    -Colocar Link nuevamente 
 """
 
 
@@ -14,6 +16,15 @@ Respuesta = input("¿Tienes experiencia programando? Sí/No: ")
 if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, la condición será verdadera 
     print("Bueno, creo que Python no será desafío para tí") # Recuerda que primero debe colocarse los 4 espacios (la sangría)
     #  para especificar que estas intrucciones dependen de que la condición del if sea verdadera.
+    Codigos = int(input("¿Cuántos códigos has programado? "))
+    if Codigos > 30:
+        print("Ya tienes cierta experiencia programando.")
+    elif Codigos > 60:
+        print("Sin duda ya no eres un novato.")
+    else:
+        print("Bueno, ya comenzaste. Pronto perderás la cuenta de la cantidad de códigos que habrás hecho.")
+    # Sección de código para preguntar por algo más complejo que servirá de base para realizar el operador lógico AND.    
+
 else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni "Sí" o "Si"
     print("No te preocupes. Python es un lenguaje excelente para empezar") # No olvides que lo que sigue debajo del else también necesita de 
     # 4 espacios, es decir una sangría, para indicar de que éstas instrucciones dependen de que la condición del if sea falsa.
@@ -24,17 +35,7 @@ print("Sigamos aprendiendo Python. Nos vemos pronto") # Las instrucciones que no
 
 
 """
-El operador lógico OR permite unir dos condiciones para formar una condición más grande. Ésta condición se considera verdadera cuando una de
-Las condiciones es verdadera. En el caso de que las dos condiciones sean verdaderas, también la condición en general se considera verdadera,
-es decir que una condición  formada por condiciones conectadas por medio de un OR sólo se considera falsa cuando ambas condiciones que la
-integran son falsas.  Esta tabla resume todo lo relacionado con el operador OR:
 
-Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
-O                 Or              El carro es de color es negro o de              Si el carro es gris, entonces es verdad. Si el carro es  
-                                  color es gris                                   negro, también es verdad; y sí el carro tiene tanto gris
-                                                                                  como negro, entonces también es verdad.
-
-Acá les dejo un buen enlace si quieren más información sobre operadores lógicos:
 
 https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
 
