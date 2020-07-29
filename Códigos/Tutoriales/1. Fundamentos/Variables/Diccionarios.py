@@ -5,7 +5,7 @@ se organizan elementos emparejados con un elemento de idenficiación
 llamado llave. Son similares a las listas, sólo que cada elemento
 es una combinación entre la variable a guardar y su llave
 """
-
+"""
 edades = {"Juan":26,"Pedro":22,"Mateo":25} #se escribe entre llaves
 # {llave 1: valor 1, llave 2: valor 2,...}
 print(edades["Juan"])
@@ -51,6 +51,8 @@ while i < 2: #Puedes usar While 1 o While True si quieres que el ciclo sea infin
     # personalizado en caso de que la llave no sea encontrada (el valor por defecto es None, pero puede ajustarse para colocar strings u otros datos
     print(consulta)
     i = i + 1
+"""
+
 
 #------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
 Platzi = {} #Creación  de diccionario vacío
@@ -60,15 +62,14 @@ Platzi["Llave 3"] = 11
 Platzi["Llave 4"] = 15
 for key in Platzi: # se recorre el diccionario usando las llaves como interable (puede llamarse key o como el programador quiera) 
     print(key)
-for valores in Platzi.values(): # También se puede recorrer el diccionario usando los valores como interables. Aprentemente los
-    # imprime en el orden en el que fueron asignados al diccionario, pero lo que he visto hasta ahora que los diccionarios son
-    # estrucutras de datos que pueden imprimirse de forma desordenada.
+for key in Platzi.keys(): # Esta es otra forma es usar las llaves como iterable. El resultado es el mismo
+    print(key)
+for valores in Platzi.values(): # También se puede recorrer el diccionario usando los valores como interables.
     print(valores)
 for k, v in Platzi.items(): # Se puede hace runa iteración con dos contadores al tiempo para poder tanto las llaves como los valores
-    # durante el ciclo.1
+    # En cada ciclo
     print("Llave:{} , Valor:{}".format(k,v))
 print(len(Platzi)) #Len() también se puede usar para calcular la longitud de diccionarios 
-#------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
 
 
 
