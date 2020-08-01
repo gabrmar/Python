@@ -4,7 +4,7 @@
 class gato: #creando el objeto/clase gato
     especie = "gato quillero" #este espacio es para los atributos de clase
     #se pueden ver como variables globales dentro de la clase
-    def __init__(self,color,piernas,nombre): #la función/método __init__ es 
+    def __init__(self,color,piernas,nombre): #la función/método __init__ es  
         # el connstructor de clase. Es el encargado de definir
         # los atributos de la clase (las variables que estarán
         # (asociadas a este objeto).
@@ -59,4 +59,6 @@ persona = métodos() #Variable persona recibe los métodos de la clase métodos
 persona.saludo()
 persona.halago()
 persona.despedida()
+Prueba = isinstance(felix,gato) # función que sirve para probar si un objeto pertenence a una clase en específico
+print(Prueba)
 
