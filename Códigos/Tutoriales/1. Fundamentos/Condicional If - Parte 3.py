@@ -5,10 +5,12 @@ Aspectos a incluir:
 
     -Aplicación con operador AND
     -Explicación del operador AND
+    -Explicación del !=
     -Uso de condicionales anidados por medio del else if y el elif 
     -Colocar Link nuevamente 
+    -Probar los códigos pasados de los conddicionales If
 """
-
+Codigos = 0 # Ecxplicar el por qué desde esta línea.
 
 Nombre = input("¿Cuál es tu nombre? ") # Ingresando nombre 
 print("Hola "+ Nombre + "." + " Bienvenido") # Bienvenida al usuario
@@ -25,17 +27,21 @@ if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, l
     else: # Instrucciones a ejecutar en caso de que niguna de las conficiones anteriores sean verdaderas.
         print("Bueno, ya comenzaste. Pronto perderás la cuenta de la cantidad de códigos que habrás hecho.")
     # Sección de código para preguntar por algo más complejo que servirá de base para realizar el operador lógico AND. 
-Respuesta2 = input("Tengo algo de curiosidad. ¿De causualidad alguno de los códigos que has realizado tiene que ver con inteligencia artificial? Sí/No: " )   
-if Respuesta2 == "Sí" or Respuesta2 == "Si" and Codigos > 60: # Si el usuario escribe Sí o Si  y tras de eso había puesto una cantidad de
-    # Códigos hechos mayores a 60, entonces esta condición es verdadera.
-    print("Vaya, vaya. Parece que estoy hablando con un veterano de la programación...")
-    print("Déjame decirte que si hay un lenguaje idea para crear inteligencias artificales, ese es Python.")
-elif Respuesta2 == "No" or Respuesta2 == "no": #Si el usuario dice que no,con mayúscula o sin ella, la condición es verdadera.
-    print("Déjame decirte que es una de las aplicaiones más intersantes que te puedo recomendar con Python. \n Averigua un poco de ellas.")
-    # Explicar backslash 
-else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni Sí ni no
-    print("No te entendí bien.") # No olvides que lo que sigue debajo del else también necesita de 
-    # 4 espacios, es decir una sangría, para indicar de que éstas instrucciones dependen de que la condición del if sea falsa.
+    if Codigos != 0: # Si la cantidad de códigos no es cero, entocnes la condición es verdadera     
+        Respuesta2 = input("Tengo algo de curiosidad. ¿De causualidad alguno de los códigos que has realizado tiene que ver con inteligencia artificial? Sí/No: " )  
+        if Respuesta2 == "Sí" or Respuesta2 == "Si" and Codigos > 60: # Si el usuario escribe Sí o Si  y tras de eso había puesto una cantidad de
+            # Códigos hechos mayores a 60, entonces esta condición es verdadera.
+            print("Vaya, vaya. Parece que estoy hablando con un veterano de la programación...")
+            print("Déjame decirte que si hay un lenguaje idea para crear inteligencias artificales, ese es Python.")
+        elif Respuesta2 == "No" or Respuesta2 == "no": #Si el usuario dice que no,con mayúscula o sin ella, la condición es verdadera.
+            print("Déjame decirte que es una de las aplicaiones más intersantes que te puedo recomendar con Python. \n Averigua un poco de ellas.")
+            # el \n sirve para que el resto de la frase siga en una línea nue
+        else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni Sí ni no
+            print("No te entendí bien.") # No olvides que lo que sigue debajo del else también necesita de 
+            # 4 espacios, es decir una sangría, para indicar de que éstas instrucciones dependen de que la condición del if sea falsa.
+elif Respuesta == "No" or Respuesta == "no": # Sí el usuario escribe No o no, la condición será verdadera
+    print("Tranquilo. Python es un buen lenguaje para aprender a programar") 
+
 
 print("") 
 print("Disculpa. Me tengo que ir a hacer cosas de bots. Nos vemos pronto") # Las instrucciones que no tiene espacios al inicio no dependen de una condición if
@@ -43,8 +49,6 @@ print("Disculpa. Me tengo que ir a hacer cosas de bots. Nos vemos pronto") # Las
 
 
 """
-
-
 https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
 
 """
