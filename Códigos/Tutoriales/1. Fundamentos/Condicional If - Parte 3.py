@@ -34,7 +34,7 @@ if Respuesta == "Sí" or Respuesta == "Si": # Sí el usuario escribe Sí o Si, l
             print("Vaya, vaya. Parece que estoy hablando con un veterano de la programación...")
             print("Déjame decirte que si hay un lenguaje idea para crear inteligencias artificales, ese es Python.")
         elif Respuesta2 == "No" or Respuesta2 == "no": #Si el usuario dice que no,con mayúscula o sin ella, la condición es verdadera.
-            print("Déjame decirte que es una de las aplicaiones más intersantes que te puedo recomendar con Python. \n Averigua un poco de ellas.")
+            print("Déjame decirte que es una de las aplicaiones más intersantes que te puedo recomendar con Python. \nAverigua un poco de ellas.")
             # el \n sirve para que el resto de la frase siga en una línea nue
         else: # Ahora el else se usa para definir lo que se va a ejecutar en caso de que el usuario no escriba ni Sí ni no
             print("No te entendí bien.") # No olvides que lo que sigue debajo del else también necesita de 
@@ -44,9 +44,15 @@ elif Respuesta == "No" or Respuesta == "no": # Sí el usuario escribe No o no, l
 
 
 print("") 
-print("Disculpa. Me tengo que ir a hacer cosas de bots. Nos vemos pronto") # Las instrucciones que no tiene espacios al inicio no dependen de una condición if
+print("Disculpa, me tengo que ir a hacer cosas de bots. Nos vemos pronto") # Las instrucciones que no tiene espacios al inicio no dependen de una condición if
 # para ser ejecutadas
 
+"""
+EL uso del OR nos permite aceptar más formas en las que el usuario puede escribir "Sí" o "No", sin embargo aún hay varias formas en las que un
+usuario puede escribir si no tiene una buena ortografía, por ejemplo puede escribir sin tilde, sin mayúscula inicial o incluso con mayúscula
+donde no debería haber mayúscula. Todas estas posibilidades pueden incluirse por medio de más operadores OR.te invito a que jueges con éste
+código y hagas los cambios en las condiciones con los OR y AND que consideres para que el bot responda mejor a lo que escriba el usuario.  
+"""
 
 """
 https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
