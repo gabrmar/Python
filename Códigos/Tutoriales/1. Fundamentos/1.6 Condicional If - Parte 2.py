@@ -30,7 +30,7 @@ es decir que una condición  formada por condiciones conectadas por medio de un 
 integran son falsas.  Esta tabla resume todo lo relacionado con el operador OR:
 
 Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
-O                 Or              El carro es de color es negro o de              Si el carro es gris, entonces es verdad. Si el carro es  
+O                 Or              El carro es de color negro o de                 Si el carro es gris, entonces es verdad. Si el carro es  
                                   color es gris                                   negro, también es verdad; y sí el carro tiene tanto gris
                                                                                   como negro, entonces también es verdad.
 
