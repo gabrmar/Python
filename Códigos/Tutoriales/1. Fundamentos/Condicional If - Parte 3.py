@@ -3,15 +3,23 @@
 """
 Aspectos a incluir:
 
-    -Aplicación con operador AND
-    -Explicación del operador AND
+En Éste código nos enfocamos en el uso de más operadores lógicos así como más usos del condicional if por medio del código del bot simple. 
+Empecemos con ese nuevo operador lógico, el operador AND (Conocido como "Y" en español). Ya sabemos que el operador OR hace que un condicional
+sea verdadero si alguna de sus condiciones es verdadera. Por otro lado, el operador AND hace que la condición sea verdera únicamente si todas
+las condiciones son verdaderas. Se puede ver como lo contrario al operador OR.
+
+Operador Lógico   Python          Ejemplo                                         ¿Cuándo es verdad?
+Y                 And             El carro es de color negro y es                 Si el carro es de color negro y  es marca Toyota,  
+                                  marca Toyota                                    entonces es la frase es verdera
+                                                                                  
+
     -Explicación del !=
     -Explicación del \n
     -Uso de condicionales anidados por medio del else if y el elif 
     -Colocar Link nuevamente 
     -Probar los códigos pasados de los conddicionales If
 """
-Codigos = 0 # Ecxplicar el por qué desde esta línea.
+Codigos = 0 # Declarando el valor inicial de número de códigos. Se usará más adelante en el código
 
 Nombre = input("¿Cuál es tu nombre? ") # Ingresando nombre 
 print("Hola "+ Nombre + "." + " Bienvenido") # Bienvenida al usuario
