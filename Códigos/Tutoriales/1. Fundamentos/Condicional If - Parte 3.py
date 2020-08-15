@@ -12,12 +12,21 @@ Operador Lógico   Python          Ejemplo                                      
 Y                 And             El carro es de color negro y es                 Si el carro es de color negro y  es marca Toyota,  
                                   marca Toyota                                    entonces es la frase es verdera
                                                                                   
+El  NOT
 
-    -Explicación del !=
-    -Explicación del \n
-    -Uso de condicionales anidados por medio del else if y el elif 
+Además del AND, en este código también se verá el uso del operador NOT ("no" en español). Este operador no se usa sólo como los que hemos visto
+en códigos pasados, sino que se usa para modifcar otros operadores, siendo el caso más común modificar el operador de igual (=) cuaando se usa
+con el condicional If. Acá hay un ejemplo:
+
+Ejemplo                  Explicación  
+if edad == 18:           Si la edad es igual a 18, entonces la condición  es verdadera
+if edad != 18:           Si la edad NO es igual a 18, enttonces la confición es verdadera
+
+Como se puede ver, su aplicación más común es usarse en condicionales if para evualuar cuando una variable no tiene un valor en específico.
+
+
+    -Uso de condicionales anidados por medio del else if y el elif (Verificar si esto es realmente necesario)
     -Colocar Link nuevamente 
-    -Probar los códigos pasados de los conddicionales If
 """
 Codigos = 0 # Declarando el valor inicial de número de códigos. Se usará más adelante en el código
 
