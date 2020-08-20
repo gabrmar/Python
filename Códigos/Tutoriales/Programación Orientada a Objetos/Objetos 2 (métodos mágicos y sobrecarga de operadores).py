@@ -1,7 +1,7 @@
 """
 Los métodos mágicos son funciones que permiten realizar proceosos que que están fuera
 de alcance por medio de los métodos regulares. Son conocidos por tener su nombre entre
-guiones bajos (underscores o dunders). El método mágino __init__ es el usado para la definicón
+guiones bajos dobles (underscores o dunders). El método mágino __init__ es el usado para la definicón
 de los atributos de la clase.
 """
 import random
@@ -14,14 +14,14 @@ class Vector2D:
   def __add__(self, other): #el argumento other inidica que se usarán atributos pertenencientes
       #a un objeto diferente al que estamos definiendo (diferente al objeto self)
     return Vector2D(self.x + other.x, self.y + other.y)
-    #se enrtrega ub objeto Vector2D que tiene por componentes la suma de los componentes correspondientes
+    #se enrtrega un objeto Vector2D que tiene por componentes la suma de los componentes correspondientes
     #A cada tipo
 """
 Muchos de los métodos mágicos tienen la función de definir cómo usar operadores matemáticos con los objetos
 creados por el programador. __Add__ define cómo será la suma para objetos de la clase Vector2D, pero si se necesita
-otro tipo de relación entre los atributos a sumar, se puede alcanzar sólo mmodificando el código. esto aplica
-para todos los operadores matemáticos que tenga un método mágico asociado. Este proceso se conoce como
-sobrecarga de operadores.
+otro tipo de relación entre los atributos a sumar, se puede alcanzar sólo modificando el código. esto aplica
+para todos los operadores matemáticos que tenga un método mágico asociado. Darle nuevas funciones a los operadores
+matemáticos se le conoce como sobrecarga de operadores.
 """
 
 class SpecialString:
@@ -32,9 +32,6 @@ class SpecialString:
     line = "=" * len(other.cont) # multiplicando el caracter según el tamaño del caracter del otro obejto
     return "\n".join([self.cont, line, other.cont]) # uniendo los Strings por medio de inicios de línea
 
-  def __init__(self, cont):
-    self.cont = cont
-
   def __gt__(self, other): # defniendo la relación entre objetos ante el símbolo mayor que
     for index in range(len(other.cont)+1):
       result = other.cont[:index] + ">" + self.cont
@@ -42,9 +39,9 @@ class SpecialString:
       print(result)
 
 """
-Se puede definir por medio de la sobrecarga de operaciones si los objetos pueden se indexables, iterables
+Se puede definir por medio de la sobrecarga de operadores si los objetos pueden se indexables, iterables
 y hasta suceptubles a funciones de variables string, teniendo la libertad de redefinir las operaciones
-de estas funciones predefinidas según la necesidd
+de estas funciones predefinidas según la necesidad.
 """
 
 class VagueList:
@@ -89,20 +86,12 @@ class Pizza:
     self.toppings = toppings
 
   @staticmethod #Decorador de métodos estáticos
-  def validate_topping(topping): #los métodos estáticos no reciben nuevos argumentos
+  def validate_topping(topping): #los métodos estáticos son métodos de clases que trabajan con los mismos argumentos que su clase padre
     if topping == "pineapple":
       raise ValueError("No pineapples!")
     else:
       return True
-"""
-Se pueden decorar métodos como propiedades para poder definir el tipo de acceso a los atributos
-"""
-  @property
-  def pineapple_allowed(self):
-    return False
 
-
-     
  
 
 vector1 = Vector2D(5, 7)
@@ -130,11 +119,6 @@ print(figura.área())
 ingredients = ["cheese", "onions", "spam"]
 if all(Pizza.validate_topping(i) for i in ingredients):
     pizza = Pizza(ingredients)
-
-pizza = Pizza(["cheese", "tomato"])
-print(pizza.pineapple_allowed)
-#pizza.pineapple_allowed = True # si habilitas la  línea, se tendrá un error de atributo
-#al tratar de modificar un atributo que ha sido decorado como propiedad
 
 
 
