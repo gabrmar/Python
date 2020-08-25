@@ -9,35 +9,34 @@ deberían ser tratados con privacidad el cual consiste en el uso de guiones bajo
 para dar control de acceso se establece el nivel de privacidad que se necesite dependiendo de los requerimientos que el código debe cumplir.
 
 """
+class CasillaDeVotación:
 
-class year_graduated:
-   def __init__(self, year=32):
-      self._year = year
+   def __int__(self, identificador, pais):
+      self._identificador = identificador
+      self._pais = pais
+      self._region = None
 
-   # make the getter method
-   def get_year(self):
-      return self.__year
+   @property
+   def region(self):
+      return self._region
 
-# make the setter method
-def set_year(self, a):
-    self.__year = a
+   @property.setter
+   def set_region(self, region):
+      if region in self._pais:
+         self._region = region
+      else:
+         raise ValueError(f"la región {region} no está en la lista")
 
-grad_obj = year_graduated()
-print(grad_obj._year)
+casilla = CasillaDeVotación(123, ["Colombia", "Argentina"])
+print(casilla.region)
+casilla.region = "Cundinimarca"
+print(casilla.region)  
 
-# Before using setter
-print(grad_obj.get_year())
-#
-# # After using setter
-grad_obj.set_year(2019)
-print(grad_obj._year)
 
 """
-Para más información, aquí están los siguientes enlaces 
+Para más información, aquí está este enlace: 
 
-1) https://www.tutorialspoint.com/getter-and-setter-in-python
+Privacidad: https://www.tutorialspoint.com/How-data-hiding-works-in-Python-Classes
 
-2) https://www.tutorialspoint.com/How-data-hiding-works-in-Python-Classes
-
-
+Setters and Getters: https://www.geeksforgeeks.org/getter-and-setter-in-python/
 """
