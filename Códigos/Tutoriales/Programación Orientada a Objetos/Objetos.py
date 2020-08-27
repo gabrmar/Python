@@ -1,6 +1,10 @@
 #Clases en  python
 # OOP (programación orientada a objetos)
 
+"""
+Colocar un enlace sobre el uso de la función Super
+"""
+
 class gato: #creando el objeto/clase gato
     especie = "gato quillero" #este espacio es para los atributos de clase
     #se pueden ver como variables globales dentro de la clase
