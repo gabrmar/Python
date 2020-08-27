@@ -10,31 +10,30 @@ para dar control de acceso se establece el nivel de privacidad que se necesite d
 
 """
 
-"""
-Empezar comentarios por acá
 
-"""
-class CasillaDeVotación:
+class CasillaDeVotación: # Creación de clase Casilla de votación
 
-   def __int__(self, identificador, pais):
-      self._identificador = identificador
-      self._pais = pais
-      self._region = None
+   def __init__(self, identificador, pais): # Se define una variable para indentificador de la casilla y para definir el país (una lista) .
+      self._identificador = identificador # Notación de un guión bajo para indicar privacidad
+      self._pais = pais 
+      self._region = None # El None en Python signinfica nada. Es una palabra para indicar que la variable no tiene ningún valor definido
+      # por ahora.
 
-   @property
-   def region(self):
-      return self._region
+   @property # Decorador de la función propiedad (Más información en los enlacess)
+   def region(self): # Función getter región 
+      return self._region # Regresar valor privado de la región
 
-   @property.setter
-   def set_region(self, region):
-      if region in self._pais:
-         self._region = region
+   @region.setter # Definción de la función setter de region para la función propiedad
+   def region(self, region): # Función setter región
+      if region in self._pais: # Sección de control para validar que el nuevo país que se quiere agregar hace parte de la lista de países 
+         self._region = region # permitidos
       else:
-         raise ValueError(f"la región {region} no está en la lista")
+         raise ValueError(f"la región {region} no está en la lista") # Activar excepxión  de error de valor
 
 casilla = CasillaDeVotación(123, ["Colombia", "Argentina"])
-print(casilla.region)
-casilla.region = "Cundinimarca"
+print(casilla.region) # por medio de la función propiedad ahora se puede usar notación de punto (objeto.atributo) para obtener y modificar
+# los valores de cada una de las propiedades del objeto.
+casilla.region = "Colombia"  # Si se coloca un país diferente a los que están en la lista, entonces se genera un error de valor (ValueError)
 print(casilla.region)  
 
 

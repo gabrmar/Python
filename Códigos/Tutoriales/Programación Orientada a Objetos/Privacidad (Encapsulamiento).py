@@ -9,7 +9,7 @@ deberían ser tratados con privacidad el cual consiste en el uso de guiones bajo
 para dar control de acceso se establece el nivel de privacidad que se necesite dependiendo de los requerimientos que el código debe cumplir.
 
 """
-
+   
 
 
 class year_graduated: # Clase año graduado 
