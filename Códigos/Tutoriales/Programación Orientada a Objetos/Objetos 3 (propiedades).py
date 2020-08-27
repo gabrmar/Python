@@ -30,7 +30,7 @@ print(pizza.pineapple_allowed)
 #al tratar de modificar un atributo que ha sido decorado como propiedad. La razón es la siguiente:
 
 """
-el  decorador @property hace referencia a la función property() que recibe como priemer parámetro
+el  decorador @property hace referencia a la función property() que recibe como primer parámetro
 una fucnión getter, es decir que cuando trato de moidificarla al volverla verdaera, se genera un erorr
 de atributo porque esa función no está diseñada para cambiar valores (setter) sino sólo para mostrarlos.
 

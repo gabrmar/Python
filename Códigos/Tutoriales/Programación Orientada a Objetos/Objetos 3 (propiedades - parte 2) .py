@@ -15,12 +15,12 @@ class Pizza:
     self.toppings = toppings
     self._pineapple_allowed = False # un guión bajo para un nivel de privacidad.
 
-  @property
-  def pineapple_allowed(self):
-    return self._pineapple_allowed
+  @property # Definición de parámetros para la función propiedad
+  def pineapple_allowed(self) #  Definición de función getter 
+    return self._pineapple_allowed # Regresar la variable sobre la piña como ingrediente (verdadero o falso)
 
-  @pineapple_allowed.setter
-  def pineapple_allowed(self, value):
+  @pineapple_allowed.setter # Deinfición de función setter para la función propiedad
+  def pineapple_allowed(self, value): # Función setter
     if value: #  una forma corta de  if value == True
       password = input("Enter the password: ") # Contraseña para validación de estar ante un usuario con privilegios para cambiar esta valor
       if password == "cisco":
