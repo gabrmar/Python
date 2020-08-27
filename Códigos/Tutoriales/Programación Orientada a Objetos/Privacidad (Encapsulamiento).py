@@ -9,32 +9,33 @@ deberían ser tratados con privacidad el cual consiste en el uso de guiones bajo
 para dar control de acceso se establece el nivel de privacidad que se necesite dependiendo de los requerimientos que el código debe cumplir.
 
 """
-"""
-Continuar con los comentarios.
-"""
+
 
 
 class year_graduated: # Clase año graduado 
-   def __init__(self, year=32):
-      self._year = year
+   def __init__(self, year=32): # Se define un año por defecto de valor 32
+      self._year = year # Definiendo un atributo con un guión bajo para indicar la privacidad de este valor
 
-   # make the getter method
+   # Función getter
    def get_year(self):
-      return self.__year
+      return self.__year # Al retornar una variable que no existe (Nunca se ha definido una variable con doble guión bajo hasta ahora) se va a
+      # generar un error de atributo porque tal valor no existe.
 
-# make the setter method
-def set_year(self, a):
-    self.__year = a
+   # Función setter
+   def set_year(self, a):
+      self.__year = a # Cambiar el valor de la variable oculta de año
 
-grad_obj = year_graduated()
-print(grad_obj._year)
+grad_obj = year_graduated() # Definiendo una instancia de la clase año graduado
+print(grad_obj._year) # Imprimiendo la variable de año 
 
-# Before using setter
-print(grad_obj.get_year())
-#
-# # After using setter
-grad_obj.set_year(2019)
-print(grad_obj._year)
+# Si quitas el comentario de la línea de abajo, se va a generar un error de atributo porque no existe la variable __year hasta ahora. El uso
+# de los guiones simples y dobles como notación de privacidad es algo que sólo se usa en Python.
+#print(grad_obj.get_year()) # Invoncando función getter para pedir el año
+
+# ***After using setter***
+grad_obj.set_year(2019) # Invocando función setter para cambiar el valor del año
+print(grad_obj._year) # Imprimmir el valor del año. Seguirá imprimiendo el valor incial del año porque el setter guarda su valor en otra 
+# Variable diferente de _year (un guión), es decir __year (doble guión).
 
 """
 Para más información, aquí están los siguientes enlaces 
