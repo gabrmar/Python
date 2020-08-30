@@ -1,8 +1,6 @@
 #Clases en  python
 # OOP (programación orientada a objetos)
 
-
-
 class gato: #creando el objeto/clase gato
     especie = "gato quillero" #este espacio es para los atributos de clase
     #se pueden ver como variables globales dentro de la clase
@@ -25,25 +23,7 @@ class gato: #creando el objeto/clase gato
     def maullar(self):
         print("{x} usó maullar: miau!".format(x= self.nombre))
 
-class gatico(gato): #la clase entre paréntesis se vuelve la superclase
-    # de la clase gatico y hereda sus atributos y funciones a la clase
-    # que se está creando. La clase gatico se vuelve una subclase de
-    # la clase gato
-
-    def esconder(self): # No olvides colocar el self
-        print("el gatico {a} se ha escondido".format(a = self.nombre))
-        # se puede ver que pide el atributo nombre sin haberlo definido
-        # en la clase gatico, sino que lo saca de la superclase gato
-    def maullar(self):
-        print("{x} usó maullar: miauuuuu!".format(x= self.nombre))
-        #Definir un métodoya había sido definido en la herencia
-        #hace que este sea sobrescrito
-        super().maullar() # la función super permite llamar métodos
-        # de la super clase(ahora este método realiza el maullar
-        # con el mensaje de la subclase y luego con el mensaje
-        # de la superclase)
-    
-class métodos: #Se pueden crear clases sin atributos. Sólo con métodos
+class métodos: #Se pueden crear clases sin atributos. Sólo con métodos que serán  usados por el objeto que se cree
     def saludo(self):
         print("hola")
     def halago(self):
@@ -51,18 +31,14 @@ class métodos: #Se pueden crear clases sin atributos. Sólo con métodos
     def despedida(self):
         print("hasta pronto")
 
-
-
 felix = gato("rojo",4, "Felix")
-felix_jr = gatico("rojo",4,"felix JR.")
 print(felix.color)  
 print(felix.piernas)
 felix.maullar() 
 print("La especie de {g} es {e}".format(g = felix.nombre,e = felix.especie))
 #print(felix.edad)# este atributo no ha sido definido, por eso habilitarlo
 # genera un error de atributo
-felix_jr.esconder()
-felix_jr.maullar()
+
 
 persona = métodos() #Variable persona recibe los métodos de la clase métodos
 persona.saludo()
