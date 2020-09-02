@@ -21,8 +21,9 @@ class Square(Rectangle): # la sintaxis es class clase hija (super clase):
 # Ejemplo 2
 
 class gato: #creando clase gato
-    especie = "gato quillero" 
+    #raza = "gato quillero" # No recuerdo el porqué de esta línea
     def __init__(self,color,piernas,nombre,dieta = "Atún"): #la función/método __init__ es  
+        raza = "gato quillero" 
         # el connstructor de clase. Es el encargado de definir
         # los atributos de la clase (las variables que estarán
         # (asociadas a este objeto).
@@ -32,7 +33,7 @@ class gato: #creando clase gato
         self.piernas = piernas
         self.nombre = nombre
         self.dieta = dieta
-        self._raza = especie # Indicando por convención por medio del guión bajo que la raza es una variable privada la cual el usuario
+        self._raza = raza # Indicando por convención por medio del guión bajo que la raza es una variable privada la cual el usuario
         # no conoce ni va a interactuar con ella.
         self._edad = None # El None es el indicador de que la varialble no tiene un valor definido. es como el Null en Java. En este caso
         # se está efiniendo una variable privdad que se usará para el manejo de la edad del gato.
