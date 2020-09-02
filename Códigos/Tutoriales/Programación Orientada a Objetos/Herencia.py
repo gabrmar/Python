@@ -1,26 +1,27 @@
-
+# Herencia de clases
 
 # Primer objeto 
-class Rectangle:
-    def __init__(self, length, width):
+class Rectangle: # Definiendo clase rectángulo
+    def __init__(self, length, width): # la clase rectángulo necesita un largo y un ancho para ser definido
         self.length = length
         self.width = width
 
-    def area(self):
+    def area(self): # Método para cálculo de área 
         return self.length * self.width
 
-    def perimeter(self):
+    def perimeter(self): # Método para cálculo de perímetro 
         return 2 * self.length + 2 * self.width
 
-# Here we declare that the Square class inherits from the Rectangle class
-class Square(Rectangle):
-    def __init__(self, length):
-        super().__init__(length, length)
+# Definiendo claae cuadrado que hereda de la clase rectángulo
+class Square(Rectangle): # la sintaxis es class clase hija (super clase):
+    def __init__(self, length): # la clase cuadrado sólo necesita definir un valor de longitud para ser usado
+        super().__init__(length, length)  # Usando el método super() para definir cómo el parámetro de la longitud del cuadrado
+        # encaja en la definción inicial del rectángulo
 
+# Ejemplo 2
 
-class gato: #creando el objeto/clase gato
-    especie = "gato quillero" #este espacio es para los atributos de clase
-    #se pueden ver como variables globales dentro de la clase
+class gato: #creando clase gato
+    especie = "gato quillero" 
     def __init__(self,color,piernas,nombre,dieta = "Atún"): #la función/método __init__ es  
         # el connstructor de clase. Es el encargado de definir
         # los atributos de la clase (las variables que estarán
@@ -31,20 +32,20 @@ class gato: #creando el objeto/clase gato
         self.piernas = piernas
         self.nombre = nombre
         self.dieta = dieta
-        self._raza = "Gato persa" # Indicando por convención por medio del guión bajo que la raza es una variable privada la cual el usuario
+        self._raza = especie # Indicando por convención por medio del guión bajo que la raza es una variable privada la cual el usuario
         # no conoce ni va a interactuar con ella.
         self._edad = None # El None es el indicador de que la varialble no tiene un valor definido. es como el Null en Java. En este caso
         # se está efiniendo una variable privdad que se usará para el manejo de la edad del gato.
 
     def maullar(self):
-        print("{x} usó maullar: miau!".format(x= self.nombre))
+        print(f"{self.nombre} usó maullar: miau!")
 
-class gatico(gato): #la clase entre paréntesis se vuelve la superclase
+class gatico(gato): #la clase entre paréntesis se vuelve la super clase
     # de la clase gatico y hereda sus atributos y funciones a la clase
     # que se está creando. La clase gatico se vuelve una subclase de
     # la clase gato
 
-    def esconder(self): # No olvides colocar el self
+    def esconder(self): # No olvides colocar el self cada vez que definas una función dentro de una clase
         print("el gatico {a} se ha escondido".format(a = self.nombre))
         # se puede ver que pide el atributo nombre sin haberlo definido
         # en la clase gatico, sino que lo saca de la superclase gato
@@ -57,7 +58,11 @@ class gatico(gato): #la clase entre paréntesis se vuelve la superclase
         # con el mensaje de la subclase y luego con el mensaje
         # de la superclase)
 
-
+Rec = Rectangle(2,5)
+cuadra = Square(4)
+print(Rec.area())
+print(Rec.perimeter())
+print(f"Area:{cuadra.area()} Perímetro:{cuadra.perimeter()}")
 felix_jr = gatico("rojo",4,"felix JR.")
 felix_jr.esconder()
 felix_jr.maullar()
