@@ -30,9 +30,19 @@ print(sys.getrecursionlimit()) # Imprime el valor por defecto del límite para r
 sys.setrecursionlimit(10000) # Cambiando el límite de recursión para soportar mayores recursiones 
 print(sys.getrecursionlimit())
 
-a = factorial_iterativo(1000)  
-b = factorial_recursivo(1000) # límite de recursividad por defecto: 998
+"""
+Pendiente agregar comentarios
+"""
 
+t0 = time.time()
+a = factorial_iterativo(1000)  
+t1 = time.time()
+delta_it = t1 - t0
+t1 = time.time()
+b = factorial_recursivo(1000) # límite de recursividad por defecto: 998
+t1 = time.time()
+delta_rec = t1 - t0
 print(f"{a,b}")
+print(f"{delta_it,delta_rec}")
 
 
