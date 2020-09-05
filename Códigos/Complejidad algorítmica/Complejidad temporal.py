@@ -35,14 +35,13 @@ Pendiente agregar comentarios
 """
 
 t0 = time.time()
-a = factorial_iterativo(1000)  
+a = factorial_iterativo(500)  
 t1 = time.time()
 delta_it = t1 - t0
 t1 = time.time()
-b = factorial_recursivo(1000) # límite de recursividad por defecto: 998
+b = factorial_recursivo(500) # límite de recursividad por defecto: 998
 t1 = time.time()
 delta_rec = t1 - t0
 print(f"{a,b}")
 print(f"{delta_it,delta_rec}")
-
 
