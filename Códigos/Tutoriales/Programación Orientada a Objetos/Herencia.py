@@ -16,13 +16,14 @@ class Rectangle: # Definiendo clase rectángulo
 class Square(Rectangle): # la sintaxis es class clase hija (super clase):
     def __init__(self, length): # la clase cuadrado sólo necesita definir un valor de longitud para ser usado
         super().__init__(length, length)  # Usando el método super() para definir cómo el parámetro de la longitud del cuadrado
-        # encaja en la definción inicial del rectángulo
+        # encaja en la definción inicial del rectángulo. Eso es necesario para que los métodos de la clase rectángulo puedan ser
+        # ser usados por la clase cuadrado.
 
 # Ejemplo 2
 
 class gato: #creando clase gato
     #raza = "gato quillero" # No recuerdo el porqué de esta línea
-    def __init__(self,color,piernas,nombre,dieta = "Atún"): #la función/método __init__ es  
+    def __init__(self,color,nombre,dieta = "Atún"): #la función/método __init__ es  
         raza = "gato quillero" 
         # el connstructor de clase. Es el encargado de definir
         # los atributos de la clase (las variables que estarán
@@ -30,7 +31,6 @@ class gato: #creando clase gato
         # es necesario colocar como primer argumento la declaración self
         # para el caso de la dieta, se está definiendo un valor por defecto en caso de que el usuario no lo especifique.
         self.color = color #self asocia las variables a la clase
-        self.piernas = piernas
         self.nombre = nombre
         self.dieta = dieta
         self._raza = raza # Indicando por convención por medio del guión bajo que la raza es una variable privada la cual el usuario
@@ -59,14 +59,14 @@ class gatico(gato): #la clase entre paréntesis se vuelve la super clase
         # con el mensaje de la subclase y luego con el mensaje
         # de la superclase)
 
-Rec = Rectangle(2,5)
-cuadra = Square(4)
-print(Rec.area())
-print(Rec.perimeter())
-print(f"Area:{cuadra.area()} Perímetro:{cuadra.perimeter()}")
-felix_jr = gatico("rojo",4,"felix JR.")
-felix_jr.esconder()
-felix_jr.maullar()
+Rec = Rectangle(5,2) # Definiendo objeto tipo rectángulo con largo 5 y ancho 2 
+cuadra = Square(4) # Definiendo objeto tipo cuadrádo con arísta de valor 4
+print(Rec.area()) # Mostrando el valor del área del rectángulo
+print(Rec.perimeter()) # Mostrando el valor del perímetro del rectángulo
+print(f"Area:{cuadra.area()} Perímetro:{cuadra.perimeter()}") # Mostrando tanto área como perímetro del cuadrado
+felix_jr = gatico("rojo","felix JR.") # Creando objeto tipo gatico definiendo su color y nombre
+felix_jr.esconder() # Acción de esconder
+felix_jr.maullar()  # Acción de maullar 
 
 """
 Link: https://realpython.com/python-super/
