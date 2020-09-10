@@ -20,13 +20,10 @@ con el condicional If. Acá hay un ejemplo:
 
 Ejemplo                  Explicación  
 if edad == 18:           Si la edad es igual a 18, entonces la condición  es verdadera
-if edad != 18:           Si la edad NO es igual a 18, enttonces la confición es verdadera
+if edad != 18:           Si la edad NO es igual a 18, enttonces la condición es verdadera
 
 Como se puede ver, su aplicación más común es usarse en condicionales if para evualuar cuando una variable no tiene un valor en específico.
 
-
-    -Uso de condicionales anidados por medio del else if y el elif (Verificar si esto es realmente necesario)
-    -Colocar Link nuevamente 
 """
 Codigos = 0 # Declarando el valor inicial de número de códigos. Se usará más adelante en el código
 
@@ -61,7 +58,7 @@ elif Respuesta == "No" or Respuesta == "no": # Sí el usuario escribe No o no, l
     print("Tranquilo. Python es un buen lenguaje para aprender a programar") 
 
 
-print("") 
+print("")  # Espacio en blanco
 print("Disculpa, me tengo que ir a hacer cosas de bots. Nos vemos pronto") # Las instrucciones que no tiene espacios al inicio no dependen de 
 # una condición if para ser ejecutadas
 
