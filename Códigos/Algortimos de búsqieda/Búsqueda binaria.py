@@ -32,9 +32,11 @@ if __name__ == '__main__':
     tamano_de_lista = int(input('De que tamano es la lista? '))
     objetivo = int(input('Que numero quieres encontrar? '))
 
-    lista = sorted([random.randint(0, 100) for i in range(tamano_de_lista)]) # Seguir por aquí  
+    lista = sorted([random.randint(0, 100) for i in range(tamano_de_lista)]) #  La función sorted organiza el contenido de la lista
+    # de números generados de forma aleatoria. Es importante recalcar que la búsqueda binaria sólo funciona con listas ordenadas.
 
-    encontrado = busqueda_binaria(lista, 0, len(lista), objetivo)
-
-    print(lista)
-    print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"} en la lista')
+    encontrado = busqueda_binaria(lista, 0, len(lista), objetivo) # Llamando función de búsqueda binaria
+    print(lista) # Imprimiendo lista ordenada
+    print(f'El elemento {objetivo} {"está" if encontrado == True else "no está"} en la lista') # el == True se puede quitar sin hacer efecto
+    # en el código. Mira como se deferencias las comillas simples de las dobles. Las primeras son para representar el mensaje que se va a 
+    # imprimir y las segundas representan las partes del mensaje que puede o no salir dependiendo del condicional if.
