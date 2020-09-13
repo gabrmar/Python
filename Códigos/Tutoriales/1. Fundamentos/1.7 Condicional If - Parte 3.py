@@ -70,6 +70,8 @@ mayúscula donde no debería haber mayúscula.Todas estas posibilidades pueden i
 """
 
 """
-https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
+Referencias
 
+1) Operadores lógicos: https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/operadores_logicos.html
+2) \n y demás secuencias de escape en Python: https://tutz.tv/python/secuencias-de-escape/
 """
