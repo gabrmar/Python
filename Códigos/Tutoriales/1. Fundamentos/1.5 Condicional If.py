@@ -15,6 +15,12 @@ else:
 
 La primera parte expresa qué condición queremos evaluar con el if y las instrucciones a ejecutar si al condición es cierta. En caso de que sea
 falsa, entonces se ejecutan las instruccciones de la sección else.
+
+En este código verrás el uso del siguiente tipo de dato en Python:
+
+-Cadenas de caracteres (Strings): Es la forma en que las palabras son almacenadas en cualquier lenguaje de programación. Consta de una 
+agrupación de cracteres. Una cadena de cracteres puede verse como si fuera una lista conformada únicamente por letras o letras y números.
+Todo string se define entre comillas dobles o sencillas. Por ejemplo, "hola", 'perro' o "2 gatos".
 """
 
 

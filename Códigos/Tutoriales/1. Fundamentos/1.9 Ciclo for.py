@@ -7,15 +7,12 @@ los ciclos más comunes es el ciclo for (para). El suguiente código es un ejemp
 
 -Listas: Una agrupación de variables de uno o más tipos dentro de un solo nombre que representa a todo el grupo. Más información de las listas
 Al final del código.
--Cadenas de caracteres (Strings): Es la forma en que las palabras son almacenadas en cualquier lenguaje de programación. Consta de una 
-agrupación de cracteres. Una cadena de cracteres puede verse como si fuera una lista conformada únicamente por caracteres.
-
 """
 
 palabras = ["hola.","¿Cómo","estás?"] # Lista llamada palabras conformada por 3 strings. Todo string se define entre comillas dobles o sencillas
 palabra = "Programación" # variable string que contiene la palabra programacón. 
 for letra in palabras: # La estructura de un ciclo for es la siguiente: for contador in lista o string:
-    """La variable letra revisa letra por letra el contenido de la variable palabra. Es decir que primero busca la primera letra (p), luego
+    """La variable letra revisa letra por letra el contenido de la variable palabra, es decir que primero busca la primera letra (p), luego
     la segunda (r) y así sucesivamente hasta llegar a la última (n). """
     print(letra) # Acá se muestra la letra guardada 
 
@@ -23,12 +20,11 @@ for i in range(10): # La función range nos permite crear una lista formada por 
     # lista de números enteros que va desde cero hasta 9.
     print("iteración número " + str(i)) # para mostrar una variable, puedes agregarla como una suma y coloarla dentro del str(variable) para
     # que sea tratada como texto, no como número.
-    # range(i,x) define un iterable que empieza desde el número i y termina en el número x-1.
+    # En Python las variables que sirven sirven para regular el flujo del contador en un ciclo for se le conocen como iterables.
+    # range(i,x) define una lista iterable que empieza desde el número i y termina en el número x-1.
 
 for x in palabra:
  print(x)
-
-# En Python las variables que sirven sirven para regular el flujo del contador en un ciclo for se le conocen como iterables.
 
 
 """
