@@ -1,0 +1,1 @@
+# Colocar aspectos básicos de las funciones en Python que sean más propios del lenguaje
