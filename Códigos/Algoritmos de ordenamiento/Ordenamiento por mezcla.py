@@ -5,12 +5,12 @@ def ordenamiento_por_mezcla(lista): # Definiendo función de ordenamiento por me
         medio = len(lista) // 2 # El punto medio se calcula por medio de una  división entera (//), es decir una devisión que no da valores
         # decimales
         izquierda = lista[:medio] # Se genera una sub-lista desde el inicio hasta el punto medio -1
-        derecha = lista[medio:] # Se genera una sub-lusta desde el punto medio hasta el final  
+        derecha = lista[medio:] # Se genera una sub-lista desde el punto medio hasta el final  
         print(izquierda, '*' * 5, derecha) # Se imprime el contenido de las dos listas sepatados por 5 asterístos (*)
 
         # llamada recursiva en cada mitad
-        ordenamiento_por_mezcla(izquierda)
-        ordenamiento_por_mezcla(derecha)
+        ordenamiento_por_mezcla(izquierda) # Llamado recursivo con sólo la lista de la izquierda
+        ordenamiento_por_mezcla(derecha) # Llamado recursivo con sólo la lista de la derecha
 
         # Iteradores para recorrer las dos sublistas
         i = 0
@@ -18,7 +18,7 @@ def ordenamiento_por_mezcla(lista): # Definiendo función de ordenamiento por me
         # Iterador para la lista principal
         k = 0
 
-        while i < len(izquierda) and j < len(derecha):
+        while i < len(izquierda) and j < len(derecha): # Mientras los iteradores sean menores a las longitudes de las sub-listas
             if izquierda[i] < derecha[j]:
                 lista[k] = izquierda[i]
                 i += 1
