@@ -6,7 +6,12 @@
 
 """
 
-def suma(n1,n2):
+def ejemplo():
+    # Las funciones en Python se escriben así: def nombre_de_función():
+    # dentro de los paréntesis puedes colocar las variables que la función necesite para trabajar, pero también puedes hacer funciones
+    # que no necesiten variables de entrada para funcionar.
+
+def suma(n1,n2): # Definiendo función suma
     suma = n1 + n2
     return suma
 
