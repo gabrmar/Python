@@ -1,14 +1,18 @@
 
 """
-- Introducción a las strings de Python
-- Formateo con valores numéricos  
-- Formateo con format()
-- Formateo con f""
 - Funciones báscias en strings en Python (Esto puede ir en otra función)
 - Compraciones con un IF en una string 
 - Slicing (Una tercera parte)
 - Iterables de strings en Python (Cuarta parte)
 """
+"""
+En programación se le llaman strings (cadenas de caracteres en español) a toda unión de distíntos símbolos alfabéticos o numéricos. Por
+ejemplo tenemos "hola", "23 años" y "23". Estos strings siempre se colocan entre comillas para diferenciarlos del resto de varibles.
+
+A la hora de pedirle datos al usuario, la mayoría de los datos son almacenados como texto, como strings. Por lo tanto es necesario 
+decirle a Python como debe interpertar los datos que almacena. Esto se conoce como formatear las variables.
+"""
+
 
 # Formateando variables
 x = input("Primer número:") # El número que se guarde en la variable x es tomado como si fuera  un caracter, sólo texto
@@ -26,7 +30,7 @@ print("{a} multilicado por 3.14 es {b}".format(a=y,b=z)) # Usar la función form
 # ajusta a texto. Lo importante con format() es dejar una llave con una variable por cada espacio donde quieras instertar variables del
 # Código 
 
-# Usando f""
+# Usando f-strings
 print(f"Sumando los valores de {x} y {z}") # Ésta es la forma más rápida ya que el formateo sólo requiere la letra f antes del mensaje
 # del print y las llaves con los nombres de las variables que deseas mostrar en el mensaje
 suma = x + z
@@ -34,5 +38,9 @@ print(f"Suma total:{suma}")
 
 
 """
-1) Enlace de formateo/casteo de variables  en Python
+Referencias:
+
+Formateo en Python: https://docs.hektorprofe.net/python/entradas-y-salidas/salida-por-pantalla/
+
+
 """
