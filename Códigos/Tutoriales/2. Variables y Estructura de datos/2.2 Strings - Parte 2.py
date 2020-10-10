@@ -14,6 +14,7 @@ string = ",".join(lista)  # transforma listas de strings en una sola por medio d
 # se puede usar cualquer caracter como separador entre los elementos de la lista
 print(string)
 string2 = "00000esta es la historia de Ramiro00000"
+print(string2)
 string2 = string2.strip("0") # strip permite elminar caracteres que estén en los extremos de una string. En este caso el 0.
 # También sirve para elminar espacios de más en un string.
 print(string2)
