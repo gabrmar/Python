@@ -1,6 +1,9 @@
 """
 - Funciones báscias en strings en Python (Esto puede ir en otra función)
-- Compraciones con un IF en una string 
+- Compraciones con un IF en una string así como el operador in y not in  
+- Función ord y Función chr (Quizás en un nuevo código) así como función max y min 
+ Link: https://thepythonguru.com/python-strings/
+ Buscar un enlace en español 
 """
 
 
