@@ -1,11 +1,8 @@
 """
-- Funciones báscias en strings en Python (Esto puede ir en otra función)
-- Compraciones con un IF en una string así como el operador in y not in  
-
+Las cadenas de caracteres o strings poseen muchas aplicaciones, por ello en Python luedes encontrar una gran cantidad de funciones
+que facilitan su manejo haciendo que hacer códigos con strings sea algo mucho más práctico. Abajo encontrarás un ejemplo con las funciones
+más comunes para mnejar strings.
 """
-
-
-# Basarse en ejemplos del código base de string
 
 
 lista = ["ella", "tú", "nosotros"] # Definiendo lista de tres cadenas de caracteres (3 strings).
