@@ -1,10 +1,9 @@
 """
 - Función ord y Función chr (Quizás en un nuevo código) así como función max y min 
- Link: https://thepythonguru.com/python-strings/
- Buscar un enlace en español 
  """
 
  #----------------------------------------------If con Strings--------------------------
+
 
 s1 = "hola"
 s2 = "Hola"
@@ -25,6 +24,6 @@ al de su versión en mayúscula.
 """
 Refrencias:
 
-1) Información sobre ASCII
+1) ASCII: https://es.wikipedia.org/wiki/ASCII
 
 """
