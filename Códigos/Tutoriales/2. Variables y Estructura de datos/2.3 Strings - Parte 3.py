@@ -1,20 +1,23 @@
 """
-- Pulir las funciones print
-- Agregar comentairos
+- Explicar sobre las posiciones dentro de un string
+- Explicar un poquito sobre strings y chars.
 - Posible introducción corta sobre ASCII y Unicode 
 
  """
 
+x = "Mensjae"  # Variable string.
+a = x[1] # Sacando la letra que se encuentra en la posición 1 del string. Reucerda que un string es lo mismo que una lista de caracteres.
+# Gracias a ello es que se pueden aplicar muchas de las funciones de listas en una variable tipo string.
+print(a) # Motrando el caracter extraído del string
+b = ord(a) # Obtiene el códgo ASCII/Unicode que representa el caracter
+print(f"El número que representa el caracter {a} es {b}.")
+code = 100 # Número entero cualquiera
+c = chr(code) # Obtiene el caracter que es representado por un número entero en las tablas ASCII y Unicode
+print(f"El número {code} representa el símbolo {c} en las tablas ASCII y Unicode.")
+
  #----------------------------------------------If con Strings--------------------------
 
-x = "Mensjae"
-a = x[1]
-print(a)
-b = ord(a)
-print(a,b)
-code = 100
-c = chr(code)
-print(code,c)
+
 s1 = "hola"
 s2 = "Hola"
 if s1 > s2:
