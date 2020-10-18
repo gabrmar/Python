@@ -1,10 +1,20 @@
 """
-- Función ord y Función chr (Quizás en un nuevo código) así como función max y min 
+- Pulir las funciones print
+- Agregar comentairos
+- Posible introducción corta sobre ASCII y Unicode 
+
  """
 
  #----------------------------------------------If con Strings--------------------------
 
-
+x = "Mensjae"
+a = x[1]
+print(a)
+b = ord(a)
+print(a,b)
+code = 100
+c = chr(code)
+print(code,c)
 s1 = "hola"
 s2 = "Hola"
 if s1 > s2:
@@ -25,5 +35,6 @@ al de su versión en mayúscula.
 Refrencias:
 
 1) ASCII: https://es.wikipedia.org/wiki/ASCII
+2) Unicode: https://es.wikipedia.org/wiki/Unicode
 
 """
