@@ -1,7 +1,5 @@
 """
-- Explicar sobre las posiciones dentro de un string
-- Explicar un poquito sobre strings y chars.
-- Posible introducción corta sobre ASCII y Unicode 
+- Organizar sección de Strings con IF
 
 Como se ha dicho antes, las variables strings son cadenas de símbolos llamados caracteres. Es posible acceder a los caracteres que
 hacen parte de una string por medio de un número que representa la posición del caracter que queremos extraer dentro de unos corchetes.
@@ -17,17 +15,25 @@ print(a) # Motrando el caracter extraído del string
 
 
 """
-ASCIII/UNICODE Aquí
+Unicode
+
+Todos los símbolos que escribes en el teclado son representados internamente con números que fueron definido por medio de un estándar
+que hoy conocemos como Unicode. Todos los computadores son capaces de interpretar el texto proveniente de otro equipo gracias a que todos
+siguen las reglas Unicode para poder indentificar cada letra y símbolo. En Python podemos ver el número Unicode que representa cada uno
+de los caracteres.
 """
 
 
-b = ord(a) # Obtiene el códgo ASCII/Unicode que representa el caracter
+b = ord(a) # Obtiene el códgo Unicode que representa el caracter
 print(f"El número que representa el caracter {a} es {b}.")
-code = 100 # Número entero cualquiera
-c = chr(code) # Obtiene el caracter que es representado por un número entero en las tablas ASCII y Unicode
-print(f"El número {code} representa el símbolo {c} en las tablas ASCII y Unicode.")
+code = 100 # Número entero cualquiera. La cantidad de números enteros que se usan dentro de la Tabla Unicode es de miles de números.
+# Prueba con el número que quieras si queires conocer cuan grande es la tabla Unicode.
+c = chr(code) # Obtiene el caracter que es representado por un número entero en la tabla Unicode
+print(f"El número {code} representa el símbolo {c} en la tabla Unicode.")
 
  #----------------------------------------------If con Strings--------------------------
+
+
 
 
 s1 = "hola"
@@ -49,7 +55,6 @@ al de su versión en mayúscula.
 """
 Refrencias:
 
-1) ASCII: https://es.wikipedia.org/wiki/ASCII
-2) Unicode: https://es.wikipedia.org/wiki/Unicode
+1) Unicode: https://es.wikipedia.org/wiki/Unicode
 
 """
