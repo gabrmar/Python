@@ -31,9 +31,18 @@ code = 100 # Número entero cualquiera. La cantidad de números enteros que se u
 c = chr(code) # Obtiene el caracter que es representado por un número entero en la tabla Unicode
 print(f"El número {code} representa el símbolo {c} en la tabla Unicode.")
 
- #----------------------------------------------If con Strings--------------------------
+"""
+Condicionales IF usando variables string
 
+Por extrño que pueda parecer a simple vista, en Python se pueden comparar variables strings usando los comparadores de mayor y menor que
+como si se tratasen de númros. Esto se puede gracias a que lo que se hace es la comparación de los códigos Unicode que conforman cada 
+caracter. Por ejemplo, si tienes dos strings y quoeres ver quien es mayor que a otra, entonces primero se compara el primer caracter de 
+cada string. Si son iguales en valor Unicode, entonces se repite el proceso con los cracteres inmediatos. Si todos los caracteres
+correspondientes tienen el mismo valor Unicode, es porque las strings son iguales.
 
+NOTA: es importante resaltar que una letra en miníscula tiene un valor Unicode difernete al de su versión en mayúscula.
+
+"""
 
 
 s1 = "hola"
@@ -43,14 +52,7 @@ if s1 > s2:
 else:
     print("Hola 2")
 # La compración entre cadenas de caracteres (strings) se hace la siguiente manera:
-"""
-Se hace comparación el primer caracter de cada  string. Si son iguales en valor ASCII,
-entonces se repite el proceso con los cracteres inmediatos. Si todos los caracteres
-correspondientes tienen el mismo valor ASCII, es porque las strings son iguales.
 
-NOTA: es importante resaltar que una letra en miníscula tiene un valor ASCII difernete
-al de su versión en mayúscula.
-"""
 
 """
 Refrencias:
