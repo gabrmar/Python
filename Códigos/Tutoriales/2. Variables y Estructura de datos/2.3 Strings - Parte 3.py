@@ -45,13 +45,28 @@ NOTA: es importante resaltar que una letra en miníscula tiene un valor Unicode 
 """
 
 
+print("-----------------------------------------")
+print("")
+print("Comparación de strings")
 s1 = "hola"
 s2 = "Hola"
+print("")
+print(f"String 1:{s1}")
+print(f"String 2:{s2}")
+print("")
+print(f"Valores Unicode de los caracteres en el string {s1}")
+for i in s1:
+    x = ord(i)
+    print(f"El valor únicode de {i} es {x}")
+print("******************************************")
+print(f"Valores Unicode de los caracteres en el string {s2}")
+for i in s2:
+    x = ord(i)
+    print(f"El valor únicode de {i} es {x}")
 if s1 > s2:
-    print("Hola")
+    print(f"{s1} es una string mayor que {s2}")
 else:
-    print("Hola 2")
-# La compración entre cadenas de caracteres (strings) se hace la siguiente manera:
+    print(f"{s2} es una string mayor que {s1}")
 
 
 """
