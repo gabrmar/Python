@@ -1,5 +1,5 @@
 """
-- Organizar sección de Strings con IF
+- Organizar sección de Strings con IF. Agregar comentarios sobre últimos cambios.
 
 Como se ha dicho antes, las variables strings son cadenas de símbolos llamados caracteres. Es posible acceder a los caracteres que
 hacen parte de una string por medio de un número que representa la posición del caracter que queremos extraer dentro de unos corchetes.
