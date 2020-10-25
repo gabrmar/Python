@@ -57,12 +57,12 @@ print("")
 print(f"Valores Unicode de los caracteres en el string {s1}")
 for i in s1:
     x = ord(i)
-    print(f"El valor únicode de {i} es {x}")
+    print(f"El valor Unicode de {i} es {x}")
 print("******************************************")
 print(f"Valores Unicode de los caracteres en el string {s2}")
 for i in s2:
     x = ord(i)
-    print(f"El valor únicode de {i} es {x}")
+    print(f"El valor Unicode de {i} es {x}")
 if s1 > s2:
     print(f"{s1} es una string mayor que {s2}")
 else:
