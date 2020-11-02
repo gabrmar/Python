@@ -1,9 +1,3 @@
-
-"""
-
-- Slicing y operaciones sobre una string - suma y multiplicación (Una tercera parte)
-- Iterables de strings en Python (Cuarta parte)
-"""
 """
 En programación se le llaman strings (cadenas de caracteres en español) a toda unión de distíntos símbolos alfabéticos o numéricos. Por
 ejemplo tenemos "hola", "23 años" y "23". Estos strings siempre se colocan entre comillas para diferenciarlos del resto de varibles.

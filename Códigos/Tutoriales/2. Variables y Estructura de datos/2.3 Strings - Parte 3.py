@@ -34,7 +34,7 @@ print(f"El número {code} representa el símbolo {c} en la tabla Unicode.")
 """
 Condicionales IF usando variables string
 
-Por extrño que pueda parecer a simple vista, en Python se pueden comparar variables strings usando los comparadores de mayor y menor que
+Por extraño que pueda parecer a simple vista, en Python se pueden comparar variables strings usando los comparadores de mayor y menor que
 como si se tratasen de númros. Esto se puede gracias a que lo que se hace es la comparación de los códigos Unicode que conforman cada 
 caracter. Por ejemplo, si tienes dos strings y quoeres ver quien es mayor que a otra, entonces primero se compara el primer caracter de 
 cada string. Si son iguales en valor Unicode, entonces se repite el proceso con los cracteres inmediatos. Si todos los caracteres
