@@ -8,7 +8,9 @@ Las list
 """
 
 """
-Introducción aquí
+Las listas son un tipo especial de variables que permiten guardar más de un dato incluyendo valores de diferetes tipos de variables.
+Con ellas se pueden hacer códigos de forma más sencilla al agrupar datos en común en una sola lista a la cual podemos usar para ver uno
+o varios elementos, modifcarlos e imprimir toda la lista.
 """
 
 # listas en Python, operadores de listas, funciones y métodos de listas
