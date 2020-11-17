@@ -57,9 +57,8 @@ for i in i1: # Recorriendo con la lista creada por la función range() para reco
 for i in i2: # Recorriendo con la lista creada por la función range() para recorrer la lista llamada lista4[]
     print(f"lista4, elemento {i}:{lista4[i]}")
 
-"""
-Revisar de aquí para aabajo 
-"""
+
+# Imprimiendo listas
 
 print(lista_vacío) # Puedes imprimir listas completas sólo colocando el nombre de la lista dentro de la función print()
 print(lista)
@@ -73,13 +72,19 @@ while i < 3:
 i=0
 
 """
-Sigue por aquí
+Operaciones matemáticas entre listas 
+
+Las listas usan el  mismo tipo de operaciones que las strings ya que al fin y al cabo una string también es una lista de caracteres.
+Por tanto podemos usar tanto la suma como la multiplicación entre listas con los siguientes resultados:
+
+Suma: Permite obtener una lista que contiene todos los elementos de las listas sumadas
+Multiplicación por un número entero: Repite los elementos dentro de la lista tantas veces según el valor del número entero
 """
 
 # Operaciones entre listas
-lista5 = lista + lista3 #concatenando listas (como si fuera String) por medio de la suma 
+lista5 = lista + lista3 # Uniendo listas (como si fuera String) por medio de la suma 
 print(lista5)
-print(lista*3) #triplicación de los elementos de la lista (como si fuera String)
+print(lista*3) # Repitiendo los elementos de la lista 3 veces
  
 """
 Referencias
