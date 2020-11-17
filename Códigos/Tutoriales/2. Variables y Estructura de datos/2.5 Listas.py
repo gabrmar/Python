@@ -61,19 +61,26 @@ for i in i2: # Recorriendo con la lista creada por la función range() para reco
 Revisar de aquí para aabajo 
 """
 
-print(lista_vacío) #puedes imprimir listas completas
-print(lista) # puedes imprimir listas completas
+print(lista_vacío) # Puedes imprimir listas completas sólo colocando el nombre de la lista dentro de la función print()
+print(lista)
 print(lista_múltiple)
+# Impresión de lista de listas usando un ciclo while
 while i < 3:
-    print(lista_múltiple[3][i]) #accediendo a listas dentro de listas
-    i +=1 #las listas anidados es la forma para trabajar con matrices 
+    print(lista_múltiple[3][i]) # Para acceder a un elemento que está dentro de una lista que está dentro de otra lista se necesitan dos
+    # índices. El primer índice permite elegir la lista que quieres seleccionar mientras que el segúndo índice permite elegir el elemento
+    # de la lista que quieres mostrar.
+    i +=1
 i=0
+
+"""
+Sigue por aquí
+"""
 
 # Operaciones entre listas
 lista5 = lista + lista3 #concatenando listas (como si fuera String) por medio de la suma 
 print(lista5)
 print(lista*3) #triplicación de los elementos de la lista (como si fuera String)
-
+ 
 """
 Referencias
 
