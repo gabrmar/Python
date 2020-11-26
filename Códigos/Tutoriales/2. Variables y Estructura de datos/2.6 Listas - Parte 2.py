@@ -2,7 +2,9 @@
 Las list
 
 -Segmentación de lista
-
+-Introducción
+-Ver si se necesitan referencias
+-Comentarios 
 """
 
 # manejo adicional de listas
