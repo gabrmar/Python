@@ -1,10 +1,20 @@
 """
-Las list
+Las listas
 
 -Segmentación de lista
 -Introducción
 -Ver si se necesitan referencias
 -Comentarios 
+"""
+"""
+Al igual que con las strings, es posible pedir más de un elemento de ellas en un sólo comando. Esto se le conoce como segmentación de
+lista. Para ello vasta con seguir el mismo patrón que cuando se obtienen reabanadas de de strings:
+
+x = "prueba"
+print(x[0:2]) <------ mostrará la frase "pr"
+
+Esto mismo se usará para hacer segmentación de listas.
+
 """
 
 # manejo adicional de listas
