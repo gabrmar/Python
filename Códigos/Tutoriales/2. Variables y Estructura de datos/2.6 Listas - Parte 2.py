@@ -31,10 +31,11 @@ p7 = lista[::2] # Todos los elementos de la lista con un paso de 2
 p8 = lista[1:9:2] # Todos los elementos entre la posición 1 y 9 con un paso de dos.El elemento 7 ("hola") no hace parte de p8
 p9 = lista[-1:] # Las posiciones negativas se cuentan empezando la lista desde el último elemento. En este caso, "comida" está en la 
 # posición -1"
-leirbp10 = lista[-1:2] # Da una lista vacía. La razón aparente es porque no hay una forma de obtener elementos recorriendo la lista de 
-# izquiera a derecha 
+p10 = lista[-1:2] # Da una lista vacía. Eso se debe a que recorrer de -1 a 2 requiere moverse de derecha a izquierda, lo cual requiere
+# agregar un parámetro adicional que se verá más adelante. A menos que se especifique lo contrario, las listas normalmente son  recorridas
+# de izquierda a derecha
 p11 = lista[-3:-1] # Desde la posición -3 ("hola") hasta la -1 ("comida") sin incluir a este último (recorrido de izquierda a derecha) 
-p12 = lista[::-1] # Por otro lado, sí se pueden usar pasos negativos para hacer un recorrido de derecha a izquierda de una lista.
+p12 = lista[::-1] # Por otro lado, sí se pueden usar pasos negativos para hacer un recorrido de derecha a izquierda de una lista
 
 # -----Imprimiendo segmentos de listas---------------
 
