@@ -1,11 +1,4 @@
 """
-Las listas
-
-- Probar códigos
--Ver si se necesitan referencias
--Comentarios 
-"""
-"""
 Al igual que con las strings, es posible pedir más de un elemento de ellas en un sólo comando. Esto se le conoce como segmentación de
 lista. Para ello vasta con seguir el mismo patrón que cuando se obtienen reabanadas de de strings:
 
