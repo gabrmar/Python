@@ -1,17 +1,11 @@
 """
-1) Funciones de listas
-2) Compresiones de listas
+1) Funciones de listas - Incluir las funciones recolectadas en previos códigos
+2) Compresiones de listas - Nuevo código
 3) Verificar si se pueden agregar más fucniones que consideren la separación de esta sección en dos códigos
 4) Verificar si se necesitan referencias para este código
 """
 
 # funciones de listas
-"""
-Las lsitas pueden ser creadas por medio de reglas que definan las cualidades
-de los elementos que los integran. Dichas cualidades son definidas por
-instrucciones de código de manera similar a como una función matemática
-define el trazo de un gráfico
-"""
 
 
 #Funciones numéricas para listas
@@ -32,6 +26,14 @@ número = 10
 
 
 #Compresiones de listas
+
+"""
+Las lsitas pueden ser creadas por medio de reglas que definan las cualidades
+de los elementos que los integran. Dichas cualidades son definidas por
+instrucciones de código de manera similar a como una función matemática
+define el trazo de un gráfico
+"""
+
 
 
 #comprensión de lista de cubos
