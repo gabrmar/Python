@@ -6,7 +6,7 @@
 """
 
 # funciones y métodos de listas
-
+# Colocar definiciones claves que diferencian las funciones de los métodos
 
 #Funciones numéricas para listas
 
@@ -25,3 +25,4 @@ print(sumatoria)
 número = 10
 
 #Incluir sort, reverse y todas las demás fucniones y métodos de listas encontrados en los marcadores
+# Hacer la lista de las funciones de los marcadores 
