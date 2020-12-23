@@ -25,4 +25,4 @@ print(sumatoria)
 número = 10
 
 #Incluir sort, reverse y todas las demás fucniones y métodos de listas encontrados en los marcadores
-#Pop,remove,insert,range,append,sort,reverse
+#Pop,remove,insert,range,append,sort,reverse,count
