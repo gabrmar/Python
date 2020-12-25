@@ -1,2 +1,3 @@
-l1 = [10,1]
-print(max(l1))
+l = [0 for i in range(1,3)]
+print(l)
+print(range(1,3))

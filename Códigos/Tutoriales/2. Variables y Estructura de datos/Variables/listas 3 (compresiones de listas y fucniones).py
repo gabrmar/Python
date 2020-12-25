@@ -6,6 +6,9 @@ instrucciones de código de manera similar a como una función matemática
 define el trazo de un gráfico
 """
 
+row = [3 for i in range(8)]
+
+
 #comprensión de lista de cubos
 cubos =[i**3 for i in range(5)] # usa el contador i y lo eleva al cubo
 # en un ciclo desde 0 a 5 (5 no incluido)

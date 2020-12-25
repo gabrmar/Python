@@ -10,6 +10,9 @@ define el trazo de un gráfico
 
 
 #comprensión de lista de cubos
+row = [3 for i in range(8)]
+
+
 cubos =[i**3 for i in range(5)] # usa el contador i y lo eleva al cubo
 # en un ciclo desde 0 a 5 (5 no incluido)
 print(cubos)
