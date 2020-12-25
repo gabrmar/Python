@@ -22,21 +22,18 @@ características:
 En este código podrás ver algunos ejemplos de funciones y métodos de listas en Python
 """
 
-#Funciones numéricas para listas
-
-mínimo = min(cubos) #mínimo de una lista de números
-máximo = max(cubos) #máximo de una lista de números
-# max y min también pueden usarse con variables que no estén agrupadas
-# en listas
-max2 = max(1,2,3)
-print(mínimo)
-print(máximo)
-print(max2)
-print(round(3.1416,2)) #redondeo de números
-print(abs(-10)) #valor absoluto de un número
-sumatoria = sum(cubos) #suma de todos los elemento de una lista
-print(sumatoria)
-número = 10
-
 #Incluir sort, reverse y todas las demás fucniones y métodos de listas encontrados en los marcadores
 #Pop,remove,insert,range,append,sort,reverse,count
+
+l1 = [1,2,3,4,5,3,3,3]
+
+#Funciones numéricas para listas
+
+mínimo = min(l1) # Mínimo de una lista de números
+máximo = max(l1) # Máximo de una lista de números
+# Las funciones max() y min() también pueden usarse con variables que no estén agrupadas en listas. Por ejemplo:
+max2 = max(1,2,3)
+print(mínimo,máximo,max2)
+sumatoria = sum(l1) #suma de todos los elemento de una lista
+print("Suma de todos los elementos de de la lista l1:",sumatoria)
+
