@@ -1,3 +1,17 @@
+#Parámetros por nombre (Keyboard arguments)
+
+def prueba(a,b,c):
+   a = a*2
+   b = b+4
+   c = c/2
+   print("Salida:",a,b,c)
+
+"""
+Las funciones también pueden ser invocadas llenando sus parámetros no por su posición sino por su nombre. A esto lo conocemos como
+argumento de reclado.
+"""
+prueba(c=1,a=10,b=8) #Los argumentos no son colocados en el orden en que fueron definidos al escribir la función y aún así funciona
+
 """
 Por medio de la de la declaración *args, defines que la fución trabajará
 con argumentos variables, es  decir que no siempre uesará la misma cantidad

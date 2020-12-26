@@ -7,10 +7,12 @@ instrucciones de código de manera similar a como una función matemática
 define el trazo de un gráfico
 """
 
-
+"""[expression for element in list if conditional]"""
 
 #comprensión de lista de cubos
 row = [3 for i in range(8)]
+
+board = [[EMPTY for i in range(8)] for j in range(8)] # Matrices
 
 
 cubos =[i**3 for i in range(5)] # usa el contador i y lo eleva al cubo
