@@ -23,9 +23,26 @@ En este código podrás ver algunos ejemplos de funciones y métodos de listas e
 """
 
 #Incluir sort, reverse y todas las demás fucniones y métodos de listas encontrados en los marcadores
-#Pop,remove,insert,range,append,sort,reverse,count
+#Pop,remove,insert,append,sort,reverse,count
 
-l1 = [1,2,3,4,5,3,3,3]
+l1 = [1,2,3,4,5,3,3,3,3]
+
+print(f"El primer elemento de la lista es {l1[0]}")
+l1.pop(0) # Índice
+print(f"Ahora es {l1[0]} luego de usar el método pop()")
+print("Nueva lista:",l1)
+l1.remove(3) # Elemento a eliminar
+print("Luego de remover usando remove():",l1)
+x = 10
+l1.append(x)
+print(f"Luego de añadir el elemento {x} usando append():",l1)
+l1.reverse()
+print("Luego de invertir la lista por medio de reverse():",l1)
+l1.sort()
+print("Luego de organizar la lista por medio de sort():",l1)
+y = 3
+r = l1.count(y)
+print(f"El elemento {y} se repite {r} veces en la lista.")
 
 #Funciones numéricas para listas
 
