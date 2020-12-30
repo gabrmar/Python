@@ -1,8 +1,4 @@
 """
-
-4) Verificar si se necesitan referencias para este código
-"""
-"""
 Las listas tienen una serie de funciones integradas que permiten modificar su contenido sin necesidad de agregar los cambios en una nueva
 variable. Estas funciones se conocen como métodos y estas son algunas de sus características son las siguientes:
 
@@ -22,10 +18,9 @@ características:
 En este código podrás ver algunos ejemplos de funciones y métodos de listas en Python
 """
 
-#Incluir sort, reverse y todas las demás fucniones y métodos de listas encontrados en los marcadores
-#Pop,remove,insert,append,sort,reverse,count
-
 l1 = [1,2,3,4,5,0,3,3,3,10,3]
+
+# Métodos comunes para listas
 
 print(f"El primer elemento de la lista es {l1[0]}")
 l1.pop(0) # Índice
@@ -44,7 +39,7 @@ y = 3
 r = l1.count(y) # Contando las veces en que la variable y aparece en la lista
 print(f"El elemento {y} se repite {r} veces en la lista.")
 
-#Funciones numéricas para listas
+#Funciones comunes para listas
 
 mínimo = min(l1) # Mínimo de una lista de números
 máximo = max(l1) # Máximo de una lista de números

@@ -5,7 +5,6 @@ se organizan elementos emparejados con un elemento de idenficiación
 llamado llave. Son similares a las listas, sólo que cada elemento
 es una combinación entre la variable a guardar y su llave
 """
-"""
 edades = {"Juan":26,"Pedro":22,"Mateo":25} #se escribe entre llaves
 # {llave 1: valor 1, llave 2: valor 2,...}
 print(edades["Juan"])
@@ -51,7 +50,6 @@ while i < 2: #Puedes usar While 1 o While True si quieres que el ciclo sea infin
     # personalizado en caso de que la llave no sea encontrada (el valor por defecto es None, pero puede ajustarse para colocar strings u otros datos
     print(consulta)
     i = i + 1
-"""
 
 
 #------Espacio creado gracias a los aportes del curso de Python en Platzi -------------#
@@ -66,10 +64,21 @@ for key in Platzi.keys(): # Esta es otra forma es usar las llaves como iterable.
     print(key)
 for valores in Platzi.values(): # También se puede recorrer el diccionario usando los valores como interables.
     print(valores)
-for k, v in Platzi.items(): # Se puede hace runa iteración con dos contadores al tiempo para poder tanto las llaves como los valores
+for k, v in Platzi.items(): # Se puede hace una iteración con dos contadores al tiempo para poder tanto las llaves como los valores
     # En cada ciclo
     print("Llave:{} , Valor:{}".format(k,v))
 print(len(Platzi)) #Len() también se puede usar para calcular la longitud de diccionarios 
 
+""""
+Para remover valores de un diccionario, basta en eliminar su llave asociada. Ejemplo:
+
+del Diccio[llave]
+
+También puedes usar el método popitem(), pero esto elimina el último elemento insertado en el diccionario. 
+Esto require más pruebas. Ejemplo:
+
+dict.popitem()
+
+"""
 
 
