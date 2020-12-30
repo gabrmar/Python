@@ -1,4 +1,11 @@
 #Compresiones de listas
+"""
+1) Referencia sobre la keyword all y any.
+2) Referencia sobre la función enumerate()
+3) Hacer un recorrido de matrices
+"""
+
+
 
 """
 Las lsitas pueden ser creadas por medio de reglas que definan las cualidades
