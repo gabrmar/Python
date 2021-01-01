@@ -1,6 +1,5 @@
 #Compresiones de listas
 """
-1) Referencia sobre la keyword all y any.
 2) Referencia sobre la función enumerate()
 3) Hacer un recorrido de matrices
 """
@@ -29,6 +28,12 @@ print(cubos)
 pares = [i**2 for i in range(10) if i**2%2==0] # puedes agregar condicionales
 # para segiuir especificando las reglas de la lista
 print(pares)
+
+#Comprensión de listas booleanas para la explicación de las funciones all() y any()
+
+#Caso all()
+
+#Caso any()
 
 #galleta = [2*i for i in range(10**100)] #habilita esta línea  y tendrás un error de memoria
 # por agotamiento de memoria por usar un rango muy grande para la lista (lista de demsiado tamaño)
