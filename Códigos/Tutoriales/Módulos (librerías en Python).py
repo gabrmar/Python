@@ -2,6 +2,18 @@
 
 import random #equivalente de Include de C
 from math import pi,sqrt # importe selectivo de elementos de la librería math
+"""
+Trabajar sobre estoe en el futuro
+
+from <module> import *  (importe de todas las entidades lo cual genera riesgos de conflictos de nombres)
+
+Así como también:
+
+import module as <alias name>
+
+from module import n as a, m as b, o as c
+
+"""
 # Se importó la constante pi y la función de raíz cuadrada sqrt
 from math import remainder as residuo # puedes cambiar el nombre de la variable o función
 # por un nombre que sea más cómodo para el programador

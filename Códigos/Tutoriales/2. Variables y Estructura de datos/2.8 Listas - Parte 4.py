@@ -1,6 +1,6 @@
 #Compresiones de listas
 """
-2) Referencia sobre la función enumerate()
+2) Referencia sobre la función enumerate() - Listo 
 3) Hacer un recorrido de matrices
 """
 
@@ -54,3 +54,11 @@ else:
     print("no hay ningún númerio mayor a 50")
 for v in enumerate(cubos): #impirime tuplas de los elementos de la lista con su índice repectivo
     print(v)
+
+"""
+Referencias:
+
+Función Enumerate(): https://micro.recursospython.com/recursos/la-funcion-enumerate.html
+
+
+"""
