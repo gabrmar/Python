@@ -1,10 +1,11 @@
-days= { 'Mon', 'Tue', 'Wed','Thu'}
-enum_days = enumerate(days)
-print(type(enum_days))
+#from windrose import WindroseAxes
+import numpy as np 
+import pandas as pd
 
-# converting it to alist
-print(list(enum_days))
-
-# changing the default counter to 5
-enum_days = enumerate(days, 5)
-print(list(enum_days))
+x = pd.read_csv(r'C:\Users\gm_ll\OneDrive - UNIVERSIDAD AUTONOMA DEL CARIBE\Gmecatronics\Sistemas informáticos\Python\Códigos\Test.csv')
+df = pd.DataFrame(x)
+print(df)
+#a = list(df.iloc[1:,0])
+#b = list(df.iloc[1:,1])
+#print(a)
+#print(b)
