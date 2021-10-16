@@ -1,6 +1,7 @@
 # datos tipo tupla 
 """"
-Similares a las listas, las tuplas son secuencias de valores que no puede ser modificadas una vez son creadas.
+Similares a las listas, las tuplas son secuencias de valores, sólo que no puede ser modificadas una vez 
+son creadas.
 """
 tupla = ("galleta","pollo",3.14632)
 tupla2 = "hola",3,2,-1 #se puede crear tuplas sin paréntesis
