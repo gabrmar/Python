@@ -1,4 +1,4 @@
-import random
+import random # Módulo para funciones pseudo-aleatorias
 
 print("Bienvenido") 
 pruebas = 2
@@ -8,9 +8,11 @@ i = 0
 while i < pruebas:
     j = 0
     while j < len(binario):
-        binario[j] = random.randint(0,1)
-        j = j + 1 
+        binario[j] = random.randint(0,1) # Geberando número binario "al azar"
+        j = j + 1
     print("número binario número {a}: {b}".format(a=i+1,b=binario))
+
+    # -------Sección de validación de número decimal-----------
 
     decimal_calc = 0
     bit = 7
@@ -23,6 +25,7 @@ while i < pruebas:
     decimal = int(input("¿Cuál es el valor decimal del número binario mostrado?:"))
     i = i + 1
 
+    # ------Sección de presentación de resultados--------
 
     if decimal == decimal_calc:
         print(f"¡Correcto! el valor decimal de {binario} es {decimal}")
