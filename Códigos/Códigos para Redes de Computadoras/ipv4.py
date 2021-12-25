@@ -11,6 +11,14 @@ def bin2dec(bin_list):
 
     return decimal
 
+def bin2dec_ipv4(bin_ipv4_list):
+    pass
+
+def dec2bin(dec):
+    pass
+
 #-----Sumas en binario
+
+
 #-----Cálculos de host(estaciones)
 #----Otros 
