@@ -1,4 +1,4 @@
-import random # Módulo para funciones pseudo-aleatorias
+import random, ipv4 # Módulo para funciones pseudo-aleatorias y librería personalizada de IPv4
 
 print("Bienvenido") 
 pruebas = 2
@@ -14,13 +14,7 @@ while i < pruebas:
 
     # -------Sección de validación de número decimal-----------
 
-    decimal_calc = 0
-    bit = 7
-
-    for k in binario:
-        if k == 1:
-            decimal_calc = decimal_calc + pow(2,bit)
-        bit = bit - 1
+    decimal_calc = ipv4.bin2dec(binario)
 
     decimal = int(input("¿Cuál es el valor decimal del número binario mostrado?:"))
     i = i + 1
