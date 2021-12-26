@@ -28,4 +28,16 @@ def dec2bin(dec):
 
 
 #-----Cálculos de host(estaciones)
+
+def count_bin(dec_ipv4_list,number):
+    bytes = 4
+
+    #-----Extraer números
+    aux = []
+
+    for i in dec_ipv4_list:
+        aux.append(bin(i)) # Al formatear lo valores como binario quedan guardados como cadenas de caracteres con el prefijo 0b
+    return aux  #----This is temporary
+
+
 #----Otros 
