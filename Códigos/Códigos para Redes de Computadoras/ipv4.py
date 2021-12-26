@@ -12,7 +12,14 @@ def bin2dec(bin_list):
     return decimal
 
 def bin2dec_ipv4(bin_ipv4_list):
-    pass
+    decimal_list = [0,0,0,0]
+    bytes = 4
+    i = 0
+
+    while i < bytes:
+        decimal_list[i] = bin2dec(bin_ipv4_list[i]) 
+        i = i + 1
+    return decimal_list
 
 def dec2bin(dec):
     pass
