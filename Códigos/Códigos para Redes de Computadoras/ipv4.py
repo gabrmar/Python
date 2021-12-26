@@ -36,8 +36,18 @@ def count_bin(dec_ipv4_list,number):
     aux = []
 
     for i in dec_ipv4_list:
-        aux.append(bin(i)) # Al formatear lo valores como binario quedan guardados como cadenas de caracteres con el prefijo 0b
-    return aux  #----This is temporary
+        aux.append(bin(i)) #Al formatear lo valores como binario quedan guardados como cadenas de caracteres con el prefijo 0b
+    for i in aux:
+        aux[aux.index(i)] = i[2:] #Eliminando prefijo 0b
+
+        # Agregar ceros de relleno en cada octecto
+
+    #----- Concatenar
+    aux2 = ""
+
+    for i in aux:
+        aux2 = aux2 + i
+    return aux2
 
 
 #----Otros 
