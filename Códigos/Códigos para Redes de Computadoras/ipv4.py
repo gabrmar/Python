@@ -40,14 +40,31 @@ def count_bin(dec_ipv4_list,number):
     for i in aux:
         aux[aux.index(i)] = i[2:] #Eliminando prefijo 0b
 
-        # Agregar ceros de relleno en cada octecto
+    print(aux)
+
+    # Agregar ceros de relleno en cada octecto
+
+    i = 0
+    while i < len(aux):
+        if len(aux[i]) < 8:
+            while len(aux[i]) < 8:
+                aux[i] = "0" + aux[i]
+        i = i + 1
+
+        
+
+    print(aux)
 
     #----- Concatenar
     aux2 = ""
 
     for i in aux:
         aux2 = aux2 + i
-    return aux2
+    
+    #----- Contar
+    # Leer https://www.geeksforgeeks.org/python-program-to-add-two-binary-numbers/
+
+    pass
 
 
 #----Otros 
