@@ -1,4 +1,4 @@
-decimal = 200
+decimal = int(input("Coloca el número decimal que quieres convertir a binario: "))
 binario = [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ]
 bit = 7
 if decimal > 255:
