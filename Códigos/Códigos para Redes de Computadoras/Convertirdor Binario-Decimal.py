@@ -1,6 +1,12 @@
 import ipv4
 
-binario = [1 ,0, 0, 1, 0, 0, 0, 1]
+aux = input("Coloca el número binario a convertir: ")
 
-decimal = ipv4.bin2dec(binario)
-print(decimal)
+#-----formateando entrada para que sea una lista de valores enteros 
+
+binario = []
+for i in  aux:
+    binario.append(int(i))
+
+decimal = ipv4.bin2dec(binario) #Está en consideración si se necesita colocar el formateo dentoro de la librería IPv4
+print(decimal) 
