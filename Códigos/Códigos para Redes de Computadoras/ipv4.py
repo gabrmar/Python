@@ -1,6 +1,14 @@
 #-----conversiones
 
-def bin2dec(bin_list):
+def bin2dec(bin_str):
+    
+    #---Formateando string binaria a lista
+
+    bin_list = []
+    for i in  bin_str:
+        bin_list.append(int(i))
+
+
     decimal = 0
     bit = 7
 
