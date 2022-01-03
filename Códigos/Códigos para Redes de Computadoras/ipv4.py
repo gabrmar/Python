@@ -19,7 +19,7 @@ def bin2dec(bin_str):
 
     return decimal
 
-def bin2dec_ipv4(bin_ipv4_list):
+def bin2dec_ipv4(bin_ipv4_list): #Convertir una dirección IPv4 en binario a su versión decimal
     decimal_list = [0,0,0,0]
     bytes = 4
     i = 0
@@ -29,8 +29,18 @@ def bin2dec_ipv4(bin_ipv4_list):
         i = i + 1
     return decimal_list
 
-def dec2bin(dec):
-    pass
+def dec2bin(decimal): #Convertir un número decimal a binario
+    binario = [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ]
+    bit = 7
+
+    if decimal > 255:
+        print("El número decimal seleccionado debe ser menor a 256")
+    else:
+        for i in binario:
+            binario[bit] = decimal%2
+            decimal = decimal//2
+            bit = bit -1
+    return binario
 
 #-----Sumas en binario
 
