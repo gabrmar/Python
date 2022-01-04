@@ -1,6 +1,6 @@
 #-----conversiones
 
-def bin2dec(bin_str):
+def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
     
     #---Formateando string binaria a lista
 
@@ -41,6 +41,17 @@ def dec2bin(decimal): #Convertir un número decimal a binario
             decimal = decimal//2
             bit = bit -1
     return binario
+
+def dec2bin_ipv4(dec_ipv4_list):
+    bin_list = [0, 0, 0, 0]
+    bytes = 4
+    i = 0
+
+    while i < bytes:
+        bin_list[i] =dec2bin(dec_ipv4_list[i])
+        i = i + 1
+    return bin_list
+
 
 #-----Sumas en binario
 
