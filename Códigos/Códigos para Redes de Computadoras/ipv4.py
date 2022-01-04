@@ -42,7 +42,7 @@ def dec2bin(decimal): #Convertir un número decimal a binario
             bit = bit -1
     return binario
 
-def dec2bin_ipv4(dec_ipv4_list):
+def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su formato en binario
     bin_list = [0, 0, 0, 0]
     bytes = 4
     i = 0
