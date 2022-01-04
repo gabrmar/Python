@@ -8,6 +8,14 @@ def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
     for i in  bin_str:
         bin_list.append(int(i))
 
+    #---Añadiendo ceros para tener el tamaño de 8 bits en caso de ser menor a este
+
+    if len(bin_list) < 8: 
+        while len(bin_list) != 8:
+            bin_list.insert(0,"0")
+
+    print(f"Conviertiendo {bin_list}:")
+
 
     decimal = 0
     bit = 7
