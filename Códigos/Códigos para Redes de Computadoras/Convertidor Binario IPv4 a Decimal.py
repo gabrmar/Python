@@ -8,6 +8,6 @@ while i < 4:
         j = j + 1
     i = i + 1
 
-print(bin)    
+print(f"Dirección IPv4 en binario:{bin}")    
 dec_ipv4 = ipv4.bin2dec_ipv4(bin) # Conversión a decimal 
-print(dec_ipv4)
+print(f"Dirección IPv4 en decimal:{dec_ipv4}")
