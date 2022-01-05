@@ -1,3 +1,14 @@
+#----Misceláneos 
+
+def padding(bin_list):
+
+    if len(bin_list) < 8: 
+        while len(bin_list) != 8:
+            bin_list.insert(0,"0")
+    
+    return bin_list
+
+
 #-----conversiones
 
 def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
@@ -7,13 +18,7 @@ def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
     bin_list = []
     for i in  bin_str:
         bin_list.append(int(i))
-
-    #---Añadiendo ceros para tener el tamaño de 8 bits en caso de ser menor a este
-
-    if len(bin_list) < 8: 
-        while len(bin_list) != 8:
-            bin_list.insert(0,"0")
-
+    bin_list = padding(bin_list) #Añadiendo ceros para tener el tamaño de 8 bits en caso de ser menor a este
     print(f"Conviertiendo {bin_list}:")
 
 
