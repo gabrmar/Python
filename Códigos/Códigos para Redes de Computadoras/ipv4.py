@@ -1,3 +1,5 @@
+import random
+
 #----Misceláneos 
 
 def padding(bin_list):
@@ -8,6 +10,17 @@ def padding(bin_list):
     
     return bin_list
 
+def rand_ipv4(mode="d"):
+    dec_ipv4 = []  #Plantilla para rellenar una dirección IPv4 aleatoria
+    if mode=="d":
+        i = 0
+        while i < 4:
+            dec_ipv4.append(random.randint(0,255))
+            i = i + 1
+        address = dec_ipv4
+        #else if mode=="b":
+
+    return address
 
 #-----conversiones
 
