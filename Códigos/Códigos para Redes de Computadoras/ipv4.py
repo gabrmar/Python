@@ -11,14 +11,23 @@ def padding(bin_list):
     return bin_list
 
 def rand_ipv4(mode="d"):
-    dec_ipv4 = []  #Plantilla para rellenar una dirección IPv4 aleatoria
     if mode=="d":
+        dec_ipv4 = []  #Plantilla para dirección IPv4
         i = 0
         while i < 4:
             dec_ipv4.append(random.randint(0,255))
             i = i + 1
         address = dec_ipv4
-        #else if mode=="b":
+    elif mode=="b":
+        bin_ipv4 = [[],[],[],[]]  #Plantilla para dirección IPv4
+        i = 0
+        while i < 4:
+            j = 0
+            while j < 8:
+                bin_ipv4[i].append(random.randint(0,1))
+                j = j + 1
+            i = i + 1
+        address = bin_ipv4 
 
     return address
 
@@ -32,8 +41,6 @@ def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
     for i in  bin_str:
         bin_list.append(int(i))
     bin_list = padding(bin_list) #Añadiendo ceros para tener el tamaño de 8 bits en caso de ser menor a este
-    print(f"Conviertiendo {bin_list}:")
-
 
     decimal = 0
     bit = 7
