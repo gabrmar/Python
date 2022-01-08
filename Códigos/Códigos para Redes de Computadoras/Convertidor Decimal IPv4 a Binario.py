@@ -2,7 +2,7 @@ import ipv4
 
 dec = ipv4.rand_ipv4()
 
-#Probar formateo de lista generada aquí. esta sólo debe usarse para firnes de presentación y 
+#Probar formateo de lista generada aquí. esta sólo debe usarse para fines de presentación y
 #no para ser colocada dentro de la función dec2bin()
 
 print(f"Dirección IPv4 en decimal:{dec}")    
