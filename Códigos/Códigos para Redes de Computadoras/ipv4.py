@@ -7,8 +7,18 @@ def padding(bin_list):
     if len(bin_list) < 8: 
         while len(bin_list) != 8:
             bin_list.insert(0,"0")
-    
+
     return bin_list
+
+def formant_bin(bin_list):
+    
+    #----Convertir lista entera a cadena string
+    cadena = ""
+    for i in bin_list:
+        cadena = cadena + str(i)
+    
+
+    return cadena
 
 def rand_ipv4(mode="d"):
     if mode=="d":
@@ -73,6 +83,8 @@ def dec2bin(decimal): #Convertir un número decimal a binario
             binario[bit] = decimal%2
             decimal = decimal//2
             bit = bit -1
+    
+    binario = formant_bin(binario)
     return binario
 
 def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su formato en binario
