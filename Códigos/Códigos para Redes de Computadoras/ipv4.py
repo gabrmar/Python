@@ -95,7 +95,17 @@ def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su
     while i < bytes:
         bin_list[i] =dec2bin(dec_ipv4_list[i])
         i = i + 1
-    return bin_list
+    
+    # ----Formateando salida a estilo de IPv4
+
+    cadena = ""
+    for i in bin_list:
+        if bin_list.index(i) == len(bin_list) -1:
+            cadena = cadena + i
+        else:
+            cadena = cadena + i +". "
+
+    return cadena
 
 
 #-----Sumas en binario
