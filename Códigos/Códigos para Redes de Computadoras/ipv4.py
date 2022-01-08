@@ -10,7 +10,7 @@ def padding(bin_list):
 
     return bin_list
 
-def formant_bin(bin_list):
+def format_bin(bin_list):
     
     #----Convertir lista entera a cadena string
     cadena = ""
@@ -84,7 +84,7 @@ def dec2bin(decimal): #Convertir un número decimal a binario
             decimal = decimal//2
             bit = bit -1
     
-    binario = formant_bin(binario)
+    binario = format_bin(binario)
     return binario
 
 def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su formato en binario
