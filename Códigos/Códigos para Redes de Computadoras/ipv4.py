@@ -16,8 +16,18 @@ def format_bin(bin_list):
     cadena = ""
     for i in bin_list:
         cadena = cadena + str(i)
-    
 
+    return cadena
+
+def format_IPv4(list): #----Convertir lista valores binarios o decimales a formato de dirección IPv4
+    
+    cadena = ""
+    for i in list:
+        if list.index(i) == len(list) - 1:
+            cadena = cadena + str(i)
+        else:
+            cadena = cadena + str(i) + "."
+    
     return cadena
 
 def rand_ipv4(mode="d"):
@@ -82,7 +92,7 @@ def dec2bin(decimal): #Convertir un número decimal a binario
         for i in binario:
             binario[bit] = decimal%2
             decimal = decimal//2
-            bit = bit -1
+            bit = bit - 1
     
     binario = format_bin(binario)
     return binario
@@ -93,17 +103,19 @@ def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su
     i = 0
 
     while i < bytes:
-        bin_list[i] =dec2bin(dec_ipv4_list[i])
+        bin_list[i] = dec2bin(dec_ipv4_list[i])
         i = i + 1
     
     # ----Formateando salida a estilo de IPv4
 
     cadena = ""
+
     for i in bin_list:
-        if bin_list.index(i) == len(bin_list) -1:
+        if bin_list.index(i) == len(bin_list) - 1:
             cadena = cadena + i
         else:
-            cadena = cadena + i +". "
+
+            cadena = cadena + i + ". "
 
     return cadena
 
