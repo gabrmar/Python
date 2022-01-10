@@ -19,14 +19,14 @@ def format_bin(bin_list):
 
     return cadena
 
-def format_IPv4(list): #----Convertir lista valores binarios o decimales a formato de dirección IPv4
-    
+def format_IPv4(list,mode="d"): #----Convertir lista valores binarios o decimales a formato de dirección IPv4
     cadena = ""
-    for i in list:
-        if list.index(i) == len(list) - 1:
-            cadena = cadena + str(i)
-        else:
-            cadena = cadena + str(i) + "."
+    if mode == "d":
+        for i in list:
+            if list.index(i) == len(list) - 1:
+                cadena = cadena + str(i)
+            else:
+                cadena = cadena + str(i) + "."
     
     return cadena
 
