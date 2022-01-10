@@ -27,6 +27,14 @@ def format_IPv4(list,mode="d"): #----Convertir lista valores binarios o decimale
                 cadena = cadena + str(i)
             else:
                 cadena = cadena + str(i) + "."
+    elif mode == "b":
+        for i in list:
+            list[list.index(i)] = format_bin(i)
+        for i in list:
+            if list.index(i) == len(list) - 1:
+                cadena = cadena + str(i)
+            else:
+                cadena = cadena + str(i) + ". "
     
     return cadena
 
