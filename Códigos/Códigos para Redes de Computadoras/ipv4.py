@@ -122,6 +122,11 @@ def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su
 
 #-----Sumas en binario
 
+#-----IP con clase
+
+def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
+    pass
+
 
 #-----Cálculos de host(estaciones)
 
