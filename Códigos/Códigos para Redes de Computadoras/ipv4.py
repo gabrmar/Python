@@ -1,8 +1,8 @@
 import random
 
-#----Misceláneos 
+#-----Formateo de datos
 
-def padding(bin_list):
+def padding(bin_list): #Rellenar con ceros a la izquierda los valores binarios que usen menos de 8 dígitos
 
     if len(bin_list) < 8: 
         while len(bin_list) != 8:
@@ -10,16 +10,15 @@ def padding(bin_list):
 
     return bin_list
 
-def format_bin(bin_list):
+def format_bin(bin_list): #Convertir lista entera a cadena string para mostrar un número binario como una sola variable string
     
-    #----Convertir lista entera a cadena string
     cadena = ""
     for i in bin_list:
         cadena = cadena + str(i)
 
     return cadena
 
-def format_IPv4(list,mode="d"): #----Convertir lista valores binarios o decimales a formato de dirección IPv4
+def format_IPv4(list,mode="d"): #Convertir lista valores binarios o decimales a formato de dirección IPv4
     cadena = ""
     if mode == "d":
         for i in list:
@@ -38,7 +37,9 @@ def format_IPv4(list,mode="d"): #----Convertir lista valores binarios o decimale
     
     return cadena
 
-def rand_ipv4(mode="d"):
+#-----Rutinas de utilidad
+
+def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decimal o binario
     if mode=="d":
         dec_ipv4 = []  #Plantilla para dirección IPv4
         i = 0
