@@ -120,6 +120,13 @@ def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su
 
 #-----Sumas en binario
 
+def sum_bin(a,b):
+    sum = int(a,2) + int(b,2)
+    bin_sum = bin(sum)
+    bin_sum = bin_sum[2:]
+    
+    return bin_sum
+
 #-----IP con clase
 
 def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
