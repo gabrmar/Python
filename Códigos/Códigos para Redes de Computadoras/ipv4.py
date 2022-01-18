@@ -1,6 +1,6 @@
 import random
 
-#-----Formateo de datos
+#----- Bloque de Formateo de datos
 
 def padding(bin_list): #Rellenar con ceros a la izquierda los valores binarios que usen menos de 8 dígitos
 
@@ -37,7 +37,7 @@ def format_IPv4(list,mode="d"): #Convertir lista valores binarios o decimales a 
     
     return cadena
 
-#-----Rutinas de utilidad
+#----- Bloque de rutinas de utilidad
 
 def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decimal o binario
     if mode=="d":
@@ -60,7 +60,7 @@ def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decima
 
     return address
 
-#-----conversiones
+#***********conversiones
 
 def bin2dec(bin_str): #Convertir un binario de 8 bits a decimal
     
@@ -117,7 +117,7 @@ def dec2bin_ipv4(dec_ipv4_list): #Conversión de dirección IPv4 en decimal a su
     return bin_list
 
 
-#-----Sumas en binario
+#***********Sumas en binario
 
 def sum_bin(a,b):
     sum = int(a,2) + int(b,2)
@@ -126,13 +126,13 @@ def sum_bin(a,b):
     
     return bin_sum
 
-#-----IP con clase
+#********IP con clase
 
 def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
     pass
 
 
-#-----Cálculos de host(estaciones)
+#******Cálculos de host(estaciones)
 
 def count_bin(dec_ipv4_list,number):
     bytes = 4
@@ -160,7 +160,7 @@ def count_bin(dec_ipv4_list,number):
 
     print(aux)
 
-    #----- Concatenar
+    #***** Concatenar
     aux2 = ""
 
     for i in aux:
