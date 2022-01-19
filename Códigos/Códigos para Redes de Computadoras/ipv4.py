@@ -39,7 +39,7 @@ def format_IPv4(list,mode="d"): #Convertir lista valores binarios o decimales a 
 
 #----- Bloque de rutinas de utilidad
 
-def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decimal o binario
+def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decimal o binario. Dicha dirección es entregada como lista
     if mode=="d":
         dec_ipv4 = []  #Plantilla para dirección IPv4
         i = 0
