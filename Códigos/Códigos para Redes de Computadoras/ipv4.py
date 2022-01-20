@@ -10,7 +10,7 @@ def padding(bin_list): #Rellenar con ceros a la izquierda los valores binarios q
 
     return bin_list
 
-def format_bin(bin_list): #Convertir lista entera a cadena string para mostrar un número binario como una sola variable string
+def format_bin(bin_list): #Convertir lista entera de números binarios a cadena string para mostrar un número binario como una sola variable string
     
     cadena = ""
     for i in bin_list:
@@ -135,37 +135,7 @@ def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
 #******Cálculos de host(estaciones)
 
 def count_bin(dec_ipv4_list,number):
-    bytes = 4
 
-    #-----Extraer números
-    aux = []
-
-    for i in dec_ipv4_list:
-        aux.append(bin(i)) #Al formatear lo valores como binario quedan guardados como cadenas de caracteres con el prefijo 0b
-    for i in aux:
-        aux[aux.index(i)] = i[2:] #Eliminando prefijo 0b
-
-    print(aux)
-
-    # Agregar ceros de relleno en cada octecto
-
-    i = 0
-    while i < len(aux):
-        if len(aux[i]) < 8:
-            while len(aux[i]) < 8:
-                aux[i] = "0" + aux[i]
-        i = i + 1
-
-        
-
-    print(aux)
-
-    #***** Concatenar
-    aux2 = ""
-
-    for i in aux:
-        aux2 = aux2 + i
-    
     #----- Contar
     # Leer https://www.geeksforgeeks.org/python-program-to-add-two-binary-numbers/
 
