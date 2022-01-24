@@ -130,6 +130,7 @@ def sum_bin(a,b):
 
 def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
 
+    print("Verificando clase de la dirección", format_IPv4(dec_ipv4_list))
     clases = {"A":"0","B":"10","C":"110"}
     pass
 
