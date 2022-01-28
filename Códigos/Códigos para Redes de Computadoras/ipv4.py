@@ -130,7 +130,7 @@ def sum_bin(a,b):
 
 def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
 
-    clases = {"A":0,"B":[1,0],"C":[1,1,0]}
+    clases = {"A":0,"B":[1,0],"C":[1,1,0],"D":[1,1,1,0],"E":[1,1,1,1]}
     clase = ""
 
     print("Verificando clase de la dirección", format_IPv4(dec_ipv4_list))
@@ -138,14 +138,18 @@ def get_class(dec_ipv4_list): #Definir la clase de la dirección IPv4 dada
     byte = bin_ipv4_list[0] #Sólo el primer byte es suficiente para determinar la clase
     print("Byte de interés",byte)
     
+    #Ver como se puede optimizar estos condicionales con una algún ciclo usando las llaves y cancelarcuando  se haya evaluado la clase C
     if byte[0] == clases["A"]:
         clase = "A"
     elif byte[0:2] == clases["B"]:
         clase = "B"
     elif byte[0:3] == clases["C"]:
         clase = "C"
-
-    #Falta definir las clases especiales
+    elif byte[0:4] == clases["D"]:
+        clase = "D"
+    elif byte[0:4] == clases["E"]:
+        #Acá se necesia evaluar si la dirección IP esté fuera del líte superior de la clase E
+        clase = "E"
 
     return clase
 
