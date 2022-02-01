@@ -5,6 +5,5 @@ while i < 100:
     IPv4 = ipv4.format_IPv4(address)
     print("Verificando clase de la dirección", IPv4 )
     clase = ipv4.get_class(address)
-    if clase == "E":
-        print(f"La dirección {IPv4} es de clase {clase}")
+    print(f"La dirección {IPv4} es de clase {clase}")
     i = i + 1
