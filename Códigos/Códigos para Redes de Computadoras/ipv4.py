@@ -49,7 +49,7 @@ def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decima
             i = i + 1
         address = dec_ipv4
 
-        for i in address: #Evaluando si la dirección IP resuelta siento 255.255.255.255 la cual no es una dirección válida
+        for i in address: #Evaluando si la dirección IP resuelta siendo 255.255.255.255 la cual no es una dirección válida
             aux = i + aux
         if aux == 255*4:
             address = [192,168,10,1]
@@ -64,7 +64,15 @@ def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decima
                 bin_ipv4[i].append(random.randint(0,1))
                 j = j + 1
             i = i + 1
-        address = bin_ipv4 
+        address = bin_ipv4
+
+        for i in address: #Evaluando si la dirección IP resuelta siendo 4 bytes llenos de 1111 1111 la cual no es una dirección válida
+            aux = i + aux # Hacer prueba de concepto aquí. Se necesita ver el comportamiento de la suma de las  listas con valores enteros
+        if aux == 255*4:
+            address =[[1,0,1,0,1,0,1,0],[1,0,1,0,1,0,1,0],[1,0,1,0,1,0,1,0],[1,0,1,0,1,0,1,0]]
+            print("Dirección IPv4 por defecto utilizada")
+
+    """Se necesita hacer una prueba de cooncepto de estos casos extremos en un código aparte"""
 
     return address
 
