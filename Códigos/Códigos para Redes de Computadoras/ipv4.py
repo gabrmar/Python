@@ -40,6 +40,7 @@ def format_IPv4(list,mode="d"): #Convertir lista valores binarios o decimales a 
 #----- Bloque de rutinas de utilidad
 
 def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decimal o binario. Dicha dirección es entregada como lista
+    aux = 0
     if mode=="d":
         dec_ipv4 = []  #Plantilla para dirección IPv4
         i = 0
@@ -47,6 +48,13 @@ def rand_ipv4(mode="d"): #Genera una dirección IPv4 aleatoria en sistema decima
             dec_ipv4.append(random.randint(0,255))
             i = i + 1
         address = dec_ipv4
+
+        for i in address: #Evaluando si la dirección IP resuelta siento 255.255.255.255 la cual no es una dirección válida
+            aux = i + aux
+        if aux == 255*4:
+            address = [192,168,10,1]
+            print("Dirección IPv4 por defecto utilizada")
+
     elif mode=="b":
         bin_ipv4 = [[],[],[],[]]  #Plantilla para dirección IPv4
         i = 0
