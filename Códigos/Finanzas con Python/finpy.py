@@ -5,6 +5,10 @@ def icompuesto(tasa_interes,cuota,monto):
     interesTotales = 0 
     capital = monto #Capital adeudado 
     capitalTotal = monto
+    
+    #Se necesita hacer una evaluación de los valores de cuota vs montos e intereses para que sean viables para el resto del
+    #código
+
     while capital > 0:
         intereses = capital*(tasa_interes/100)
         #print("Intereses:",round(intereses,0))
