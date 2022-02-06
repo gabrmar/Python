@@ -19,10 +19,10 @@ def icompuesto(tasa_interes,cuota,monto):
         capitalTotal = monto
         while capital > 0:
             intereses = capital*(tasa_interes/100)
-            #print("Intereses:",round(intereses,0))
+            #print("Intereses:",round(intereses,0)) #Habilitar sólo para depurar
             interesTotales = interesTotales + intereses
             capital = capital + intereses
-            #print("Capital a pagar:",round(capital,0))
+            #print("Capital por pagar:",round(capital,0)) #Habilitar sólo para depurar
             capital = capital - cuota
             if capital < 0:
                 break
