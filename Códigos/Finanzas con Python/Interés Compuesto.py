@@ -11,7 +11,6 @@ analisis = finpy.icompuesto(tasa,cuota,monto) #La variable deentrada es un dicci
 if isinstance(analisis,str): #Evaluando el tipo de variable entregada por la función
     print(analisis)
 else:
-    print(type(analisis))
     print(analisis.lista_capi)
     print(analisis.lista_inter)
     print(analisis.capitalTotal)

@@ -37,11 +37,8 @@ def icompuesto(tasa_interes,cuota,monto):
         while capital > 0:
             intereses = capital*(tasa_interes/100)
             #print("Intereses:",round(intereses,0)) #Habilitar sólo para depurar
-            capt.append(capital)
-            inter.append(intereses)
-
-            resultado.lista_capi = capt
-            resultado.lista_inter = inter
+            resultado.lista_capi.append(capital)
+            resultado.lista_inter.append(intereses)
 
             interesTotales = interesTotales + intereses
             capital = capital + intereses
@@ -55,10 +52,7 @@ def icompuesto(tasa_interes,cuota,monto):
         resultado.interesesTotales = interesTotales
         resultado.proporcion = proporcionIntereses
 
-        #out = {"Intereses Pagados":interesTotales, "Capital Pagado":capitalTotal, "Porcentaje de intereses":proporcionIntereses, "Lista Capital":capt, "Lista Interes":inter}
-        out = resultado
-
-        return out
+        return resultado
 
 
     
