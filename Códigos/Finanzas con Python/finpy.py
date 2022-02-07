@@ -39,6 +39,10 @@ def icompuesto(tasa_interes,cuota,monto):
             #print("Intereses:",round(intereses,0)) #Habilitar sólo para depurar
             capt.append(capital)
             inter.append(intereses)
+
+            resultado.lista_capi = capt
+            resultado.lista_inter = inter
+
             interesTotales = interesTotales + intereses
             capital = capital + intereses
             #print("Capital por pagar:",round(capital,0)) #Habilitar sólo para depurar
@@ -47,6 +51,7 @@ def icompuesto(tasa_interes,cuota,monto):
                 break
         capitalTotal = capitalTotal + interesTotales
         proporcionIntereses = (interesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
+        #print("Prueba",resultado.lista_capi)
 
         out = {"Intereses Pagados":interesTotales, "Capital Pagado":capitalTotal, "Porcentaje de intereses":proporcionIntereses, "Lista Capital":capt, "Lista Interes":inter}
 
