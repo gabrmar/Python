@@ -19,37 +19,27 @@ def icompuesto(tasa_interes,cuota,monto):
     capitalTotal = -1
     proporcionIntereses = -1
 
-    capt = []
-    inter = []
-   
-
-    
-    #Se necesita hacer una evaluación de los valores de cuota vs montos e intereses para que sean viables para el resto del
-    #código
-
     intereses = monto*(tasa_interes/100)
     if intereses > cuota:
         return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
         resultado = analisis()
         capital = monto #Capital adeudado 
-        capitalTotal = monto
+        resultado.capitalTotal = monto
         while capital > 0:
             intereses = capital*(tasa_interes/100)
             #print("Intereses:",round(intereses,0)) #Habilitar sólo para depurar
             resultado.lista_capi.append(capital)
             resultado.lista_inter.append(intereses)
 
-            interesTotales = interesTotales + intereses
+            resultado.interesesTotales = resultado.interesesTotales + intereses
             capital = capital + intereses
             #print("Capital por pagar:",round(capital,0)) #Habilitar sólo para depurar
             capital = capital - cuota
             if capital < 0:
                 break
-        capitalTotal = capitalTotal + interesTotales
-        proporcionIntereses = (interesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
-        resultado.capitalTotal = capitalTotal
-        resultado.interesesTotales = interesTotales
+        resultado.capitalTotal = resultado.capitalTotal + resultado.interesesTotales
+        proporcionIntereses = (resultado.interesesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
         resultado.proporcion = proporcionIntereses
 
         return resultado
