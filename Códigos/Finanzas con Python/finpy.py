@@ -16,7 +16,7 @@ def icompuesto(tasa_interes,cuota,monto):
 
     intereses = monto*(tasa_interes/100)
     if intereses > cuota:
-        print("Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual")
+        return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
         capital = monto #Capital adeudado 
         capitalTotal = monto
@@ -36,5 +36,7 @@ def icompuesto(tasa_interes,cuota,monto):
 
         out = {"Intereses Pagados":interesTotales, "Capital Pagado":capitalTotal, "Porcentaje de intereses":proporcionIntereses, "Lista Capital":capt, "Lista Interes":inter}
 
+        return out
 
-    return out
+
+    
