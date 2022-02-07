@@ -1,5 +1,18 @@
 #Interés Compuesto
+from logging import captureWarnings
 import math
+
+class analisis:
+
+    def __init__(self,capitalTotal = -1,interesesTotales = -1,proporcion = -1,lista_capi = [],lista_inter = []):
+        self.capitalTotal = capitalTotal
+        self.interesesTotales = interesesTotales
+        self.proporcion = proporcion
+        self.lista_capi = lista_capi
+        self.lista_inter = lista_inter
+
+
+
 
 def icompuesto(tasa_interes,cuota,monto):
     interesTotales = -1
@@ -18,6 +31,7 @@ def icompuesto(tasa_interes,cuota,monto):
     if intereses > cuota:
         return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
+        resultado = analisis()
         capital = monto #Capital adeudado 
         capitalTotal = monto
         while capital > 0:
