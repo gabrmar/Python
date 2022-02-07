@@ -51,9 +51,12 @@ def icompuesto(tasa_interes,cuota,monto):
                 break
         capitalTotal = capitalTotal + interesTotales
         proporcionIntereses = (interesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
-        #print("Prueba",resultado.lista_capi)
+        resultado.capitalTotal = capitalTotal
+        resultado.interesesTotales = interesTotales
+        resultado.proporcion = proporcionIntereses
 
-        out = {"Intereses Pagados":interesTotales, "Capital Pagado":capitalTotal, "Porcentaje de intereses":proporcionIntereses, "Lista Capital":capt, "Lista Interes":inter}
+        #out = {"Intereses Pagados":interesTotales, "Capital Pagado":capitalTotal, "Porcentaje de intereses":proporcionIntereses, "Lista Capital":capt, "Lista Interes":inter}
+        out = resultado
 
         return out
 

@@ -12,4 +12,9 @@ if isinstance(analisis,str): #Evaluando el tipo de variable entregada por la fun
     print(analisis)
 else:
     print(type(analisis))
-    print(analisis)
+    print(analisis.lista_capi)
+    print(analisis.lista_inter)
+    print(analisis.capitalTotal)
+    print(analisis.interesesTotales)
+    print(analisis.proporcion)
+
