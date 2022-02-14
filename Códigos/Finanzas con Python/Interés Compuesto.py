@@ -1,6 +1,5 @@
 import string
 import stringprep
-from tokenize import String
 import finpy
 
 tasa = 1.5 #Interés efectivo mensual

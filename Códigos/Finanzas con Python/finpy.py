@@ -44,5 +44,6 @@ def icompuesto(tasa_interes,cuota,monto):
 
         return resultado
 
-
+def formato(numero):
+    pass 
     
