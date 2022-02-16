@@ -44,6 +44,14 @@ def icompuesto(tasa_interes,cuota,monto):
 
         return resultado
 
-def formato(numero):
+def formato(numero, moneda="COP"):
+    """Objetivo. Formatear números y listas a formato de moneda.
+    
+    Tareas:
+
+    1. Definir si el parámetro recibdido es un valor único o una lista
+    2. Proceder con el debido formateo según el tipo de variable
+
+    """
     pass 
     
