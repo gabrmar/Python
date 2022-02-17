@@ -51,7 +51,14 @@ def formato(numero, moneda="COP"):
 
     1. Definir si el parámetro recibdido es un valor único o una lista
     2. Proceder con el debido formateo según el tipo de variable
-
+    
     """
+    print(type(numero))
+    check = isinstance(numero,float)
+    print(check)
+    if check == True:
+        print("Número flotante detectado")
+    else:
+        print("Número flotante no detectado")
     pass 
     
