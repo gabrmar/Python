@@ -55,7 +55,9 @@ def formato(numero, moneda="COP"):
     """
     check = isinstance(numero,float)
     if check == True:
+        numero = round(numero,0)
         salida = str(numero)
+        salida = "$ " + salida
     else:
         print("Número flotante no detectado")
         salida = 0
