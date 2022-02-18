@@ -53,12 +53,12 @@ def formato(numero, moneda="COP"):
     2. Proceder con el debido formateo según el tipo de variable
     
     """
-    print(type(numero))
     check = isinstance(numero,float)
-    print(check)
     if check == True:
-        print("Número flotante detectado")
+        salida = str(numero)
     else:
         print("Número flotante no detectado")
-    pass 
+        salida = 0
+
+    return salida
     

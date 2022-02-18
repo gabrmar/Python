@@ -12,6 +12,5 @@ print(analisis.lista_inter)
 print(analisis.capitalTotal)
 print(analisis.interesesTotales)
 print(analisis.proporcion)
-print(type(analisis.capitalTotal)) #Parece como flotante
-finpy.formato(analisis.capitalTotal)
-
+print(type(finpy.formato(analisis.capitalTotal)))
+print(finpy.formato(analisis.capitalTotal))
