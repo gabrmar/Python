@@ -56,8 +56,17 @@ def formato(numero, moneda="COP"):
     check = isinstance(numero,float)
     if check == True:
         numero = round(numero,0)
-        salida = str(numero)
-        salida = "$ " + salida
+        numero = str(numero)
+        l = len(numero)
+        aux = ""
+        if l > 3:
+            #Creo que lo mejor es generar una nueva variable que recibe un elemento a la vez y cada 3 unidades
+            #agregue un punto a la cadena ya que agregar los puntos dentro de la variable número puede ser complicado de
+            #indexar dichos puntos debido a que el valor de la longitud de la variable cambiaría en cada iteración lo cual
+            #puede haer más difdícil tener una idea clara de en qué posición colocar los puntos
+            pass
+
+        salida = "$ " + aux
     else:
         print("Número flotante no detectado")
         salida = 0
