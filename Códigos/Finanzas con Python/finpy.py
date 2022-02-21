@@ -59,13 +59,14 @@ def formato(numero, moneda="COP"):
         numero = str(numero)
         l = len(numero)
         aux = ""
+        contador = 0
         if l > 3:
-            #Creo que lo mejor es generar una nueva variable que recibe un elemento a la vez y cada 3 unidades
-            #agregue un punto a la cadena ya que agregar los puntos dentro de la variable número puede ser complicado de
-            #indexar dichos puntos debido a que el valor de la longitud de la variable cambiaría en cada iteración lo cual
-            #puede haer más difdícil tener una idea clara de en qué posición colocar los puntos
-            for i  in numero:
+            for i  in numero:  #Toca hacer que numero sea de tipo entero
                 aux = aux + i
+                contador = contador + 1
+                if contador == 3:
+                    aux = aux + "."
+                    contador = 0
                 
         salida = "$ " + aux
     else:
