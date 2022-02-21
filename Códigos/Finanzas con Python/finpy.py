@@ -64,8 +64,9 @@ def formato(numero, moneda="COP"):
             #agregue un punto a la cadena ya que agregar los puntos dentro de la variable número puede ser complicado de
             #indexar dichos puntos debido a que el valor de la longitud de la variable cambiaría en cada iteración lo cual
             #puede haer más difdícil tener una idea clara de en qué posición colocar los puntos
-            pass
-
+            for i  in numero:
+                aux = aux + i
+                
         salida = "$ " + aux
     else:
         print("Número flotante no detectado")
