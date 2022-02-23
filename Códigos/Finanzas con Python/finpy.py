@@ -53,9 +53,9 @@ def formato(numero, moneda="COP"):
     2. Proceder con el debido formateo según el tipo de variable
     
     """
-    check = isinstance(numero,float)
+    numero = int(numero)
+    check = isinstance(numero,int)
     if check == True:
-        numero = round(numero,0)
         numero = str(numero)
         l = len(numero)
         aux = ""
@@ -64,7 +64,8 @@ def formato(numero, moneda="COP"):
             for i  in numero:  #Toca hacer que numero sea de tipo entero
                 aux = aux + i
                 contador = contador + 1
-                if contador == 3:
+                if contador == 3 and numero.index(i) != len(numero) - 1 : #Los puntos decimales deben colocarase simepre que hayan pasado 3 posiciones desde el punto anterior siempre que no sea el
+                    #último dígito del número.
                     aux = aux + "."
                     contador = 0
                 
