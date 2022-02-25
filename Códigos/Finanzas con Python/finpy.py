@@ -53,6 +53,9 @@ def formato(numero, moneda="COP"):
     2. Proceder con el debido formateo según el tipo de variable
     
     """
+
+    """--------------------Revisar desde acá la lógica------------------------"""
+
     numero = int(numero)
     check = isinstance(numero,int)
     if check == True:
@@ -60,15 +63,23 @@ def formato(numero, moneda="COP"):
         l = len(numero)
         aux = ""
         contador = 0
+        print(numero)
         if l > 3:
-            for i  in numero:  #Toca hacer que numero sea de tipo entero
+            for i  in numero:
+                print("i:",i) 
                 aux = aux + i
+                if numero.index(i) == 0:
+                    print("Saltando índice 0")
+                    continue
                 contador = contador + 1
+                print("contador:",contador)
+                print("índce:",numero.index(i))
                 if contador == 3 and numero.index(i) != len(numero) - 1 : #Los puntos decimales deben colocarase simepre que hayan pasado 3 posiciones desde el punto anterior siempre que no sea el
-                    #último dígito del número.
+                    #último dígito del número. Se necesita mejorar estas condiciones para que sirva para todo número
                     aux = aux + "."
                     contador = 0
-                
+        else:
+            aux = numero
         salida = "$ " + aux
     else:
         print("Número flotante no detectado")
