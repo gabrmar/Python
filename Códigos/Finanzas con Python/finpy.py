@@ -65,22 +65,23 @@ def formato(numero, moneda="COP"):
         contador = 0
         print(numero)
         if l > 3:
-            for i  in numero:
-                print("i:",i) 
+            reversa = numero[::-1]
+            print(reversa)
+            for i in reversa:
                 aux = aux + i
-                if numero.index(i) == 0:
-                    print("Saltando índice 0")
-                    continue
+                print("aux",aux)
                 contador = contador + 1
-                print("contador:",contador)
-                print("índce:",numero.index(i))
-                if contador == 3 and numero.index(i) != len(numero) - 1 : #Los puntos decimales deben colocarase simepre que hayan pasado 3 posiciones desde el punto anterior siempre que no sea el
-                    #último dígito del número. Se necesita mejorar estas condiciones para que sirva para todo número
+                if contador == 3:
                     aux = aux + "."
+                    print("Punto")
                     contador = 0
+                indice = reversa.index(i) # Toca revisar esta parte
+                print("índice",indice)
+                if len(reversa[indice:]) <= 3:
+                    break
+            salida = "$ " + aux[::-1]
         else:
-            aux = numero
-        salida = "$ " + aux
+            salida = "$ " + numero
     else:
         print("Número flotante no detectado")
         salida = 0
