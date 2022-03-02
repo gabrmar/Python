@@ -62,23 +62,25 @@ def formato(numero, moneda="COP"):
         numero = str(numero)
         l = len(numero)
         aux = ""
+        aux2 = -1
         contador = 0
-        print(numero)
         if l > 3:
+            punto = True
             reversa = numero[::-1]
-            print(reversa)
+            print("reversa",reversa)
             for i in reversa:
                 aux = aux + i
-                print("aux",aux)
                 contador = contador + 1
-                if contador == 3:
+                aux2 = aux2 + 1
+                print("aux2",aux2)
+                print("Falta:",len(reversa[aux2:]) - 1) #Para pruebas
+                if contador == 3 and punto == True and aux2 != len(reversa) - 1:
                     aux = aux + "."
                     print("Punto")
                     contador = 0
-                indice = reversa.index(i) # Toca revisar esta parte
-                print("índice",indice)
-                if len(reversa[indice:]) <= 3:
-                    break
+                    if len(reversa[aux2:]) <= 3: #Aún no funciona para el caso de 100 mil 
+                        print("No más puntos.")
+                        punto = False
             salida = "$ " + aux[::-1]
         else:
             salida = "$ " + numero
