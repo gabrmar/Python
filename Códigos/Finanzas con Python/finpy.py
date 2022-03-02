@@ -1,5 +1,4 @@
 #Interés Compuesto
-from logging import captureWarnings
 import math
 
 class analisis:
@@ -20,7 +19,7 @@ def icompuesto(tasa_interes,cuota,monto):
     proporcionIntereses = -1
 
     intereses = monto*(tasa_interes/100)
-    if intereses > cuota:
+    if intereses >= cuota: #Si el pago no logra cubrir los intereses, entonces nunca se podrá pagar la deuda
         return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
         resultado = analisis()
@@ -45,16 +44,6 @@ def icompuesto(tasa_interes,cuota,monto):
         return resultado
 
 def formato(numero, moneda="COP"):
-    """Objetivo. Formatear números y listas a formato de moneda.
-    
-    Tareas:
-
-    1. Definir si el parámetro recibdido es un valor único o una lista
-    2. Proceder con el debido formateo según el tipo de variable
-    
-    """
-
-    """--------------------Revisar desde acá la lógica------------------------"""
 
     numero = int(numero)
     check = isinstance(numero,int)
@@ -67,19 +56,14 @@ def formato(numero, moneda="COP"):
         if l > 3:
             punto = True
             reversa = numero[::-1]
-            print("reversa",reversa)
             for i in reversa:
                 aux = aux + i
                 contador = contador + 1
                 aux2 = aux2 + 1
-                print("aux2",aux2)
-                print("Falta:",len(reversa[aux2:]) - 1) #Para pruebas
                 if contador == 3 and punto == True and aux2 != len(reversa) - 1:
                     aux = aux + "."
-                    print("Punto")
                     contador = 0
-                    if len(reversa[aux2:]) <= 3: #Aún no funciona para el caso de 100 mil 
-                        print("No más puntos.")
+                    if len(reversa[aux2:]) <= 3: 
                         punto = False
             salida = "$ " + aux[::-1]
         else:
