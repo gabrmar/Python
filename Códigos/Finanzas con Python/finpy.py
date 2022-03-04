@@ -22,18 +22,16 @@ def icompuesto(tasa_interes,cuota,monto):
     if intereses >= cuota: #Si el pago no logra cubrir los intereses, entonces nunca se podrá pagar la deuda
         return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
-        resultado = analisis()
-        capital = monto #Capital adeudado 
-        resultado.capitalTotal = monto
+        resultado = analisis() #Creación de instancia  de tipo análisis
+        capital = monto #este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
+        resultado.capitalTotal = capital
         while capital > 0:
             intereses = capital*(tasa_interes/100)
-            #print("Intereses:",round(intereses,0)) #Habilitar sólo para depurar
             resultado.lista_capi.append(capital)
             resultado.lista_inter.append(intereses)
 
             resultado.interesesTotales = resultado.interesesTotales + intereses
             capital = capital + intereses
-            #print("Capital por pagar:",round(capital,0)) #Habilitar sólo para depurar
             capital = capital - cuota
             if capital < 0:
                 break
