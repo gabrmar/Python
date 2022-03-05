@@ -14,8 +14,6 @@ class analisis:
 
 
 def icompuesto(tasa_interes,cuota,monto):
-    interesTotales = -1
-    capitalTotal = -1
     proporcionIntereses = -1
 
     intereses = monto*(tasa_interes/100) #Intereses generados en un periodo de pago
@@ -23,10 +21,10 @@ def icompuesto(tasa_interes,cuota,monto):
         return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
     else:
         resultado = analisis() #Creación de instancia  de tipo análisis
-        capital = monto #este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
+        capital = monto #Este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
         resultado.capitalTotal = capital
         while capital > 0:
-            intereses = capital*(tasa_interes/100)
+            intereses = capital*(tasa_interes/100) #Cálculo de intereses generados
             resultado.lista_capi.append(capital)
             resultado.lista_inter.append(intereses)
 

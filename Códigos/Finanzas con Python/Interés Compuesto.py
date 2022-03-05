@@ -9,10 +9,10 @@ analisis = finpy.icompuesto(tasa,cuota,monto) #La variable de entrada es un dicc
 if type(analisis) == str:
     print(analisis)
 else:
-    print(analisis.lista_capi)
-    print(analisis.lista_inter)
-    print(analisis.capitalTotal)
-    print(analisis.interesesTotales)
-    print(analisis.proporcion)
-    print(type(finpy.formato(analisis.capitalTotal)))
+    print("Evolución del capital:",analisis.lista_capi)
+    print("Evolución de los intereses generados",analisis.lista_inter)
+    print("Capital pagado incluyendo intereses:",analisis.capitalTotal)
+    print("Intereses generados durante el préstamo:",analisis.interesesTotales)
+    print(f"Proporción de intereses: {analisis.proporcion}%")
+    print(type(finpy.formato(analisis.capitalTotal))) #Revisarla importancia de esta línea más tarde
     print(finpy.formato(analisis.interesesTotales))
