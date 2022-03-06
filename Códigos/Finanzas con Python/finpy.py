@@ -25,14 +25,15 @@ def icompuesto(tasa_interes,cuota,monto):
         resultado.capitalTotal = capital
         while capital > 0:
             intereses = capital*(tasa_interes/100) #Cálculo de intereses generados
+            #---- Guardando resultados en listas ---
             resultado.lista_capi.append(capital)
             resultado.lista_inter.append(intereses)
-
             resultado.interesesTotales = resultado.interesesTotales + intereses
             capital = capital + intereses
             capital = capital - cuota
-            if capital < 0:
+            if capital <= 0:
                 break
+        #--- Guardando resultados del préstamo --- 
         resultado.capitalTotal = resultado.capitalTotal + resultado.interesesTotales
         proporcionIntereses = (resultado.interesesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
         resultado.proporcion = proporcionIntereses
