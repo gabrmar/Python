@@ -12,7 +12,7 @@ class analisis:
 
 
 
-
+#--- Rutina de análisis de interés compuesto ----
 def icompuesto(tasa_interes,cuota,monto):
     proporcionIntereses = -1
 
@@ -39,35 +39,31 @@ def icompuesto(tasa_interes,cuota,monto):
         resultado.proporcion = proporcionIntereses
 
         return resultado
-
+        
+#--- Rutina de formateo de números a valor de una divisa ---
 def formato(numero, moneda="COP"):
 
-    numero = int(numero)
-    check = isinstance(numero,int)
-    if check == True:
-        numero = str(numero)
-        l = len(numero)
-        aux = ""
-        aux2 = -1
-        contador = 0
-        if l > 3:
-            punto = True
-            reversa = numero[::-1]
-            for i in reversa:
-                aux = aux + i
-                contador = contador + 1
-                aux2 = aux2 + 1
-                if contador == 3 and punto == True and aux2 != len(reversa) - 1:
-                    aux = aux + "."
-                    contador = 0
-                    if len(reversa[aux2:]) <= 3: 
-                        punto = False
-            salida = "$ " + aux[::-1]
-        else:
-            salida = "$ " + numero
+    numero = int(numero) #Elimiando crifras decimales
+    numero = str(numero)
+    l = len(numero)
+    aux = ""
+    aux2 = -1
+    contador = 0
+    if l > 3:
+        punto = True
+        reversa = numero[::-1]
+        for i in reversa:
+            aux = aux + i
+            contador = contador + 1
+            aux2 = aux2 + 1
+            if contador == 3 and punto == True and aux2 != len(reversa) - 1:
+                aux = aux + "."
+                contador = 0
+                if len(reversa[aux2:]) <= 3: 
+                    punto = False
+        salida = "$ " + aux[::-1]
     else:
-        print("Número flotante no detectado")
-        salida = 0
+        salida = "$ " + numero
 
     return salida
     
