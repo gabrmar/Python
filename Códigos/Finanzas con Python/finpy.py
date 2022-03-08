@@ -44,19 +44,24 @@ def icompuesto(tasa_interes,cuota,monto):
 def formato(numero, moneda="COP"):
 
     numero = int(numero) #Elimiando crifras decimales
-    numero = str(numero)
+    numero = str(numero) #Transformando números en string para poder contatenar puntos y el símbolo de la moneda
     l = len(numero)
-    aux = ""
-    aux2 = -1
+    aux = "" #Auxiliar de la variable de salida
+    aux2 = -1 #Auxiliar del contador de recorrido de la string numero
     contador = 0
-    if l > 3:
+    if l > 3: # Si el número no tiene más de tres cifras, entonces no se necesita colocar ningún punto
         punto = True
-        reversa = numero[::-1]
+        reversa = numero[::-1] #Inversión del número
         for i in reversa:
             aux = aux + i
             contador = contador + 1
             aux2 = aux2 + 1
+            #--- Cóndición para dejar de colocar puntos ---
             if contador == 3 and punto == True and aux2 != len(reversa) - 1:
+                #Explicación:
+                #Se debe colocar un punto cada 3 cifras (contador == 3)
+                #Esto debe continuar mientras la variable punto se mantenga verdadera (punto == True)
+                #No se deben colocar más puntos si faltan menos de 3 cifras para finalizar el recorrido (aux2 != len(reversa) - 1)
                 aux = aux + "."
                 contador = 0
                 if len(reversa[aux2:]) <= 3: 
