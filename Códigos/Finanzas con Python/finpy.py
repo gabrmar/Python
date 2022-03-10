@@ -41,9 +41,7 @@ def icompuesto(tasa_interes,cuota,monto):
         return resultado
         
 #--- Rutina de formateo de números a valor de una divisa ---
-def formato(numero, moneda="COP"):
-
-    #------Crear diccionario de monedas-------------
+def formato(numero):
 
     numero = int(numero) #Elimiando crifras decimales
     numero = str(numero) #Transformando números en string para poder contatenar puntos y el símbolo de la moneda
