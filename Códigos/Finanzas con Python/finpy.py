@@ -43,6 +43,8 @@ def icompuesto(tasa_interes,cuota,monto):
 #--- Rutina de formateo de números a valor de una divisa ---
 def formato(numero, moneda="COP"):
 
+    #------Crear diccionario de monedas-------------
+
     numero = int(numero) #Elimiando crifras decimales
     numero = str(numero) #Transformando números en string para poder contatenar puntos y el símbolo de la moneda
     l = len(numero)
@@ -64,9 +66,9 @@ def formato(numero, moneda="COP"):
                 #No se deben colocar más puntos si faltan menos de 3 cifras para finalizar el recorrido (aux2 != len(reversa) - 1)
                 aux = aux + "."
                 contador = 0
-                if len(reversa[aux2:]) <= 3: 
+                if len(reversa[aux2:]) <= 3: #Comprobando si luego de agregar el último punto de mil quedan 3 crifas o menos
                     punto = False
-        salida = "$ " + aux[::-1]
+        salida = "$ " + aux[::-1] #Nueva reversa del número para obtenerlo en el orden deseado
     else:
         salida = "$ " + numero
 
