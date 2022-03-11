@@ -18,7 +18,7 @@ def icompuesto(tasa_interes,cuota,monto):
 
     intereses = monto*(tasa_interes/100) #Intereses generados en un periodo de pago
     if intereses >= cuota: #Si el pago no logra cubrir los intereses, entonces nunca se podrá pagar la deuda
-        return "Por favor aumentar el valor de la cuota para poder pagar este crédito con la tasa de interés actual"
+        return "El crédito no se puede pagar con los valores establecidos. Es recomendable incrementar la cuota mensual."
     else:
         resultado = analisis() #Creación de instancia  de tipo análisis
         capital = monto #Este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
