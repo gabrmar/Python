@@ -18,3 +18,14 @@ else:
     print(finpy.formato(analisis.interesesTotales))
 
 #-------Exportar los datos en un archivo de texto-----------
+
+#------Versión sin formato 
+lista1 = "Evolucion del capital: " + str(analisis.lista_capi)
+lista2 = "Evolucion de los intereses: " + str(analisis.lista_inter)
+#------Crear una lista de listas para cada cadena de mensajes
+
+archivo = open("Resultados.txt","w")
+archivo.write(lista1)
+archivo.write("\n")
+archivo.write(lista2)
+archivo.close()
