@@ -3,7 +3,7 @@ import finpy
 
 tasa = 1.5 #Interés efectivo mensual
 cuota = 2e4 #Cuota mensual 
-monto = 1e5 #Monto adeudado
+monto = 1e5 #Monto adeudado  -----Probar con un monto mayor------
 
 analisis = finpy.icompuesto(tasa,cuota,monto) # La vairbale de salida es un objeto de tipo análisis si el préstamo se puede pagar
 if type(analisis) == str:
@@ -17,15 +17,29 @@ else:
     print(f"Proporción de intereses: {analisis.proporcion}%")
     print(finpy.formato(analisis.interesesTotales))
 
-#-------Exportar los datos en un archivo de texto-----------
+#-------Exportar los datos en un archivo de texto *****Volver esto una función*********-----------
 
 #Redondeando listas a valores enteros
-
+i = 0
+aux = 0
+auxl = []
+while i < len(analisis.lista_capi) - 1:
+    aux = int(analisis.lista_capi[i])
+    auxl.append(aux)
+    i = i + 1
 #Removiendo llaves de las listas
-aux = str(analisis.lista_capi)
+aux = str(auxl)
 aux = aux[1:]
 fila1 = aux[:len(aux)-2]
-aux = str(analisis.lista_inter)
+#--
+i = 0
+aux = 0
+auxl = []
+while i < len(analisis.lista_inter) - 1:
+    aux = int(analisis.lista_inter[i])
+    auxl.append(aux)
+    i = i + 1
+aux = str(auxl)
 aux = aux[1:]
 fila2 = aux[:len(aux)-2]
 
