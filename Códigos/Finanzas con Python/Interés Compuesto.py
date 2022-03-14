@@ -19,9 +19,19 @@ else:
 
 #-------Exportar los datos en un archivo de texto-----------
 
+#Redondeando listas a valores enteros
+
+#Removiendo llaves de las listas
+aux = str(analisis.lista_capi)
+aux = aux[1:]
+fila1 = aux[:len(aux)-2]
+aux = str(analisis.lista_inter)
+aux = aux[1:]
+fila2 = aux[:len(aux)-2]
+
 #------Versión sin formato 
-lista1 = "Evolucion del capital: " + str(analisis.lista_capi)
-lista2 = "Evolucion de los intereses: " + str(analisis.lista_inter)
+lista1 = "Evolucion del capital: " + fila1
+lista2 = "Evolucion de los intereses: " + fila2
 #------Crear una lista de listas para cada cadena de mensajes
 
 archivo = open("Resultados.txt","w")
