@@ -72,3 +72,39 @@ def formato(numero):
 
     return salida
     
+#--- Rutina de Exportación de Datos --- *****Verificar nombres de las vairiales******
+def exportar(analisis):
+    #Redondeando listas a valores enteros
+    i = 0
+    aux = 0
+    auxl = []
+    while i < len(analisis.lista_capi) - 1:
+        aux = int(analisis.lista_capi[i])
+        auxl.append(aux)
+        i = i + 1
+    #Removiendo llaves de las listas
+    aux = str(auxl)
+    aux = aux[1:]
+    fila1 = aux[:len(aux)-2]
+    #--
+    i = 0
+    aux = 0
+    auxl = []
+    while i < len(analisis.lista_inter) - 1:
+        aux = int(analisis.lista_inter[i])
+        auxl.append(aux)
+        i = i + 1
+    aux = str(auxl)
+    aux = aux[1:]
+    fila2 = aux[:len(aux)-2]
+
+    #------Versión sin formato 
+    lista1 = "Evolucion del capital: " + fila1
+    lista2 = "Evolucion de los intereses: " + fila2
+    #------Crear una lista de listas para cada cadena de mensajes
+
+    archivo = open("Resultados.txt","w")
+    archivo.write(lista1)
+    archivo.write("\n")
+    archivo.write(lista2)
+    archivo.close()
