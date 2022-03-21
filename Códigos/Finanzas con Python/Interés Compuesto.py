@@ -3,8 +3,7 @@ import finpy
 
 tasa = 1.5 #Interés efectivo mensual
 cuota = 2e4 #Cuota mensual 
-monto = 2e5 #Monto adeudado  -----Probar con un monto mayor------
-
+monto = 2e5 #Monto adeudado
 analisis = finpy.icompuesto(tasa,cuota,monto) # La vairbale de salida es un objeto de tipo análisis si el préstamo se puede pagar
 if type(analisis) == str:
     print("-------Error----------------")
@@ -17,6 +16,6 @@ else:
     print(f"Proporción de intereses: {analisis.proporcion}%")
     print(finpy.formato(analisis.interesesTotales))
 
-#-------Exportar los datos en un archivo de texto *****Volver esto una función*********-----------
+#-------Exportar los datos en un archivo de texto -----------
 
 finpy.exportar(analisis)

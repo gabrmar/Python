@@ -29,8 +29,7 @@ def icompuesto(tasa_interes,cuota,monto):
             resultado.lista_capi.append(capital)
             resultado.lista_inter.append(intereses)
             resultado.interesesTotales = resultado.interesesTotales + intereses
-            capital = capital + intereses
-            capital = capital - cuota
+            capital = capital + intereses - cuota 
             if capital <= 0:
                 break
         #--- Guardando resultados del préstamo --- 
@@ -72,31 +71,31 @@ def formato(numero):
 
     return salida
     
-#--- Rutina de Exportación de Datos --- *****Verificar nombres de las vairiales******
+#--- Rutina de Exportación de Datos ---
 def exportar(analisis):
     #Redondeando listas a valores enteros
     i = 0
     aux = 0
     auxl = []
-    while i < len(analisis.lista_capi) - 1:
+    while i < len(analisis.lista_capi):
         aux = int(analisis.lista_capi[i])
         auxl.append(aux)
         i = i + 1
     #Removiendo llaves de las listas
     aux = str(auxl)
     aux = aux[1:]
-    fila1 = aux[:len(aux)-2]
+    fila1 = aux[:len(aux)-1]
     #--
     i = 0
     aux = 0
     auxl = []
-    while i < len(analisis.lista_inter) - 1:
+    while i < len(analisis.lista_inter):
         aux = int(analisis.lista_inter[i])
         auxl.append(aux)
         i = i + 1
     aux = str(auxl)
     aux = aux[1:]
-    fila2 = aux[:len(aux)-2]
+    fila2 = aux[:len(aux)-1]
 
     #------Versión sin formato 
     lista1 = "Evolucion del capital: " + fila1
