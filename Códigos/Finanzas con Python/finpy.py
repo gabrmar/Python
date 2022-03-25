@@ -72,11 +72,12 @@ def formato(numero):
     return salida
     
 #--- Rutina de Exportación de Datos ---
-def exportar(analisis):
+def exportar(analisis): #*****Agregar lista de los meses********
     #Redondeando listas a valores enteros
     i = 0
     aux = 0
     auxl = []
+    meses = len(analisis.lista_capi)
     while i < len(analisis.lista_capi):
         aux = int(analisis.lista_capi[i])
         auxl.append(aux)
@@ -96,14 +97,23 @@ def exportar(analisis):
     aux = str(auxl)
     aux = aux[1:]
     fila2 = aux[:len(aux)-1]
-
+    auxl = []
+    print(range(1,meses))
+    for i in range(1,meses+1):
+        auxl.append(i)
+    aux = str(auxl)
+    aux = aux[1:]
+    fila3 = aux[:len(aux)-1]
     #------Versión sin formato 
     lista1 = "Evolucion del capital: " + fila1
     lista2 = "Evolucion de los intereses: " + fila2
+    lista3 = "Meses: " + fila3
     #------Crear una lista de listas para cada cadena de mensajes
 
-    archivo = open("Resultados.txt","w")
+    archivo = open("Resultados.txt","w")  #*******Transformar la sección de escritura en un ciclo con una vairble de lista*******
     archivo.write(lista1)
     archivo.write("\n")
     archivo.write(lista2)
+    archivo.write("\n")
+    archivo.write(lista3)
     archivo.close()
