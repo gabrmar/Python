@@ -72,20 +72,20 @@ def formato(numero):
     return salida
     
 #--- Rutina de Exportación de Datos ---
-def exportar(analisis): #*****Agregar lista de los meses********
+def exportar(analisis): #
     #Redondeando listas a valores enteros
     i = 0
     aux = 0
     auxl = []
     meses = len(analisis.lista_capi)
     while i < len(analisis.lista_capi):
-        aux = int(analisis.lista_capi[i])
+        aux = int(analisis.lista_capi[i]) #******Optimizar esta subrutina por medio otras subrutinas. Peso actual del archivo es 4.89 KB******
         auxl.append(aux)
         i = i + 1
     #Removiendo llaves de las listas
     aux = str(auxl)
     aux = aux[1:]
-    fila1 = aux[:len(aux)-1]
+    lista1 = aux[:len(aux)-1]
     #--
     i = 0
     aux = 0
@@ -96,24 +96,29 @@ def exportar(analisis): #*****Agregar lista de los meses********
         i = i + 1
     aux = str(auxl)
     aux = aux[1:]
-    fila2 = aux[:len(aux)-1]
+    lista2 = aux[:len(aux)-1]
     auxl = []
     print(range(1,meses))
     for i in range(1,meses+1):
         auxl.append(i)
     aux = str(auxl)
     aux = aux[1:]
-    fila3 = aux[:len(aux)-1]
-    #------Versión sin formato 
-    lista1 = "Evolucion del capital: " + fila1
-    lista2 = "Evolucion de los intereses: " + fila2
-    lista3 = "Meses: " + fila3
+    lista3 = aux[:len(aux)-1]
     #------Crear una lista de listas para cada cadena de mensajes
 
-    archivo = open("Resultados.txt","w")  #*******Transformar la sección de escritura en un ciclo con una vairble de lista*******
-    archivo.write(lista1)
-    archivo.write("\n")
-    archivo.write(lista2)
-    archivo.write("\n")
-    archivo.write(lista3)
+    exportable = {"Capital":lista1,"Intereses":lista2,"Meses":lista3}
+
+    archivo = open("csv.txt","w")  
+    for valores in exportable.values():
+        archivo.write(valores)
+        archivo.write("\n")
     archivo.close()
+
+    archivo = open("Leyendas.txt","w") 
+    archivo.write("Estos son las variables que representan cada una de las filas del archivo csv.txt:") 
+    archivo.write("\n")
+    for llaves in exportable.keys():
+        archivo.write(llaves)
+        archivo.write("\n")
+    archivo.close()       
+
