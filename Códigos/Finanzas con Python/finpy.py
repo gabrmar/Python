@@ -70,40 +70,34 @@ def formato(numero):
         salida = "$ " + numero
 
     return salida
-    
-#--- Rutina de Exportación de Datos ---
-def exportar(analisis): #
+
+def remover_llaves(lista_entera):
+    aux = str(lista_entera)
+    aux = aux[1:]
+    sin_llaves = aux[:-1] #El índice negativo permite indexar al revés, es decir de derecha a izquierda
+    return sin_llaves
+
+def procesar_lista(lista): #Seguir la lógica por acá
     #Redondeando listas a valores enteros
     i = 0
     aux = 0
     auxl = []
+    while i < len(lista):
+        aux = int(lista[i])
+        auxl.append(aux)
+        i = i + 1
+    cadena = remover_llaves(auxl) #Removiendo llaves de las listas
+    return cadena
+    
+#--- Rutina de Exportación de Datos ---
+def exportar(analisis):
     meses = len(analisis.lista_capi)
-    while i < len(analisis.lista_capi):
-        aux = int(analisis.lista_capi[i]) #******Optimizar esta subrutina por medio otras subrutinas. Peso actual del archivo es 4.89 KB******
-        auxl.append(aux)
-        i = i + 1
-    #Removiendo llaves de las listas
-    aux = str(auxl)
-    aux = aux[1:]
-    lista1 = aux[:len(aux)-1]
-    #--
-    i = 0
-    aux = 0
+    lista1 = procesar_lista(analisis.lista_capi)
+    lista2 = procesar_lista(analisis.lista_inter)
     auxl = []
-    while i < len(analisis.lista_inter):
-        aux = int(analisis.lista_inter[i])
-        auxl.append(aux)
-        i = i + 1
-    aux = str(auxl)
-    aux = aux[1:]
-    lista2 = aux[:len(aux)-1]
-    auxl = []
-    print(range(1,meses))
     for i in range(1,meses+1):
         auxl.append(i)
-    aux = str(auxl)
-    aux = aux[1:]
-    lista3 = aux[:len(aux)-1]
+    lista3 = remover_llaves(auxl)
     #------Crear una lista de listas para cada cadena de mensajes
 
     exportable = {"Capital":lista1,"Intereses":lista2,"Meses":lista3}
