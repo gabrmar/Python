@@ -2,7 +2,7 @@ import string
 import finpy
 
 tasa = 1.5 #Interés efectivo mensual
-cuota = 4e5 #Cuota mensual 
+cuota = 433736.711 #Cuota mensual
 monto = 4e6 #Monto adeudado
 analisis = finpy.icompuesto(tasa,cuota,monto) # La vairbale de salida es un objeto de tipo análisis si el préstamo se puede pagar
 if type(analisis) == str:

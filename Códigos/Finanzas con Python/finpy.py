@@ -40,7 +40,7 @@ def icompuesto(tasa_interes,cuota,monto):
         return resultado
         
 #--- Rutina de formateo de números a valor de una divisa ---
-def formato(numero):
+def formato(numero):  # *******Colocar excepciones para que no se coloquen números menores que 1********
 
     numero = int(numero) #Elimiando crifras decimales
     numero = str(numero) #Transformando números en string para poder contatenar puntos y el símbolo de la moneda
@@ -77,14 +77,16 @@ def remover_llaves(lista_entera):
     sin_llaves = aux[:-1] #El índice negativo permite indexar al revés, es decir de derecha a izquierda
     return sin_llaves
 
-def procesar_lista(lista): #Seguir la lógica por acá
-    #Redondeando listas a valores enteros
+def procesar_lista(lista): #Seguir la lógica por acá 
     i = 0
     aux = 0
     auxl = []
     while i < len(lista):
         aux = int(lista[i])
         auxl.append(aux)
+        if i == len(lista) - 1: #En la última posición  se da la posibilidad que el valor de capital o intereses sea menor a 1 pero mayor a cero. En ese caso lo mejor es conservar las cifras decimales
+            if lista[i] > 0 and lista[i] < 1:
+                auxl[i] = round(lista[i],6)
         i = i + 1
     cadena = remover_llaves(auxl) #Removiendo llaves de las listas
     return cadena
