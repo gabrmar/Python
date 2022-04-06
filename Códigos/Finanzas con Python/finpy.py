@@ -40,7 +40,11 @@ def icompuesto(tasa_interes,cuota,monto):
         return resultado
         
 #--- Rutina de formateo de números a valor de una divisa ---
-def formato(numero):  # *******Colocar excepciones para que no se coloquen números menores que 1********
+def formato(numero): 
+
+    assert (numero >= 1), "Esta función no trabaja con números menores a 0" #Validación de datos. Los valores en momneda no deben ser menores a 0
+
+    #***Se necesita evaluar esta función a ver cómo aplicar el sistema de formatos para valores menores a 1 y mayores a cero*****
 
     numero = int(numero) #Elimiando crifras decimales
     numero = str(numero) #Transformando números en string para poder contatenar puntos y el símbolo de la moneda
