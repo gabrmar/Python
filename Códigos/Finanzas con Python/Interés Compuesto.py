@@ -16,6 +16,7 @@ else:
     print(f"Proporción de intereses: {analisis.proporcion}%")
     print(finpy.formato(analisis.interesesTotales))
     #print(finpy.formato(-10)) #Habilita esta función para probar el error de aserción
+    #print(finpy.formato(0.123456789)) #Habilita esta función para probar el formato con líneas decimales
 
 #-------Exportar los datos en un archivo de texto -----------
 
