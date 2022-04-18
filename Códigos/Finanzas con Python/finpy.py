@@ -17,30 +17,27 @@ def icompuesto(tasa_interes,cuota,monto):
     proporcionIntereses = -1
 
     intereses = monto*(tasa_interes/100) #Intereses generados en un periodo de pago
-    #******Cambiar la condción de  retiro para simplificar el código y botar un mensaje de error ante los préstamos que no se puedben pagar*******
-    #*******assert (numero >= 1), "Esta función no trabaja con números menores a 0" #Validación de datos. Los valores en momneda no deben ser menores a 0*********
+    #Si el pago no logra cubrir los intereses, entonces nunca se podrá pagar la deuda
+    assert (intereses < cuota), "El crédito no se puede pagar con los valores establecidos. Es recomendable incrementar la cuota mensual." 
 
-    if intereses >= cuota: #Si el pago no logra cubrir los intereses, entonces nunca se podrá pagar la deuda
-        return "El crédito no se puede pagar con los valores establecidos. Es recomendable incrementar la cuota mensual."
-    else:
-        resultado = analisis() #Creación de instancia  de tipo análisis
-        capital = monto #Este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
-        resultado.capitalTotal = capital
-        while capital > 0:
-            intereses = capital*(tasa_interes/100) #Cálculo de intereses generados
-            #---- Guardando resultados en listas ---
-            resultado.lista_capi.append(capital)
-            resultado.lista_inter.append(intereses)
-            resultado.interesesTotales = resultado.interesesTotales + intereses
-            capital = capital + intereses - cuota 
-            if capital <= 0:
-                break
-        #--- Guardando resultados del préstamo --- 
-        resultado.capitalTotal = resultado.capitalTotal + resultado.interesesTotales
-        proporcionIntereses = (resultado.interesesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
-        resultado.proporcion = proporcionIntereses
+    resultado = analisis() #Creación de instancia  de tipo análisis
+    capital = monto #Este cambio de variables es sólo para reafirmar que la variable monto tiene el capital que se debe
+    resultado.capitalTotal = capital
+    while capital > 0:
+        intereses = capital*(tasa_interes/100) #Cálculo de intereses generados
+        #---- Guardando resultados en listas ---
+        resultado.lista_capi.append(capital)
+        resultado.lista_inter.append(intereses)
+        resultado.interesesTotales = resultado.interesesTotales + intereses
+        capital = capital + intereses - cuota 
+        if capital <= 0:
+            break
+    #--- Guardando resultados del préstamo --- 
+    resultado.capitalTotal = resultado.capitalTotal + resultado.interesesTotales
+    proporcionIntereses = (resultado.interesesTotales/monto)*100 #Porcentaje de los intereses con respecto al monto del préstamo
+    resultado.proporcion = proporcionIntereses
 
-        return resultado
+    return resultado
         
 #--- Rutina de formateo de números a valor de una divisa ---
 def formato(numero): 
