@@ -13,7 +13,7 @@ json.load convierte el archivo json en un diccionario de Python.
 
 def Formatear_Salida(diccionario,idioma="IN"):
     if idioma == "ESP":
-        lista_llaves = ["identificador","nombre","fecha emisión","episodiojes","personajes","enlace","fecha creación"]
+        lista_llaves = ["identificador","nombre","fecha emisión","episodios","personajes","enlace","fecha creación"]
     else:
         lista_llaves = ["id","name","air_date","episode","characters","url","created"]
     lista_valores = []
@@ -67,7 +67,7 @@ datos = json.load(archivo)
 print('La variable datos es de tipo: ', type(datos))
 resultados = datos["results"]
 
-#----------Punto 1----------------
+"""#----------Punto 1----------------
 print("-------------Punto 1--------------")
 print("la longitud de variable datos es ", len(datos))
 
@@ -86,4 +86,10 @@ Encontrar_Episodio(resultados,8,"ESP")
 #----------Punto 6----------------
 print("-------------Punto 6--------------")
 for i in range(len(resultados)+1):
-    Encontrar_Episodio(resultados,i,"ESP")
+    Encontrar_Episodio(resultados,i,"ESP")"""
+
+#----------Punto 7----------------
+print("-------------Punto 7--------------")
+Encontrar_Episodio(resultados,18,"ESP")
+Encontrar_Episodio(resultados,19,"ESP")
+Encontrar_Episodio(resultados,20,"ESP")
