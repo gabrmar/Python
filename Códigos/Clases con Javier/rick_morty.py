@@ -28,7 +28,13 @@ traduccion = {
     'prev': 'previo',
 }
 
-with open('episodes.json') as archivo:
-    datos = json.load(archivo)
-
-    print('La variable datos es de tipo: ', type(datos))
+archivo =  open('C:/Users/gm_ll/OneDrive - UNIVERSIDAD AUTONOMA DEL CARIBE/Backup/Gmecatronics/Sistemas informáticos/Python/Códigos/Clases con Javier/episodes.json')
+datos = json.load(archivo)
+print('La variable datos es de tipo: ', type(datos))
+print("la longitud de variable datos es ", len(datos))
+#print(datos["info"])
+#print(datos["results"]) <----  es una lista
+resultados = datos["results"]
+for i in resultados:
+    if i["id"] == 19:
+        print(i)    
