@@ -11,6 +11,8 @@ Tanto JSON como los dict de python tienen estructuras muy similares.
 json.load convierte el archivo json en un diccionario de Python.
 '''
 
+#--------------Sub-rutinas--------------------------------------------------
+
 def Formatear_Salida(diccionario,idioma="IN"):
     if idioma == "ESP":
         lista_llaves = ["identificador","nombre","fecha emisión","episodios","personajes","enlace","fecha creación"]
@@ -43,26 +45,25 @@ def Encontrar_Episodio(lista,episodio,idioma="IN"):
             print("\n")
             break 
 
-def Contar_Personaje(lista,personaje): #Toca hacer un ciclo donde se revise la lista de personajes dentro de la lista de resultadso
+def Contar_Personaje(lista,personaje): #Toca hacer un ciclo donde se revise la lista de personajes dentro de la lista de resultadso        
     rick = "https://rickandmortyapi.com/api/character/1"
     morty = "https://rickandmortyapi.com/api/character/2"
     summer = "https://rickandmortyapi.com/api/character/3"
-    contador_rick = 0
-    contador_morty = 0
-    contador_summer = 0
+    objetivo = ""
+    contador_personaje = 0
+    if personaje == "Rick":
+        objetivo = rick
+    if personaje == "Morty":
+        objetivo = morty
+    if personaje == "Summer":
+        objetivo = summer
     #If personajes in lista_personajes
     for i in lista: #recorrido dentro de la lista
         lista_personajes = i["characters"]
         for j in lista_personajes:
-            if rick == j:
-                contador_rick = contador_rick + 1
-            if morty == j:
-                contador_morty = contador_morty + 1
-            if summer == j:
-                contador_summer = contador_summer + 1 
-    print("Rick apareció en "+ str(contador_rick)+ " episodios")
-    print("Morty apareció en "+ str(contador_morty)+ " episodios")
-    print("Summer apareció en "+ str(contador_summer)+ " episodios")
+            if j == objetivo:
+                contador_personaje = contador_personaje + 1 
+    print( personaje + " apareció en "+ str(contador_personaje)+ " episodios")
     return 
 
 
@@ -83,12 +84,18 @@ traduccion = {
     'prev': 'previo',
 }
 
+#--------------Código principal-----------------------------------------
+
 archivo =  open('C:/Users/gm_ll/OneDrive - UNIVERSIDAD AUTONOMA DEL CARIBE/Backup/Gmecatronics/Sistemas informáticos/Python/Códigos/Clases con Javier/episodes.json')
 datos = json.load(archivo)
 print('La variable datos es de tipo: ', type(datos))
 resultados = datos["results"]
 
-"""#----------Punto 1----------------
+"""
+Puedes comentar las secciones del código que no quieras imprimir para facilitar la revisión.
+"""
+
+#----------Punto 1----------------
 print("-------------Punto 1--------------")
 print("la longitud de variable datos es ", len(datos))
 
@@ -113,9 +120,11 @@ for i in range(len(resultados)+1):
 print("-------------Punto 7--------------")
 Encontrar_Episodio(resultados,18,"ESP")
 Encontrar_Episodio(resultados,19,"ESP")
-Encontrar_Episodio(resultados,20,"ESP")"""
+Encontrar_Episodio(resultados,20,"ESP")
 
 #----------Punto 8----------------
 print("-------------Punto 8--------------")
+Contar_Personaje(resultados,"Rick")
+Contar_Personaje(resultados,"Morty")
 Contar_Personaje(resultados,"Summer")
 
