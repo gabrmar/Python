@@ -25,7 +25,7 @@ def Formatear_Salida(diccionario,idioma="IN"):
     while i < len(lista_valores):
         if lista_llaves[i] == "characters" or lista_llaves[i] == "personajes": 
             lista_personajes = lista_valores[i]
-            print(lista_llaves[i]+":")
+            print(lista_llaves[i]+":\n")
             while j < len(lista_personajes):
                 print(str(j+1)+"- "+lista_personajes[j])
                 j=j+1
@@ -43,6 +43,27 @@ def Encontrar_Episodio(lista,episodio,idioma="IN"):
             print("\n")
             break 
 
+def Contar_Personaje(lista,personaje): #Toca hacer un ciclo donde se revise la lista de personajes dentro de la lista de resultadso
+    rick = "https://rickandmortyapi.com/api/character/1"
+    morty = "https://rickandmortyapi.com/api/character/2"
+    summer = "https://rickandmortyapi.com/api/character/3"
+    contador_rick = 0
+    contador_morty = 0
+    contador_summer = 0
+    #If personajes in lista_personajes
+    for i in lista: #recorrido dentro de la lista
+        lista_personajes = i["characters"]
+        for j in lista_personajes:
+            if rick == j:
+                contador_rick = contador_rick + 1
+            if morty == j:
+                contador_morty = contador_morty + 1
+            if summer == j:
+                contador_summer = contador_summer + 1 
+    print("Rick apareció en "+ str(contador_rick)+ " episodios")
+    print("Morty apareció en "+ str(contador_morty)+ " episodios")
+    print("Summer apareció en "+ str(contador_summer)+ " episodios")
+    return 
 
 
 import json
@@ -86,10 +107,15 @@ Encontrar_Episodio(resultados,8,"ESP")
 #----------Punto 6----------------
 print("-------------Punto 6--------------")
 for i in range(len(resultados)+1):
-    Encontrar_Episodio(resultados,i,"ESP")"""
+    Encontrar_Episodio(resultados,i,"ESP")
 
 #----------Punto 7----------------
 print("-------------Punto 7--------------")
 Encontrar_Episodio(resultados,18,"ESP")
 Encontrar_Episodio(resultados,19,"ESP")
-Encontrar_Episodio(resultados,20,"ESP")
+Encontrar_Episodio(resultados,20,"ESP")"""
+
+#----------Punto 8----------------
+print("-------------Punto 8--------------")
+Contar_Personaje(resultados,"Summer")
+
