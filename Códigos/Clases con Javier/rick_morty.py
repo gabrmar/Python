@@ -20,45 +20,46 @@ def Formatear_Salida(diccionario,idioma="IN"):
         lista_llaves = ["id","name","air_date","episode","characters","url","created"]
     lista_valores = []
     lista_personajes = []
-    for valor in diccionario.values():
+    for valor in diccionario.values(): #Extracción de valores del diccionario de resultados
         lista_valores.append(valor)
     i = 0
     j = 0
     while i < len(lista_valores):
         if lista_llaves[i] == "characters" or lista_llaves[i] == "personajes": 
-            lista_personajes = lista_valores[i]
+            lista_personajes = lista_valores[i] #Acá se obtiene la lista personajes para un episodio dado
             print(lista_llaves[i]+":\n")
             while j < len(lista_personajes):
                 print(str(j+1)+"- "+lista_personajes[j])
                 j=j+1
             print("\n")
         else:
-            print(lista_llaves[i]+": "+str(lista_valores[i])+"\n")
+            print(lista_llaves[i] +": "+ str(lista_valores[i])+"\n")
         i = i+1
    
 
 
 def Encontrar_Episodio(lista,episodio,idioma="IN"):
     for i in lista:
-        if i["id"] == episodio:
+        if i["id"] == episodio: #La lista está formada por dos diccionarios
             salida = Formatear_Salida(i,idioma)
             print("\n")
             break 
 
-def Contar_Personaje(lista,personaje): #Toca hacer un ciclo donde se revise la lista de personajes dentro de la lista de resultadso        
+def Contar_Personaje(lista,personaje):    
+    #---------URL de personajes a buscar
     rick = "https://rickandmortyapi.com/api/character/1"
     morty = "https://rickandmortyapi.com/api/character/2"
     summer = "https://rickandmortyapi.com/api/character/3"
-    objetivo = ""
-    contador_personaje = 0
+    objetivo = "" #El valor de esta variable depende del parámetro de entrada personaje
+    contador_personaje = 0 
+    #---------Selección de personaje objetivo para la función
     if personaje == "Rick":
         objetivo = rick
     if personaje == "Morty":
         objetivo = morty
     if personaje == "Summer":
         objetivo = summer
-    #If personajes in lista_personajes
-    for i in lista: #recorrido dentro de la lista
+    for i in lista:
         lista_personajes = i["characters"]
         for j in lista_personajes:
             if j == objetivo:
@@ -92,13 +93,19 @@ print('La variable datos es de tipo: ', type(datos))
 resultados = datos["results"]
 
 """
+Hola Javier,
+
 Puedes comentar las secciones del código que no quieras imprimir para facilitar la revisión.
+
+Atentamente,
+
+Gabriel
 """
 
 #----------Punto 1----------------
 print("-------------Punto 1--------------")
-print("la longitud de variable datos es ", len(datos))
-
+print("la longitud de variable datos es", len(datos))
+"""
 #----------Punto 3----------------
 print("-------------Punto 3--------------")
 print("La cantidad de episodios presentes en el JSON es", len(resultados))
@@ -128,3 +135,4 @@ Contar_Personaje(resultados,"Rick")
 Contar_Personaje(resultados,"Morty")
 Contar_Personaje(resultados,"Summer")
 
+"""
