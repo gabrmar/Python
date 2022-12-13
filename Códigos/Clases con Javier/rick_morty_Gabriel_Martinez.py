@@ -92,16 +92,6 @@ datos = json.load(archivo)
 print('La variable datos es de tipo: ', type(datos))
 resultados = datos["results"]
 
-"""
-Hola Javier,
-
-Puedes comentar las secciones del código que no quieras imprimir para facilitar la revisión.
-
-Atentamente,
-
-Gabriel
-"""
-
 #----------Punto 1----------------
 print("-------------Punto 1--------------")
 print("la longitud de variable datos es", len(datos))
