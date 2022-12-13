@@ -101,8 +101,8 @@ print("La cantidad de episodios presentes en el JSON es", len(resultados))
 
 #----------Punto 4----------------
 print("-------------Punto 4--------------")
-
 Encontrar_Episodio(resultados,19)
+
 #----------Punto 5----------------
 print("-------------Punto 5--------------")
 Encontrar_Episodio(resultados,8,"ESP")
