@@ -105,7 +105,6 @@ Gabriel
 #----------Punto 1----------------
 print("-------------Punto 1--------------")
 print("la longitud de variable datos es", len(datos))
-"""
 #----------Punto 3----------------
 print("-------------Punto 3--------------")
 print("La cantidad de episodios presentes en el JSON es", len(resultados))
@@ -134,5 +133,3 @@ print("-------------Punto 8--------------")
 Contar_Personaje(resultados,"Rick")
 Contar_Personaje(resultados,"Morty")
 Contar_Personaje(resultados,"Summer")
-
-"""
