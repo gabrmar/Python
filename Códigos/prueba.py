@@ -1,5 +1,11 @@
-lista = [1,121,2,4,6,7,]
+import random
 
-for i in lista:
-    print(i)
-print(lista[2])
+niveles = range(1,11)
+lista = []
+
+print(niveles)
+
+for i in niveles:
+    lista.append(i)
+
+print(lista)
