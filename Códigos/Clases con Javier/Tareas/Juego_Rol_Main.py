@@ -5,7 +5,15 @@ merlin.mana = 100
 merlin.experiencia = 50
 gaspar = Mago()
 gaspar.sanacion = False
-gaspar.sanacion = 150
+gaspar.experiencia = 150
+ron = Mago()
+
+gaspar.recuperar_mana()
+
 del gaspar
 
 merlin.recuperar_mana()
+Mago.recuperar_mana(merlin)
+merlin.pared_magica()
+
+ron.pared_magica()
