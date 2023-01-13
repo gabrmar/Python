@@ -1,6 +1,6 @@
 import random
 
-rango = range(1,11)
+rango = range(1,11)  #Como hacer esto en una sola línea?
 niveles = []
 for i in rango:
     niveles.append(i)
