@@ -10,13 +10,13 @@ locations = [
     'Tokyo, Japón',
 ]
 class FeedPost:
-    image = ""
+    image = None
     description = "hola"
-    location = ""
-    likes = ""
+    location = None
+    likes = 0
     comments = []
-    tags = ""
-    filters = ""
+    tags = None
+    filters = None
 
     def get_location(self):
         location = random.sample(locations,1)
