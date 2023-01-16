@@ -9,7 +9,7 @@ class Mago:
     sanacion = True
     inteligencia = True
     experiencia = 20
-    Mana = 70
+    mana = 70
 
     def recuperar_mana(self):
         if self.sanacion:
@@ -25,3 +25,13 @@ class Mago:
             print("01111100...Canalizando...|")
         else:
             print("{} no tiene los requisitos para usar pared mágica".format(self))
+
+    def rafaga_de_plasma(self, mana):
+        if self.mana >= mana and self.experiencia > 50:
+            print("{} ha usado ráfaga de plasma".format(self))
+            print()
+            self.mana = self.mana - mana 
+            print(".-*-._.-*-._.-.-*-._.-*-._.-\n")
+        else:
+            print("El mago no puede usar ráfaga de plasma todavía")
+        

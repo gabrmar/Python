@@ -17,3 +17,8 @@ Mago.recuperar_mana(merlin)
 merlin.pared_magica()
 
 ron.pared_magica()
+
+merlin.experiencia = 60
+
+merlin.rafaga_de_plasma(20)
+ron.rafaga_de_plasma(20)
