@@ -7,13 +7,15 @@ for i in rango:
 
 class Mago:
 
-    def __init__(self,nombre,experiencia=5,mana=5):
+    def __init__(self,nombre,experiencia=5,mana=5,**kwargs):
         self.nombre = nombre
         self.experiencia = experiencia
         self.mana = mana
-
         self.sanacion = True
         self.inteligencia = True
+
+        for atributo,valor in kwargs.items():
+            setattr(self,atributo,valor)
         
     def recuperar_mana(self):
         if self.sanacion:
