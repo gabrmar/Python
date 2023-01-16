@@ -6,11 +6,15 @@ for i in rango:
     niveles.append(i)
 
 class Mago:
-    sanacion = True
-    inteligencia = True
-    experiencia = 20
-    mana = 70
 
+    def __init__(self,nombre,experiencia=5,mana=5):
+        self.nombre = nombre
+        self.experiencia = experiencia
+        self.mana = mana
+
+        self.sanacion = True
+        self.inteligencia = True
+        
     def recuperar_mana(self):
         if self.sanacion:
             valor = random.sample(niveles,1)[0] #[0] es necesario para poder obtener el elemento de la lista de random.sample

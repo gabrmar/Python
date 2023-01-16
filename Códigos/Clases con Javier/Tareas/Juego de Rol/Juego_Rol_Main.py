@@ -1,12 +1,12 @@
 from Juego_Rol import Mago
 
-merlin = Mago()
+merlin = Mago("Merlin")
 merlin.mana = 100
 merlin.experiencia = 50
-gaspar = Mago()
+gaspar = Mago("Gaspar")
 gaspar.sanacion = False
 gaspar.experiencia = 150
-ron = Mago()
+ron = Mago("Ron")
 
 gaspar.recuperar_mana()
 
