@@ -41,3 +41,14 @@ class Mago:
         else:
             print("El mago no puede usar ráfaga de plasma todavía")
         
+class Ladron:
+
+    def __init__(self,nombre,experiencia=10,mana=0):
+        self.nombre = nombre
+        self.experiencia = experiencia
+        self.mana = mana
+
+    def robar(self):
+        print("Ladrón {} ha usado robar".format(self.nombre))
+        self.mana = self.mana + 10
+        print("Ha robado +10 de mana al oponente")

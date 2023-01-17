@@ -1,4 +1,4 @@
-from Juego_Rol import Mago
+from Juego_Rol import Mago,Ladron
 
 merlin = Mago("Merlin")
 merlin.mana = 100
@@ -8,6 +8,7 @@ gaspar.sanacion = False
 gaspar.experiencia = 150
 ron = Mago("Ron")
 gandalf = Mago("Gandalf",100,200,obra="Señor de los Anillos",comentarios="**kwargs es algo de otro mundo")
+richard = Ladron("Richard")
 
 gaspar.recuperar_mana()
 
@@ -24,3 +25,7 @@ merlin.experiencia = 60
 merlin.rafaga_de_plasma(20)
 ron.rafaga_de_plasma(20)
 print(dir(gandalf))
+
+print(richard.mana)
+richard.robar()
+print(richard.mana)
