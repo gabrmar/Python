@@ -1,15 +1,19 @@
 import math
 
 class circulo:
-    radio = 0
+
+    def __init__(self,radio=1):
+        self.radio = radio
 
     def area(self):
         area = math.pi*math.pow(self.radio,2)
         print("el area del circulo es {}".format(area))
 
 class triangulo:
-    base = 0
-    altura = 0
+
+    def __init__(self,base=1,altura=1):
+        self.base = base
+        self.altura = altura
 
     def area(self):
         area = self.base*self.altura/2
@@ -17,8 +21,10 @@ class triangulo:
         
 
 class rectangulo:
-    lado1 = 0
-    lado2 = 0
+
+    def __init__(self,lado1,lado2):
+        self.lado1 = lado1
+        self.lado2 = lado2
 
     def area(self):
         figura = "rectángulo"
