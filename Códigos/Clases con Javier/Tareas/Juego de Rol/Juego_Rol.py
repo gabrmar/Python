@@ -52,3 +52,20 @@ class Ladron:
         print("Ladrón {} ha usado robar".format(self.nombre))
         self.mana = self.mana + 10
         print("Ha robado +10 de mana al oponente")
+
+class Arquero:
+
+    def __init__(self,nombre,flechas,arco="Arco simple"):
+        self.nombre = nombre
+        self.flechas = flechas
+        self.arco = arco
+
+    def disparar(self):
+        print("flecha lanzada")
+        self.flechas = self.flechas -1
+        print("Quedan {} flechas disponibles".format(self.flechas))
+
+    def apuntar(self):
+        print("La precisón del arquero {} ha aumentado".format(self.nombre))
+
+    
