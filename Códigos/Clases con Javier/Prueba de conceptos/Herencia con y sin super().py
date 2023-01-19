@@ -27,7 +27,7 @@ class Arquero:
     def apuntar(self):
         print("La precisón del arquero {} ha aumentado".format(self.nombre))
 
-class Arquero_2(Personaje):
+class Arquero_Herencia(Personaje):
 
     def __init__(self,nombre,experiencia=20,flechas=50,arco="Arco simple"):
         self.nombre = nombre
@@ -43,7 +43,7 @@ class Arquero_2(Personaje):
     def apuntar(self):
         print("La precisón del arquero {} ha aumentado".format(self.nombre))
 
-class Arquero_3(Personaje):
+class Arquero_Herencia_Super(Personaje):
 
     def __init__(self,nombre,experiencia=20,flechas=50,arco="Arco simple",**kwargs):
         super().__init__(nombre,experiencia,**kwargs)
@@ -51,9 +51,6 @@ class Arquero_3(Personaje):
         self.experiencia = experiencia
         self.flechas = flechas
         self.arco = arco
-
-        for atributo,valor in kwargs.items():
-            setattr(self,atributo,valor)
 
     def disparar(self):
         print("flecha lanzada")
@@ -69,6 +66,7 @@ class Arquero_3(Personaje):
 personaje = Personaje("Pablo",rol="test")
 print(dir(personaje))
 print(personaje.hp)
+print(personaje.rol)
 personaje.presentar()
 
 robin = Arquero("Robin")
@@ -76,14 +74,14 @@ robin.disparar()
 robin.apuntar()
 print(dir(robin))
 
-hipolita = Arquero_2("Hipolita")
+hipolita = Arquero_Herencia("Hipolita")
 hipolita.disparar()
 hipolita.apuntar()
 hipolita.presentar()
 print(dir(hipolita))
 #print(hipolita.hp) # el __init___ de la clase Arquero_2 sobreescribe el __init__ de la clase padre, por eso no hay un atributo de salud (hp)
 
-hawkeye = Arquero_3("Hawakeye",200,100,"Arco de carbono reforzado",eslogan="Justo en el blanco")
+hawkeye = Arquero_Herencia_Super("Hawakeye",200,100,"Arco de carbono reforzado",eslogan="Justo en el blanco")
 hawkeye.disparar()
 hawkeye.apuntar()
 hawkeye.presentar()

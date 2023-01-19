@@ -5,17 +5,26 @@ niveles = []
 for i in rango:
     niveles.append(i)
 
-class Mago:
+class Personaje:
+    def __init__(self,nombre,experiencia=5,**kwargs):
+        self.nombre = nombre 
+        self.experiencia = experiencia
+        self.health_points = 100
+        
 
-    def __init__(self,nombre,experiencia=5,mana=5,**kwargs):
+        for atributo,valor in kwargs.items():
+            setattr(self,atributo,valor)
+
+class Mago(Personaje):
+
+    def __init__(self,nombre,experiencia=0,mana=5,**kwargs):
+        super().__init__(nombre,experiencia,**kwargs) #Usando función super para poder usar el __init__ de la superclase y la clase hija al mismo tiempo
         self.nombre = nombre
         self.experiencia = experiencia
         self.mana = mana
         self.sanacion = True
         self.inteligencia = True
 
-        for atributo,valor in kwargs.items():
-            setattr(self,atributo,valor)
         
     def recuperar_mana(self):
         if self.sanacion:
@@ -41,9 +50,10 @@ class Mago:
         else:
             print("El mago no puede usar ráfaga de plasma todavía")
         
-class Ladron:
+class Ladron(Personaje):
 
-    def __init__(self,nombre,experiencia=10,mana=0):
+    def __init__(self,nombre,experiencia=10,mana=0): # este __init__ será el constructor visible de cara al usuario, por ende el ladrón tendrá 10 de experiencia por defecto
+        super().__init__(nombre,experiencia) #Usando función super para poder usar el __init__ de la superclase y la clase hija al mismo tiempo
         self.nombre = nombre
         self.experiencia = experiencia
         self.mana = mana
@@ -53,10 +63,12 @@ class Ladron:
         self.mana = self.mana + 10
         print("Ha robado +10 de mana al oponente")
 
-class Arquero:
+class Arquero(Personaje):
 
-    def __init__(self,nombre,flechas,arco="Arco simple"):
+    def __init__(self,nombre,experiencia=20,flechas=50,arco="Arco simple",**kwargs):
+        super().__init__(nombre,experiencia,**kwargs) #Usando función super para poder usar el __init__ de la superclase y la clase hija al mismo tiempo
         self.nombre = nombre
+        self.experiencia = experiencia
         self.flechas = flechas
         self.arco = arco
 

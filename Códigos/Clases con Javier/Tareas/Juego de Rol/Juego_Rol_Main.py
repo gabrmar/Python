@@ -9,7 +9,7 @@ gaspar.experiencia = 150
 ron = Mago("Ron")
 gandalf = Mago("Gandalf",100,200,obra="Señor de los Anillos",comentarios="**kwargs es algo de otro mundo")
 richard = Ladron("Richard")
-robin = Arquero("Robin",10,"Arco Simple")
+robin = Arquero("Robin",20,50,"Arco desgastado",obra="Robin Hood")
 
 gaspar.recuperar_mana()
 
@@ -25,11 +25,20 @@ merlin.experiencia = 60
 
 merlin.rafaga_de_plasma(20)
 ron.rafaga_de_plasma(20)
+print(gandalf.health_points)
+print(gandalf.comentarios)
+print(gandalf.mana)
 print(dir(gandalf))
 
 print(richard.mana)
 richard.robar()
-print(richard.mana)
+print("Experiencia del ladrón {a} es {b}".format(a=richard.nombre,b=richard.experiencia))
+print("Mana del ladrón {a} es {b}".format(a=richard.nombre,b=richard.mana))
+
 
 robin.apuntar()
 robin.disparar()
+print("salud del arquero {a} es {b}".format(a=robin.nombre,b=robin.health_points))
+print(robin.obra)
+print(robin.arco)
+print(robin.experiencia)
