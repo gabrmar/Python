@@ -79,7 +79,7 @@ hipolita.disparar()
 hipolita.apuntar()
 hipolita.presentar()
 print(dir(hipolita))
-#print(hipolita.hp) # el __init___ de la clase Arquero_2 sobreescribe el __init__ de la clase padre, por eso no hay un atributo de salud (hp)
+#print(hipolita.hp) # el __init___ de la clase Arquero_Herencia sobreescribe el __init__ de la clase padre, por eso no hay un atributo de salud (hp)
 
 hawkeye = Arquero_Herencia_Super("Hawakeye",200,100,"Arco de carbono reforzado",eslogan="Justo en el blanco")
 hawkeye.disparar()
