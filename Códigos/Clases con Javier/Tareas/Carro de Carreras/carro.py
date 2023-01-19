@@ -5,9 +5,18 @@ pesos = []
 for i in rango:
     pesos.append(i)
 
-class formula_1:
+class carro:
+    def __init__(self,marca,vel_max,aceleración,llantas):
+        self.marca = marca
+        self.vel_max = vel_max
+        self.aceleración = aceleración
+        self.llantas = llantas
+
+
+class formula_1(carro):
     
-    def __init__(self,kilometraje,nivel_gasolina=10,peso=None,**kwargs):
+    def __init__(self,marca,velo_max,acelera,tipo_llanta,kilometraje,nivel_gasolina=10,peso=None,**kwargs):
+        super().__init__(marca,velo_max,acelera,tipo_llanta)
         self.kilometraje = kilometraje
         self.nivel_gasolina = nivel_gasolina
         self.peso = peso
