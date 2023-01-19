@@ -33,6 +33,16 @@ class formula_1(carro):
     def pesar(self):
         self.peso = random.sample(pesos,1)[0]
 
+class carro_pruebas(carro):
+    def __init__(self, marca, vel_max, aceleración, llantas,academia):
+        super().__init__(marca, vel_max, aceleración, llantas)
+        self.academia = academia
+
+class safety_car(carro):
+    def __init__(self, marca, vel_max, aceleración, llantas,pista):
+        super().__init__(marca, vel_max, aceleración, llantas)
+        self.pista = pista
+
 class grua:
 
     def __init__(self,kilometraje,nivel_gasolina=20,peso=None,peso_carga=20):
