@@ -1,4 +1,5 @@
-from Módulos.Juego_Rol import Mago,Ladron,Arquero
+from Módulos.Juego_Rol import Ladron,Arquero
+from Módulos.Mago import Mago
 
 merlin = Mago("Merlin")
 merlin.mana = 100

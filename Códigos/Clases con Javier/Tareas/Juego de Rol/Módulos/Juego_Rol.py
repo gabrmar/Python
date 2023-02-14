@@ -1,9 +1,3 @@
-import random
-
-rango = range(1,11)  #Como hacer esto en una sola línea?
-niveles = []
-for i in rango:
-    niveles.append(i)
 
 class Personaje:
     def __init__(self,nombre,experiencia=5,**kwargs):
@@ -15,7 +9,7 @@ class Personaje:
         for atributo,valor in kwargs.items():
             setattr(self,atributo,valor)
 
-class Mago(Personaje):
+"""class Mago(Personaje):
 
     def __init__(self,nombre,experiencia=0,mana=5,**kwargs):
         super().__init__(nombre,experiencia,**kwargs) #Usando función super para poder usar el __init__ de la superclase y la clase hija al mismo tiempo
@@ -49,7 +43,7 @@ class Mago(Personaje):
             print(".-*-._.-*-._.-.-*-._.-*-._.-\n")
         else:
             print("El mago no puede usar ráfaga de plasma todavía")
-        
+        """
 class Ladron(Personaje):
 
     def __init__(self,nombre,experiencia=10,mana=0): # este __init__ será el constructor visible de cara al usuario, por ende el ladrón tendrá 10 de experiencia por defecto
