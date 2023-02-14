@@ -1,4 +1,4 @@
-from .Juego_Rol import Personaje
+from .Personaje import Personaje
 import random
 
 rango = range(1,11)  #Como hacer esto en una sola línea?
