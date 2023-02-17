@@ -1,4 +1,7 @@
-from Módulos.carro import formula_1,grua,carro_pruebas,safety_car
+from Módulos.grua import grua
+from Módulos.formula1 import formula_1
+from Módulos.carropruebas import carro_pruebas
+from Módulos.safetycar import safety_car
 
 caterpillar = grua(0)
 ferrari = formula_1("Ferrari","200 Km/h","80 km/h^2","Llantas caras",0,modelo=2009,motor="gasolina",cilindros=12)
