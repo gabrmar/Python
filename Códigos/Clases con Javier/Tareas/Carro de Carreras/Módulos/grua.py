@@ -1,12 +1,5 @@
 
-class carro:
-    def __init__(self,marca,vel_max,aceleración,llantas):
-        self.marca = marca
-        self.vel_max = vel_max
-        self.aceleración = aceleración
-        self.llantas = llantas
-
-"""class grua:
+class grua:
 
     def __init__(self,kilometraje,nivel_gasolina=20,peso=None,peso_carga=20):
         self.kilometraje = kilometraje
@@ -24,4 +17,4 @@ class carro:
         if self.peso_carga >= peso_carro:
             print("remolcando carro")
         else:
-            print("el carro pesa {}, demsaido pesado para ser remolcado por esta grúa".format(peso_carro))"""
+            print("el carro pesa {}, demsaido pesado para ser remolcado por esta grúa".format(peso_carro))
