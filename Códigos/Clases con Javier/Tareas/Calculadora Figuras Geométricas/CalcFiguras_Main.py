@@ -1,4 +1,6 @@
-from Módulos.CalcFiguras import circulo,triangulo,rectangulo
+from Módulos.circulo import circulo
+from Módulos.triangulo import triangulo
+from Módulos.rectangulo import rectangulo
 
 figura1 = circulo(10)
 figura2 = triangulo(2,5)
