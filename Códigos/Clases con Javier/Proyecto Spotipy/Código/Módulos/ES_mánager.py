@@ -24,3 +24,18 @@ def registrar():
         
     del datos
     return u 
+
+def validar_registro():
+
+    confirmación = False
+    while confirmación == False:
+        confirmación = input("¿Son estos datos correctos?S/N:")
+        if confirmación == "S" or confirmación == "s":
+            print("Registro exitoso")
+            time.sleep(1)
+            print("Bienvenido")
+            #Toca generar un registro del usuario en algún lado.
+            #Quizás la creación de la instancia sea suficeinte para ello, pero no creo
+        elif confirmación == "N" or confirmación == "n":
+            u = registrar()
+            print(u)
