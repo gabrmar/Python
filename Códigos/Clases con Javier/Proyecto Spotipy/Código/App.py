@@ -1,6 +1,6 @@
 import time
 from Clases.Usuario import usuario
-from Módulos.ES_mánager import registrar
+from Módulos.ES_mánager import registrar,validar_registro
 
 print("Bienvenidos a Spotipy")
 time.sleep(2)
@@ -12,17 +12,4 @@ if teclado == "1":
 if teclado == "2":
     u = registrar()
     print(u)
-
-"""
-Aspectos por mejorar:
-
-1. Reducir el número de variables de teclado. - OK
-2. Agregar método mágico __str__ en la clase usuario para imprimir los datos junto con OK
-la contraseña protegida por asteriscos. OK
-3. Crear una rutina/función para el registro. OK
-4. Hacer la confirmación de los datos al final de la fase de registro de manera que si
-el usuario lo necesita, puede reinicar la fase de registro.
-
-"""
-
-#teclado = input("Agregar opciones luego de registrarte/iniciar sesión")
+    validar_registro()
