@@ -20,7 +20,7 @@ for i in range(3):  #definiendo ciclo indefinodo
         print("operación" + nombre + "da como resultado "  + div) #esta línea genera un error de tipo
     # por no haber convertido la variable  div a string
     except ZeroDivisionError: # especificación del tipo de excepción (built-in excepcion)
-        print("error ocurrió\npor división por cero")
+        print("error ocurrió por división por cero")
     except(ValueError,TypeError): #múltiples excepciones con un solo except
     #agrupando las excepciones entre paréntesis
         print("error por valor o tipo equivocado")
