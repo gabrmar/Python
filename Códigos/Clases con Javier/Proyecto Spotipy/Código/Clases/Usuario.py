@@ -11,5 +11,14 @@ class usuario:
         pass
 
     def __str__(self):
-        return"Clase tipo {a}\nNombre:{b}\nCorreo:{c}\nCelular:{d}\nContraseña:{e}".format(a=type(self),b=self.nombre,c=self.correo,d=self.celular,
-                                                                                           e=self.contraseña)
+
+        clase ="Clase tipo:{}\n".format(type(self))
+        nombre ="Nombre:{}\n".format(self.nombre)
+        correo ="Correo:{}\n".format(self.correo)
+        celular ="Celular:{}\n".format(self.celular)
+        l = len(self.contraseña)
+        asteriscos = "*"*l #multiplicador de asteristcos según el largo de la
+        #contraseña
+        contra_protegida = self.contraseña.replace(self.contraseña,asteriscos)
+        contraseña_asteriscos ="Contraseña:{}\n".format(contra_protegida) 
+        return clase+nombre+correo+celular+contraseña_asteriscos
