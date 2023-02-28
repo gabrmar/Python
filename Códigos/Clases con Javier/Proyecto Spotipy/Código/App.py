@@ -19,7 +19,7 @@ Aspectos por mejorar:
 1. Reducir el número de variables de teclado. - OK
 2. Agregar método mágico __str__ en la clase usuario para imprimir los datos junto con OK
 la contraseña protegida por asteriscos. 
-3. Crear una rutina/función para el registro.
+3. Crear una rutina/función para el registro. OK
 4. Hacer la confirmación de los datos al final de la fase de registro de manera que si
 el usuario lo necesita, puede reinicar la fase de registro.
 
