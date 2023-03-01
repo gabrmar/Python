@@ -11,6 +11,7 @@ def registrar():
     datos.append(input("Celular:"))
     datos.append(input("Contraseña:"))
     datos.append(input("confirmar contraseña:"))
+    #---Validación del registro----
     excepciones.revisar_registro(datos)
     if datos[-2] == datos[-1]:
         u = usuario(datos[0],datos[1],datos[2],datos[3])
