@@ -9,6 +9,7 @@ def registrar():
     datos.append(input("Celular:"))
     datos.append(input("Contraseña:"))
     datos.append(input("confirmar contraseña:"))
+    #Acá podemos colocar las excepciones para estos valores
     if datos[-2] == datos[-1]:
         u = usuario(datos[0],datos[1],datos[2],datos[3])
     else:
