@@ -1,15 +1,17 @@
 import time
 from Clases.Usuario import usuario
+from Módulos.Excepciones import except_mánager
 
 def registrar():
 
+    excepciones = except_mánager()
     datos = []
     datos.append(input("Nombre:"))
     datos.append(input("Correo:"))  
     datos.append(input("Celular:"))
     datos.append(input("Contraseña:"))
     datos.append(input("confirmar contraseña:"))
-    #Acá podemos colocar las excepciones para estos valores
+    excepciones.revisar_registro(datos)
     if datos[-2] == datos[-1]:
         u = usuario(datos[0],datos[1],datos[2],datos[3])
     else:
