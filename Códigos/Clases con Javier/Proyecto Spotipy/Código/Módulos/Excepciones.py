@@ -11,6 +11,16 @@ class except_mánager:
                 números = True
         if números: #Si el nombre tiene algún nñumero, disparar un error
             raise ValueError("El nombre del usuario tiene números.")
+        
+        #Espacio para corroborar el correo
+
+        números = True
+        for caracter in lista_datos[2]: #Revisando los caracteres del número del celular
+            if not caracter.isdigit():
+                números = False
+        if not números: #Si el número de celular tiene alguna letra, disparar un error
+            raise ValueError("El número celuar tiene letras.")
+        
         """
         No estoy seguro si podré usar varias veces la misma excepción, pero creo que sí podré hacerlo con el uso
         del raise.
