@@ -13,6 +13,8 @@ class except_mánager:
             raise ValueError("El nombre del usuario tiene números.")
         
         #Espacio para corroborar el correo
+        if "@" not in lista_datos[1]:
+            raise ValueError("El correo no está en el formato correcto. Falta el arroba.")
 
         números = True
         for caracter in lista_datos[2]: #Revisando los caracteres del número del celular
