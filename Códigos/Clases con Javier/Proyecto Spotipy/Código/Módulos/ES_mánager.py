@@ -44,3 +44,5 @@ def validar_registro():
             u = registrar()
             validar_registro() #Interesante, recursivdad en acción
             print(u)
+        else:
+            raise ValueError("Opción no válida. Sólo S o N")
