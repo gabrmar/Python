@@ -14,6 +14,7 @@ if teclado == "2":
     u = registrar()
     print(u)
     validar_registro()
+teclado = input("1. Buscar cacnción\n2. Crear lista.\n3. Seleccionar lista\n4. Ajustes.")
 """x = acceder_canciones() #De esta manera es quye voy a buscar canciones.
 print(x) #Sin embargo, también puedo convertir esto en una función de la clase usuario
 """
