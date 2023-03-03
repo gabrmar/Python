@@ -1,3 +1,4 @@
+from Bases_de_Datos import Canciones
 
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
@@ -22,3 +23,11 @@ class usuario:
         contra_protegida = self.contraseña.replace(self.contraseña,asteriscos)
         contraseña_asteriscos ="Contraseña:{}\n".format(contra_protegida) 
         return clase+nombre+correo+celular+contraseña_asteriscos
+    
+    def buscar_canciones(self,nombre_canción): #Toca hacer la prueba de conceptos
+        acceso = Canciones.acceder_canciones()
+        if nombre_canción in acceso.values(): #Preguntado por la canción
+            print("Canción encontrada")
+        else:
+            print("Canción no encontrada")
+        #Mostrar resualtado
