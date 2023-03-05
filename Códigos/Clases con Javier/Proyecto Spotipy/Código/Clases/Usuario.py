@@ -32,5 +32,5 @@ class usuario:
                 resultado = True
                 print(objeto)
                 break
-            else:
-                print("Canción no encontrada")
+        if resultado == False:
+            print("Canción no encontrada")
