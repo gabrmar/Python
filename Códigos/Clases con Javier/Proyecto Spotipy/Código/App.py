@@ -14,7 +14,7 @@ if teclado == "2":
     u = registrar()
     print(u)
     validar_registro()
-teclado = input("1. Buscar cacnción\n2. Crear lista.\n3. Seleccionar lista\n4. Ajustes.\n")
+teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
 if teclado == "1":
     teclado = input("Coloca el nombre de la canción a buscar:")
     u.buscar_canciones(teclado)
