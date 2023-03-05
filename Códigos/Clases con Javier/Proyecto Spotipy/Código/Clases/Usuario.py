@@ -30,7 +30,8 @@ class usuario:
         for objeto in acceso:
             if nombre_canción in objeto.nombre:
                 resultado = True
-                print(objeto)
+                return objeto
                 break
         if resultado == False:
-            print("Canción no encontrada")
+            return "Canción no encontrada. Intenta de nuevo"
+            
