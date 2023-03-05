@@ -26,8 +26,11 @@ class usuario:
     
     def buscar_canciones(self,nombre_canción): #Toca hacer la prueba de conceptos
         acceso = acceder_canciones()
-        if nombre_canción in acceso.nombre: #Preguntado por la canción
-            print("Canción encontrada")
-        else:
-            print("Canción no encontrada")
-        #Mostrar resualtado
+        resultado = False
+        for objeto in acceso:
+            if nombre_canción in objeto.nombre:
+                resultado = True
+                print("Canción encontrada")
+                break
+            else:
+                print("Canción no encontrada")
