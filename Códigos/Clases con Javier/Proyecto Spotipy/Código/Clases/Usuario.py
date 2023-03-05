@@ -1,4 +1,4 @@
-from Bases_de_Datos import Canciones
+from Bases_de_Datos.Canciones import acceder_canciones
 
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
@@ -25,8 +25,8 @@ class usuario:
         return clase+nombre+correo+celular+contraseña_asteriscos
     
     def buscar_canciones(self,nombre_canción): #Toca hacer la prueba de conceptos
-        acceso = Canciones.acceder_canciones()
-        if nombre_canción in acceso.values(): #Preguntado por la canción
+        acceso = acceder_canciones()
+        if nombre_canción in acceso.nombre: #Preguntado por la canción
             print("Canción encontrada")
         else:
             print("Canción no encontrada")
