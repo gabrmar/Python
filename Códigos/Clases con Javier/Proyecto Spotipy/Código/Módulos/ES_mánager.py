@@ -48,21 +48,23 @@ def validar_registro():
         else:
             raise ValueError("Opción no válida. Sólo S o N")
         
-def iniciar_sesión(usuario,contraseña):
+def iniciar_sesión(nombre,contraseña):
     usuarios = consultar_usarios()
     filtro = False
     filtro2 = False
-    for i in usuarios:
-        if i.nombre == usuario:
+    for usuario in usuarios:
+        if usuario.nombre == nombre:
             filtro = True
             break
-    for i in usuarios:
-        if i.contraseña == contraseña:
+    for usuario in usuarios:
+        if usuario.contraseña == contraseña:
             filtro2 = True
+            #Propuesta para retornar el objeto tipo usuario
+            ususario_autenticado = usuario
             break
     if filtro and filtro2:
         print("Usuario autenticado\n")
-        return True
+        return usuario
     else:
         print("Credenciales incorrectas\n")
         return False
