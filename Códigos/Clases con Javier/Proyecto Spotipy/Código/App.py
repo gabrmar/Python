@@ -19,6 +19,15 @@ if teclado == "1":
     teclado = input("Coloca el nombre de la canción a buscar:")
     canción = u.buscar_canciones(teclado)
     print(canción) #Probar esta variante para casos exitosos y fracasos
+    while type(canción) == str:
+        print("Intenta de nuevo o escribe x para salir")
+        time.sleep(2)
+        teclado = input("Coloca el nombre de la canción a buscar:")
+        if teclado == "x" or teclado == "X":
+            break
+        canción = u.buscar_canciones(teclado)
+        print(canción)
+
 
 """
 Objetivo
