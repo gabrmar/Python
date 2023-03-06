@@ -1,5 +1,6 @@
 import time
 from Clases.Usuario import usuario
+from Bases_de_Datos.Base_Usuarios import consultar_usarios
 from Módulos.Excepciones import except_mánager
 
 def registrar():
@@ -46,3 +47,22 @@ def validar_registro():
             print(u)
         else:
             raise ValueError("Opción no válida. Sólo S o N")
+        
+def iniciar_sesión(usuario,contraseña):
+    usuarios = consultar_usarios()
+    filtro = False
+    filtro2 = False
+    for i in usuarios:
+        if i.nombre == usuario:
+            filtro = True
+            break
+    for i in usuarios:
+        if i.contraseña == contraseña:
+            filtro2 = True
+            break
+    if filtro and filtro2:
+        print("Usuario autenticado\n")
+        return True
+    else:
+        print("Credenciales incorrectas\n")
+        return False

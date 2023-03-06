@@ -1,6 +1,6 @@
 import time
 from Clases.Usuario import usuario
-from Módulos.ES_mánager import registrar,validar_registro
+from Módulos.ES_mánager import registrar,validar_registro,iniciar_sesión
 
 
 print("Bienvenidos a Spotipy")
@@ -9,7 +9,10 @@ teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n")
 if teclado == "1":
     teclado = input("Usuario:")
     teclado2 = input("Contraseña:")
-    #Acá debe haber alguina comparación entre los datos adquiridos y alguna base de datos
+    estado = iniciar_sesión(teclado,teclado2)
+    time.sleep(2)
+    #----Hay que agregar la parte donnse se vuelven a pedir los datos. Es posible que se pueda hacer una función al respecto
+    #----También hay que obtener la información del usuiario autenticado para que se puedan  buscar canciones con este
 if teclado == "2":
     u = registrar()
     print(u)

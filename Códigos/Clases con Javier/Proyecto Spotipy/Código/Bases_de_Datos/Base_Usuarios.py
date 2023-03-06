@@ -1,7 +1,7 @@
-from Clases import Usuario
+from Clases.Usuario import usuario
 
-admin = Usuario("admin","admin@gmail.com","3006983847","admin")
-gabo = Usuario("Gabriel","gmll920628@gmail.com","3006983847","gabo")
+admin = usuario("admin","admin@gmail.com","3006983847","admin")
+gabo = usuario("Gabriel","gmll920628@gmail.com","3006983847","gabo")
 
 lista_usuarios = [admin,gabo]
 
