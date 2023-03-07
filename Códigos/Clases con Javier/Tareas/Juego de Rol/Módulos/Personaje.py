@@ -8,3 +8,6 @@ class Personaje:
 
         for atributo,valor in kwargs.items():
             setattr(self,atributo,valor)
+            #Objeto: self
+            #Nombre del atributo: el que esté definodo por el nombre del kwarg
+            #Valor del atributo: el que esté definifo como el valor asociado al kwarg
