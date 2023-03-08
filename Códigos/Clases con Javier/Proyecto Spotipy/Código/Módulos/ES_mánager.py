@@ -43,8 +43,8 @@ def validar_registro():
             #Quizás la creación de la instancia sea suficeinte para ello, pero no creo
         elif confirmación == "N" or confirmación == "n":
             u = registrar()
-            validar_registro() #Interesante, recursivdad en acción
             print(u)
+            validar_registro() #Interesante, recursivdad en acción
         else:
             raise ValueError("Opción no válida. Sólo S o N")
         
