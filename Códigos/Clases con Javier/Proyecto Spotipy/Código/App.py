@@ -16,6 +16,23 @@ def pos_inicio(): #Tal vez se pueden inclir como parte de la clase ES_Mánager
                 break
             canción = u.buscar_canciones(teclado)
             print(canción)
+            time.sleep(2)
+        print("¿Qué desea hacer?")
+        teclado = input("1. Reproducir\n2. Buscar otra canción\n3. Salir\n")
+        if teclado == "1":
+            print(canción.letra)
+        if teclado == "2":
+            teclado = input("Coloca el nombre de la canción a buscar:")
+            canción = u.buscar_canciones(teclado)
+            while type(canción) == str:
+                print("Intenta de nuevo o escribe x para salir")
+                time.sleep(2)
+                teclado = input("Coloca el nombre de la canción a buscar:")
+                if teclado == "x" or teclado == "X":
+                    break
+                canción = u.buscar_canciones(teclado)
+            if teclado == "3":
+                print("Gracias por usar Spotipy")
     
 
 print("Bienvenidos a Spotipy")
@@ -29,20 +46,7 @@ if teclado == "1":
     time.sleep(2)
     # Esta parte de abaajo se puede optimizar de otra forma
     pos_inicio()
-"""    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
-    if teclado == "1":
-        teclado = input("Coloca el nombre de la canción a buscar:")
-        canción = u.buscar_canciones(teclado)
-        print(canción) #Probar esta variante para casos exitosos y fracasos
-        while type(canción) == str:
-            print("Intenta de nuevo o escribe x para salir")
-            time.sleep(2)
-            teclado = input("Coloca el nombre de la canción a buscar:")
-            if teclado == "x" or teclado == "X":
-                break
-            canción = u.buscar_canciones(teclado)
-            print(canción)"""
-            #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
+    #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
     #----Hay que agregar la parte donnse se vuelven a pedir los datos. Es posible que se pueda hacer una función al respecto
 if teclado == "2":
     u = registrar()
@@ -50,29 +54,6 @@ if teclado == "2":
     validar_registro()
     # Esta parte de abaajo se puede optimizar de otra forma 
     pos_inicio() #Hay un problema con el ocultar de la contraseña cuando los datos no son correctos (luego de un N)
-"""    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
-    if teclado == "1":
-        teclado = input("Coloca el nombre de la canción a buscar:")
-        canción = u.buscar_canciones(teclado)
-        print(canción) #Probar esta variante para casos exitosos y fracasos
-        while type(canción) == str:
-            print("Intenta de nuevo o escribe x para salir")
-            time.sleep(2)
-            teclado = input("Coloca el nombre de la canción a buscar:")
-            if teclado == "x" or teclado == "X":
-                break
-            canción = u.buscar_canciones(teclado)
-            print(canción)"""
-            #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
+    #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
 if teclado == "3":
     print("Gracias por usar Spotipy")
-
-
-"""
-Objetivo
--Colocar el menú de búsqueda de cacniones OK
--Crear usuario de prueba para los inicios de sesión
--Hacer la rutina de búsqueda OK 
--Definir si esta será una función o un método de la clase usuario. OK
--Colocar la rutina de reprodiucción de música dentro del ES_mánager-.
-"""
