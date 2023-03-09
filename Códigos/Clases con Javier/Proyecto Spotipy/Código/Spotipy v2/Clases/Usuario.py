@@ -1,4 +1,4 @@
-from Bases_de_Datos.Canciones import acceder_canciones
+from Bases_de_Datos.Base_Canciones import acceder_canciones
 
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
@@ -6,10 +6,6 @@ class usuario:
         self.correo = correo
         self.celular = celular
         self.contraseña = contraseña
-
-    def proteger_contraseña(self):
-        #self.contraseña será usado para entregar una contraseña protegida
-        pass
 
     def __str__(self):
 

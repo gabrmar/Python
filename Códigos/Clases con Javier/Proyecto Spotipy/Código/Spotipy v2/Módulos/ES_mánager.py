@@ -1,7 +1,7 @@
 import time
 from Clases.Usuario import usuario
 from Bases_de_Datos.Base_Usuarios import consultar_usarios
-from Módulos.Excepciones import except_mánager
+from Clases.Excepciones import except_mánager
 
 def registrar():
 
