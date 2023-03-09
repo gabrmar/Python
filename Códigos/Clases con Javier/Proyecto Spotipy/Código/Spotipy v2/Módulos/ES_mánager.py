@@ -68,3 +68,36 @@ def iniciar_sesión(nombre,contraseña):
     else:
         print("Credenciales incorrectas\n")
         return False
+    
+def pos_inicio(usuario): #Tal vez se pueden inclir como parte de la clase ES_Mánager
+    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
+    if teclado == "1":
+        teclado = input("Coloca el nombre de la canción a buscar:")
+        canción = usuario.buscar_canciones(teclado)
+        print(canción) #Probar esta variante para casos exitosos y fracasos
+        while type(canción) == str:
+            print("Intenta de nuevo o escribe x para salir")
+            time.sleep(2)
+            teclado = input("Coloca el nombre de la canción a buscar:")
+            if teclado == "x" or teclado == "X":
+                break
+            canción = usuario.buscar_canciones(teclado)
+            print(canción)
+            time.sleep(2)
+        print("¿Qué desea hacer?")
+        teclado = input("1. Reproducir\n2. Buscar otra canción\n3. Salir\n")
+        if teclado == "1":
+            print(canción.letra)
+        if teclado == "2":
+            teclado = input("Coloca el nombre de la canción a buscar:")
+            canción = usuario.buscar_canciones(teclado)
+            while type(canción) == str:
+                print("Intenta de nuevo o escribe x para salir")
+                time.sleep(2)
+                teclado = input("Coloca el nombre de la canción a buscar:")
+                if teclado == "x" or teclado == "X":
+                    break
+                canción = usuario.buscar_canciones(teclado)
+            if teclado == "3":
+                print("Gracias por usar Spotipy")
+    
