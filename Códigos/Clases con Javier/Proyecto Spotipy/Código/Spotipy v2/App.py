@@ -57,3 +57,9 @@ if teclado == "2":
     #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
 if teclado == "3":
     print("Gracias por usar Spotipy")
+
+
+"""•	Creación de las listas de reproducción como atributo del usuario
+•	Crear rutina de anuncios
+•	Crear método de dar me gusta
+"""
