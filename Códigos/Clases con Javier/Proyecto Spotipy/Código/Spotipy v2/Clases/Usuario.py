@@ -6,6 +6,7 @@ class usuario:
         self.correo = correo
         self.celular = celular
         self.contraseña = contraseña
+        self.listas = None
 
     def __str__(self):
 
