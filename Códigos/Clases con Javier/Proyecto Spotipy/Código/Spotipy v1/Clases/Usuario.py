@@ -7,10 +7,6 @@ class usuario:
         self.celular = celular
         self.contraseña = contraseña
 
-    def proteger_contraseña(self):
-        #self.contraseña será usado para entregar una contraseña protegida
-        pass
-
     def __str__(self):
 
         clase ="Clase tipo:{}\n".format(type(self))
