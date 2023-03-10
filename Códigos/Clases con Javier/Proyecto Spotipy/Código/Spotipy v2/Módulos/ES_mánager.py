@@ -68,10 +68,33 @@ def iniciar_sesión(nombre,contraseña):
     else:
         print("Credenciales incorrectas\n")
         return False
+        
     
-def canción_encontrada(canción):
+def pos_inicio(usuario): #Tal vez se pueden incluir como parte de la clase ES_Mánager
+    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
+    if teclado == "1":
+        teclado = input("Coloca el nombre de la canción a buscar:")
+        canción = usuario.buscar_canciones(teclado)
+        print(canción) #Probar esta variante para casos exitosos y fracasos
+        if type(canción) != str:
+            return canción
+        else:
+            while type(canción) == str:
+                print("Intenta de nuevo o escribe x para salir")
+                time.sleep(2)
+                teclado = input("Coloca el nombre de la canción a buscar:")
+                if teclado == "x" or teclado == "X":
+                    break
+                canción = usuario.buscar_canciones(teclado)
+                print(canción)
+                time.sleep(2)
+                return canción
+        #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
+        #canción_encontrada(canción) Estoy moviendo esta función hacia el código principal
+
+def canción_encontrada(canción,usuario):
         print("¿Qué desea hacer?")
-        teclado = input("1. Reproducir\n2.Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
+        teclado = input("1. Reproducir\n2. Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
         if teclado == "1":
             print(canción.letra)
         if teclado == "2":
@@ -89,22 +112,3 @@ def canción_encontrada(canción):
                 canción = usuario.buscar_canciones(teclado)
             if teclado == "3":
                 print("Gracias por usar Spotipy")
-    
-    
-def pos_inicio(usuario): #Tal vez se pueden incluir como parte de la clase ES_Mánager
-    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
-    if teclado == "1":
-        teclado = input("Coloca el nombre de la canción a buscar:")
-        canción = usuario.buscar_canciones(teclado)
-        print(canción) #Probar esta variante para casos exitosos y fracasos
-        while type(canción) == str:
-            print("Intenta de nuevo o escribe x para salir")
-            time.sleep(2)
-            teclado = input("Coloca el nombre de la canción a buscar:")
-            if teclado == "x" or teclado == "X":
-                break
-            canción = usuario.buscar_canciones(teclado)
-            print(canción)
-            time.sleep(2)
-        #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
-        canción_encontrada(canción)
