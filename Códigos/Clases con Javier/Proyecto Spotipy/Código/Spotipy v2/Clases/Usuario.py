@@ -1,6 +1,5 @@
 from Bases_de_Datos.Base_Canciones import acceder_canciones
-from Lista_repro import lista_reproducción
-
+from Clases.Lista_repro import lista_reproducción
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
         self.nombre = nombre

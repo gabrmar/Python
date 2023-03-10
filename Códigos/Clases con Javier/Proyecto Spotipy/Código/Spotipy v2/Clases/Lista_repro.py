@@ -1,4 +1,4 @@
-from Canciones import canción
+from Clases.Canciones import canción
 
 class lista_reproducción:
     def __init__(self,nombre):
