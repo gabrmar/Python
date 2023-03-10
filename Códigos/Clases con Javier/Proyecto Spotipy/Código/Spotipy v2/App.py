@@ -30,5 +30,5 @@ if teclado == "3":
 
 """•	Creación de las listas de reproducción como atributo del usuario
 •	Crear rutina de anuncios
-•	Crear método de dar me gusta
+•	Crear método de dar me gusta (opcional)
 """

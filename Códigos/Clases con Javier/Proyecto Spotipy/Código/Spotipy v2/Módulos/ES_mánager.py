@@ -85,10 +85,13 @@ def pos_inicio(usuario): #Tal vez se pueden inclir como parte de la clase ES_Má
             print(canción)
             time.sleep(2)
         print("¿Qué desea hacer?")
-        teclado = input("1. Reproducir\n2. Buscar otra canción\n3. Salir\n")
+        teclado = input("1. Reproducir\n2.Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
         if teclado == "1":
             print(canción.letra)
         if teclado == "2":
+            #Validar si el usuario tiene listas. Si este no existe, crear la lista y agregarla
+            pass
+        if teclado == "3":
             teclado = input("Coloca el nombre de la canción a buscar:")
             canción = usuario.buscar_canciones(teclado)
             while type(canción) == str:

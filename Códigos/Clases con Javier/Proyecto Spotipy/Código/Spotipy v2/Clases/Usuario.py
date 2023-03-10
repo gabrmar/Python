@@ -1,4 +1,5 @@
 from Bases_de_Datos.Base_Canciones import acceder_canciones
+from Lista_reproducción import lista_reproducción
 
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
@@ -6,7 +7,7 @@ class usuario:
         self.correo = correo
         self.celular = celular
         self.contraseña = contraseña
-        self.listas = None
+        self.listas = {} #propuesta: usar un diccionario para la colección de listas
 
     def __str__(self):
 
@@ -31,4 +32,27 @@ class usuario:
                 break
         if resultado == False:
             return "Canción no encontrada. Intenta de nuevo"
+        
+    def buscar_listas(self,nombre_lista):
+        if nombre_lista in self.listas:
+            print("Lista encontrada")
+            return self.listas[nombre_lista]
+        else:
+            print("Lista no encontrada. La lista será creada")
+            return False
+        
+    def añadir_a_listas(self,nombre_lista,lista_reproducción):
+        self.listas[nombre_lista] = lista_reproducción
+        print("Lista de reproducción añadadida para el usuario {}".format(self.nombre))
+        
+    def añadir_a_lista(self,canción,nombre_lista):
+        lista = self.buscar_listas(nombre_lista)
+        if type(lista) == list: #Puede que usar lista_reproducción en vez de list sea mejor
+            pass
+        else:
+            lista = lista_reproducción(nombre_lista)
+            lista.añadir_a_lista(canción,lista.nombre) #Añadir canción a la lista de reproducción
+            self.añadir_a_listas(lista.nombre,lista) #Añadir la lista de reproducción a la colección de listas de reproducción de un usuario
+
+            
             
