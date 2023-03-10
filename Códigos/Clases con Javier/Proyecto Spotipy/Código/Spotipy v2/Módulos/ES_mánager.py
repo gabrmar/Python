@@ -84,6 +84,7 @@ def pos_inicio(usuario): #Tal vez se pueden inclir como parte de la clase ES_Má
             canción = usuario.buscar_canciones(teclado)
             print(canción)
             time.sleep(2)
+        #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
         print("¿Qué desea hacer?")
         teclado = input("1. Reproducir\n2.Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
         if teclado == "1":
