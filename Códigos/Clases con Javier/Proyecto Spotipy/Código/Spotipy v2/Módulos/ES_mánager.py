@@ -69,22 +69,7 @@ def iniciar_sesión(nombre,contraseña):
         print("Credenciales incorrectas\n")
         return False
     
-def pos_inicio(usuario): #Tal vez se pueden inclir como parte de la clase ES_Mánager
-    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
-    if teclado == "1":
-        teclado = input("Coloca el nombre de la canción a buscar:")
-        canción = usuario.buscar_canciones(teclado)
-        print(canción) #Probar esta variante para casos exitosos y fracasos
-        while type(canción) == str:
-            print("Intenta de nuevo o escribe x para salir")
-            time.sleep(2)
-            teclado = input("Coloca el nombre de la canción a buscar:")
-            if teclado == "x" or teclado == "X":
-                break
-            canción = usuario.buscar_canciones(teclado)
-            print(canción)
-            time.sleep(2)
-        #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
+def canción_encontrada(canción):
         print("¿Qué desea hacer?")
         teclado = input("1. Reproducir\n2.Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
         if teclado == "1":
@@ -105,3 +90,21 @@ def pos_inicio(usuario): #Tal vez se pueden inclir como parte de la clase ES_Má
             if teclado == "3":
                 print("Gracias por usar Spotipy")
     
+    
+def pos_inicio(usuario): #Tal vez se pueden incluir como parte de la clase ES_Mánager
+    teclado = input("1. Buscar cacnción\n2. Seleccionar lista\n3. Ajustes.\n")
+    if teclado == "1":
+        teclado = input("Coloca el nombre de la canción a buscar:")
+        canción = usuario.buscar_canciones(teclado)
+        print(canción) #Probar esta variante para casos exitosos y fracasos
+        while type(canción) == str:
+            print("Intenta de nuevo o escribe x para salir")
+            time.sleep(2)
+            teclado = input("Coloca el nombre de la canción a buscar:")
+            if teclado == "x" or teclado == "X":
+                break
+            canción = usuario.buscar_canciones(teclado)
+            print(canción)
+            time.sleep(2)
+        #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
+        canción_encontrada(canción)
