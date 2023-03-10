@@ -1,5 +1,5 @@
 from Bases_de_Datos.Base_Canciones import acceder_canciones
-from Lista_reproducción import lista_reproducción
+from Lista_repro import lista_reproducción
 
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
@@ -54,5 +54,5 @@ class usuario:
             lista.añadir_a_lista(canción,lista.nombre) #Añadir canción a la lista de reproducción
             self.añadir_a_listas(lista.nombre,lista) #Añadir la lista de reproducción a la colección de listas de reproducción de un usuario
 
-            
+
             
