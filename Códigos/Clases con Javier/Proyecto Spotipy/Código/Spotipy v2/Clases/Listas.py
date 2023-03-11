@@ -7,7 +7,8 @@ class listas_reproducción:
     def __str__(self):
         for lista in self.listas:
             #Acá hay que imprimir cada una de las listas de reproducción
-            pass 
+            for lista in self.listas.keys():
+                pass 
 
     def __len__(self):
         return len(self.listas)
