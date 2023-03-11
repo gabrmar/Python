@@ -121,4 +121,10 @@ def canción_encontrada(canción,usuario):
                         print(canción)
                         canción_encontrada(canción,usuario)
         if teclado == "4":
-            print("Gracias por usar Spotipy")
+            print("Cerrando sesión...")
+            time.sleep(2)
+            """Probar el incio de sesión como una función más del ES_mánager:
+            print("Bienvenidos a Spotipy")
+            time.sleep(2)
+            teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n3. Salir\n")
+            """
