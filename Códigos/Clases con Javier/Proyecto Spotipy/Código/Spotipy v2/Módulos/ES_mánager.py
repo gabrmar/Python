@@ -103,12 +103,16 @@ def canción_encontrada(canción,usuario):
         if teclado == "3":
             teclado = input("Coloca el nombre de la canción a buscar:")
             canción = usuario.buscar_canciones(teclado)
-            while type(canción) == str:
-                print("Intenta de nuevo o escribe x para salir")
-                time.sleep(2)
-                teclado = input("Coloca el nombre de la canción a buscar:")
-                if teclado == "x" or teclado == "X":
-                    break
-                canción = usuario.buscar_canciones(teclado)
+            if type(canción) != str:
+                print(canción)
+                canción_encontrada(canción,usuario)
+            else:
+                while type(canción) == str:
+                    print("Intenta de nuevo o escribe x para salir")
+                    time.sleep(2)
+                    teclado = input("Coloca el nombre de la canción a buscar:")
+                    if teclado == "x" or teclado == "X":
+                        break
+                    canción = usuario.buscar_canciones(teclado)
             if teclado == "4":
                 print("Gracias por usar Spotipy")

@@ -28,7 +28,7 @@ class usuario:
             if nombre_canción == objeto.nombre: # Tiene que ser una equivalencia exacta
                 resultado = True
                 return objeto
-                break
+                #break
         if resultado == False:
             return "Canción no encontrada. Intenta de nuevo"
         
