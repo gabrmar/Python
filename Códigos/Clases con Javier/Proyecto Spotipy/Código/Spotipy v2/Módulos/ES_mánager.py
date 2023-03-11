@@ -94,7 +94,7 @@ def pos_inicio(usuario): #Tal vez se pueden incluir como parte de la clase ES_M�
 
 def canción_encontrada(canción,usuario):
         print("¿Qué desea hacer?")
-        teclado = input("1. Reproducir\n2. Agregar a lista de reproducción\n3. Buscar otra canción\n3. Salir\n")
+        teclado = input("1. Reproducir\n2. Agregar a lista de reproducción\n3. Buscar otra canción\n4. Salir\n")
         if teclado == "1":
             print(canción.letra)
         if teclado == "2":
@@ -110,5 +110,5 @@ def canción_encontrada(canción,usuario):
                 if teclado == "x" or teclado == "X":
                     break
                 canción = usuario.buscar_canciones(teclado)
-            if teclado == "3":
+            if teclado == "4":
                 print("Gracias por usar Spotipy")
