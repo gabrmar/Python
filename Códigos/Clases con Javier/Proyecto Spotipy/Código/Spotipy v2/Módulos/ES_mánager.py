@@ -99,8 +99,8 @@ def canción_encontrada(canción,usuario):
             print(canción.letra)
             canción_encontrada(canción,usuario)
         if teclado == "2":
-            #Validar si el usuario tiene listas. Si este no existe, crear la lista y agregarla
-            pass
+            if len(usuario.listas_usuario) == 0:
+                print("No hay listas de reproducción presentes en usuario {}. Se creará una lista nueva".format(usuario.nombre))
         if teclado == "3":
             teclado = input("Coloca el nombre de la canción a buscar:")
             canción = usuario.buscar_canciones(teclado)
