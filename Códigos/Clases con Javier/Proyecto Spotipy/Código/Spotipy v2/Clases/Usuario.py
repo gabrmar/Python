@@ -1,12 +1,13 @@
 from Bases_de_Datos.Base_Canciones import acceder_canciones
 from Clases.Lista_repro import lista_reproducción
+from Clases.Listas import listas_reproducción
 class usuario:
     def __init__(self,nombre,correo,celular,contraseña):
         self.nombre = nombre
         self.correo = correo
         self.celular = celular
         self.contraseña = contraseña
-        self.listas = {} #propuesta: usar un diccionario para la colección de listas
+        self.listas_usuario = listas_reproducción() #propuesta: usar clase listas 
 
     def __str__(self):
 
