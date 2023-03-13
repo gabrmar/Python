@@ -6,9 +6,8 @@ from Clases.ES_mánager import IO_mánager
 #Removiendo pos_inicio del main y llevándolo a  ES_mánager
 interfaz = IO_mánager()
 
-print("Bienvenidos a Spotipy")
-time.sleep(2)
-teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n3. Salir\n")
+teclado = interfaz.iniciar()
+
 if teclado == "1":
     teclado = input("Usuario:")
     teclado2 = input("Contraseña:")

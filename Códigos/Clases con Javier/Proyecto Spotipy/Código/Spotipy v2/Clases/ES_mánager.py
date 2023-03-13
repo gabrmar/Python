@@ -4,6 +4,16 @@ from Bases_de_Datos.Base_Usuarios import consultar_usarios
 from Clases.Excepciones import except_mánager
 
 class IO_mánager:
+
+    def iniciar(self):
+
+        print("Bienvenidos a Spotipy")
+        time.sleep(2)
+        teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n3. Salir\n")
+
+        return teclado
+        
+
     
     def registrar(self):
 
@@ -123,8 +133,3 @@ class IO_mánager:
             if teclado == "4":
                 print("Cerrando sesión...")
                 time.sleep(2)
-                """Probar el incio de sesión como una función más del ES_mánager:
-                print("Bienvenidos a Spotipy")
-                time.sleep(2)
-                teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n3. Salir\n")
-                """
