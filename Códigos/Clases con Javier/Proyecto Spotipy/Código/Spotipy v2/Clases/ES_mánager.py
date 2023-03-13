@@ -133,3 +133,4 @@ class IO_mánager:
             if teclado == "4":
                 print("Cerrando sesión...")
                 time.sleep(2)
+                #teclado = self.iniciar() esto require más revisión
