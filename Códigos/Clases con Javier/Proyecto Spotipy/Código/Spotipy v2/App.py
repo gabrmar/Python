@@ -1,7 +1,7 @@
 import time
 from Clases.Usuario import usuario
 #from Módulos.ES_mánager import registrar,validar_registro,iniciar_sesión,pos_inicio,canción_encontrada
-from Módulos.ES_mánager import IO_mánager
+from Clases.ES_mánager import IO_mánager
 
 #Removiendo pos_inicio del main y llevándolo a  ES_mánager
 interfaz = IO_mánager()
