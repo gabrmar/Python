@@ -8,7 +8,7 @@ class IO_mánager:
     def iniciar(self):
 
         print("Bienvenidos a Spotipy")
-        time.skeep(1)
+        time.sleep(1)
         teclado = input("1. Iniciar Sesión.\n2. Registrarse.\n3. Salir\n")
 
         return teclado
@@ -32,7 +32,7 @@ class IO_mánager:
             verificación = False
             while(verificación== False):
                 print("La contraseña no fue confirmada. Por favor revisar.")
-                time.skeep(1)
+                time.sleep(1)
                 teclado4 = input("Contraseña:")
                 teclado5 = input("confirmar contraseña:")
                 if teclado4 == teclado5:
@@ -91,13 +91,13 @@ class IO_mánager:
             else:
                 while type(canción) == str:
                     print("Intenta de nuevo o escribe x para salir")
-                    time.skeep(1)
+                    time.sleep(1)
                     teclado = input("Coloca el nombre de la canción a buscar:")
                     if teclado == "x" or teclado == "X":
                         break
                     canción = usuario.buscar_canciones(teclado)
                     print(canción)
-                    time.skeep(1)
+                    time.sleep(1)
                     return canción
         #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
         #canción_encontrada(canción) Estoy moviendo esta función hacia el código principal
@@ -121,7 +121,7 @@ class IO_mánager:
                     while type(canción) == str:
                         print(canción)
                         print("Intenta de nuevo o escribe x para salir")
-                        time.skeep(1)
+                        time.sleep(1)
                         teclado = input("Coloca el nombre de la canción a buscar:")
                         if teclado == "x" or teclado == "X":
                             self.pos_inicio(usuario)
@@ -132,5 +132,5 @@ class IO_mánager:
                             self.canción_encontrada(canción,usuario)
             if teclado == "4":
                 print("Cerrando sesión...")
-                time.skeep(1)
+                time.sleep(1)
                 #teclado = self.iniciar() esto require más revisión
