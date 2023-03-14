@@ -104,7 +104,9 @@ class IO_mánager:
         if teclado == "2":
             #Pasar listas de reproducción
             listas = usuario.listas_usuario
+            time.sleep(1)
             print(listas)
+            self.pos_inicio(usuario)
 
     def canción_encontrada(self,canción,usuario):
             print("¿Qué desea hacer?")
