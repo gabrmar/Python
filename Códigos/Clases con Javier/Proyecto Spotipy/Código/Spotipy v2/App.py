@@ -13,7 +13,7 @@ if teclado == "1":
     teclado2 = input("Contraseña:")
     user  = interfaz.iniciar_sesión(teclado,teclado2)
     #print(user)
-    time.sleep(2)
+    time.sleep(1)
     # Esta parte de abaajo se puede optimizar de otra forma
     opción = interfaz.pos_inicio(user)
     #-----Acá viene la parte del menú donde se pregunta por reproducir, buscar otra canción o añadir a una lista de reproducción
