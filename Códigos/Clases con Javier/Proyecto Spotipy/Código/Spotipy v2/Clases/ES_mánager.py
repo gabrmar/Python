@@ -101,6 +101,10 @@ class IO_mánager:
                     return canción
         #----Acá se podría hacer una sfunción aparte de la clase ES_mánager que se llame canción_encontrada(cacnión)
         #canción_encontrada(canción) Estoy moviendo esta función hacia el código principal
+        if teclado == "2":
+            #Pasar listas de reproducción
+            listas = usuario.listas_usuario
+            print(listas)
 
     def canción_encontrada(self,canción,usuario):
             print("¿Qué desea hacer?")
