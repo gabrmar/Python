@@ -43,7 +43,7 @@ class usuario:
         
     def añadir_a_listas(self,nombre_lista,lista_reproducción):
         self.listas[nombre_lista] = lista_reproducción
-        print("Lista de reproducción añadadida para el usuario {}".format(self.nombre))
+        print("Lista de reproducción {lista} añadadida para el usuario {usuario}".format(lista=nombre_lista,usuario=self.name))
         
     def añadir_a_lista(self,canción,nombre_lista):
         lista = self.buscar_listas(nombre_lista)
