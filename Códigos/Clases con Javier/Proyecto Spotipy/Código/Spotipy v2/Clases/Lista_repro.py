@@ -7,5 +7,5 @@ class lista_reproducción:
         
     def añadir_a_lista(self,canción,nombre_lista):
         self.fila.append(canción)
-        print("Canción añadida a la lista {}".format(self.nombre))
+        print("Canción {nombre_canción} añadida a la lista {lista}".format(nombre_canción=canción.nombre,lista=nombre_lista))
 

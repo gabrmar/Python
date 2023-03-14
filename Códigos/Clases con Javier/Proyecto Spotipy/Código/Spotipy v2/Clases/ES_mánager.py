@@ -2,6 +2,7 @@ import time
 from Clases.Usuario import usuario
 from Bases_de_Datos.Base_Usuarios import consultar_usarios
 from Clases.Excepciones import except_mánager
+from Clases.Lista_repro import lista_reproducción
 
 class IO_mánager:
 
@@ -117,6 +118,9 @@ class IO_mánager:
             if teclado == "2":
                 if len(usuario.listas_usuario) == 0:
                     print("No hay listas de reproducción presentes en usuario {}. Se creará una lista nueva".format(usuario.nombre))
+                    nombre_lista = input("Por favor añadir el nombre para la lista:")
+                    lista_nueva = lista_reproducción(nombre_lista)
+                    lista_nueva.añadir_a_lista(canción,nombre_lista)
             if teclado == "3":
                 teclado = input("Coloca el nombre de la canción a buscar:")
                 canción = usuario.buscar_canciones(teclado)
