@@ -13,7 +13,7 @@ class listas_reproducción:
                 #Acá hay que imprimir cada una de las listas de reproducción
                 for lista in self.listas.keys():
                     nombres_listas.append(lista)
-                return nombres_listas
+                return str(nombres_listas)
 
     def __len__(self):
         return len(self.listas)
