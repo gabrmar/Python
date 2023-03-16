@@ -43,7 +43,7 @@ class usuario:
         
     def añadir_a_listas(self,nombre_lista,lista_reproducción):
         self.listas_usuario.listas[nombre_lista] = lista_reproducción
-        print("Lista de reproducción {lista} añadadida para el usuario {usuario}\n".format(lista=nombre_lista,usuario=self.nombre))
+        print("\nLista de reproducción {lista} añadadida para el usuario {usuario}".format(lista=nombre_lista,usuario=self.nombre))
         print("{}\n".format(self.listas_usuario.listas))
         
     def añadir_a_lista(self,canción,nombre_lista):
