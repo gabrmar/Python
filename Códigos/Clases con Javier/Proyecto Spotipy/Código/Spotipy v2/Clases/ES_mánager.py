@@ -125,7 +125,8 @@ class IO_mánager:
                     lista_nueva = lista_reproducción(nombre_lista)
                     usuario.añadir_a_listas(nombre_lista,lista_nueva)
                     #usuario.añadir_a_lista(canción,lista_nueva)
-                    self.pos_inicio(usuario)
+                    opción = self.pos_inicio(usuario)
+                    self.canción_encontrada(opción,usuario)
             if teclado == "3":
                 teclado = input("Coloca el nombre de la canción a buscar:")
                 canción = usuario.buscar_canciones(teclado)
