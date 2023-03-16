@@ -107,7 +107,8 @@ class IO_mánager:
             listas = usuario.listas_usuario
             time.sleep(1)
             print(listas)
-            self.pos_inicio(usuario)
+            opción = self.pos_inicio(usuario)
+            self.canción_encontrada(opción,usuario)
         if teclado == "3":
             print("Opción no disponible en esta versión de Spotipy")
             self.pos_inicio(usuario)
@@ -127,6 +128,10 @@ class IO_mánager:
                     #usuario.añadir_a_lista(canción,lista_nueva)
                     opción = self.pos_inicio(usuario)
                     self.canción_encontrada(opción,usuario)
+                else:
+                    print("Mostrando listas del usuario {}".format(usuario.nombre))
+                    print(usuario.listas_usuario)
+                    nombre_lista = input("Coloca el nombre de la lista donde agregar la canción {}:".format(canción.nombre))
             if teclado == "3":
                 teclado = input("Coloca el nombre de la canción a buscar:")
                 canción = usuario.buscar_canciones(teclado)
