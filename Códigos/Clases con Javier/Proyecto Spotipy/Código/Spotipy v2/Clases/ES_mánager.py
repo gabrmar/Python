@@ -124,7 +124,7 @@ class IO_mánager:
                     print("No hay listas de reproducción presentes en usuario {}. Se creará una lista nueva".format(usuario.nombre))
                     nombre_lista = input("Por favor añadir el nombre para la lista:")
                     lista_nueva = lista_reproducción(nombre_lista)
-                    usuario.añadir_a_listas(nombre_lista,lista_nueva)
+                    usuario.añadir_a_listas(lista_nueva.nombre,lista_nueva)
                     #usuario.añadir_a_lista(canción,lista_nueva)
                     opción = self.pos_inicio(usuario)
                     self.canción_encontrada(opción,usuario)
@@ -132,6 +132,13 @@ class IO_mánager:
                     print("Mostrando listas del usuario {}".format(usuario.nombre))
                     print(usuario.listas_usuario)
                     nombre_lista = input("Coloca el nombre de la lista donde agregar la canción {}:".format(canción.nombre))
+                    resultado = usuario.buscar_listas(nombre_lista)
+                    if resultado != False:
+                        print(resultado)
+                    else:
+                        print(resultado)
+                        lista_nueva = lista_reproducción(nombre_lista)
+                        usuario.añadir_a_listas(lista_nueva.nombre,lista_nueva)
             if teclado == "3":
                 teclado = input("Coloca el nombre de la canción a buscar:")
                 canción = usuario.buscar_canciones(teclado)
