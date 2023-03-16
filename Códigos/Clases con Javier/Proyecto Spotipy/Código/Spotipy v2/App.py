@@ -29,9 +29,3 @@ if teclado == "2":
     interfaz.canción_encontrada(opción,user) #---------Revisar esto--------------
 if teclado == "3":
     print("Gracias por usar Spotipy")
-
-
-"""•	Creación de las listas de reproducción como atributo del usuario
-•	Crear rutina de anuncios
-•	Crear método de dar me gusta (opcional)
-"""
