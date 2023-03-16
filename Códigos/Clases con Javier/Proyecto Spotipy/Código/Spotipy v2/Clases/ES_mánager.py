@@ -124,6 +124,7 @@ class IO_mánager:
                     nombre_lista = input("Por favor añadir el nombre para la lista:")
                     lista_nueva = lista_reproducción(nombre_lista)
                     usuario.añadir_a_listas(nombre_lista,lista_nueva)
+                    #usuario.añadir_a_lista(canción,lista_nueva)
                     self.pos_inicio(usuario)
             if teclado == "3":
                 teclado = input("Coloca el nombre de la canción a buscar:")
