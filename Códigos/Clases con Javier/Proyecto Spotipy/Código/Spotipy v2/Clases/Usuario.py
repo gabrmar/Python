@@ -34,7 +34,7 @@ class usuario:
             return "Canción no encontrada. Intenta de nuevo"
         
     def buscar_listas(self,nombre_lista):
-        if nombre_lista in self.listas:
+        if nombre_lista in self.listas_usuario:
             print("Lista encontrada")
             return self.listas[nombre_lista]
         else:
