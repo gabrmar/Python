@@ -36,7 +36,7 @@ class usuario:
     def buscar_listas(self,nombre_lista):
         if nombre_lista in self.listas_usuario.listas:
             print("Lista encontrada")
-            return self.listas[nombre_lista]
+            return self.listas_usuario.listas[nombre_lista]
         else:
             print("Lista no encontrada. La lista será creada")
             return False
