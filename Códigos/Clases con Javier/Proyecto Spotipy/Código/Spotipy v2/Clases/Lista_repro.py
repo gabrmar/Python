@@ -5,10 +5,10 @@ class lista_reproducción:
         self.nombre = nombre
         self.fila = []
 
-    """ def __str__(self):
+    def __str__(self):
         salida = []
         for canciones in self.fila:
-            salida.append(canciones)"""
+            salida.append(canciones)
         
     def añadir_a_lista(self,canción,nombre_lista):
         self.fila.append(canción)
