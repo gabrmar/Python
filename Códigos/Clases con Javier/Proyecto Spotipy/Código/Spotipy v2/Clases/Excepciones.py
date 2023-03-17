@@ -1,7 +1,7 @@
 class except_mánager:
 
     def revisar_registro(self,lista_datos):
-        #El objetivo es reivsar los datos presentes en la lista de dato y dar excepciones para los siguoentes casos:
+        #El objetivo es reivsar los datos presentes en la lista de dato y dar excepciones para los siguientes casos:
         #   -Cuando el correo no tiene el símbolo arroba (@).
         #   -Cuando el número de celular no tiene la longitud propia de un número para celulares.
         #   -Cuando el númerop de celular tiene caracteres que no son numéricos.
@@ -22,8 +22,3 @@ class except_mánager:
                 números = False
         if not números: #Si el número de celular tiene alguna letra, disparar un error
             raise ValueError("El número celuar tiene letras.")
-        
-        """
-        No estoy seguro si podré usar varias veces la misma excepción, pero creo que sí podré hacerlo con el uso
-        del raise.
-        """

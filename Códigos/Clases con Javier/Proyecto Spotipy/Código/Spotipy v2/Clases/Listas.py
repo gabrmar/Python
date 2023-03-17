@@ -7,7 +7,7 @@ class listas_reproducción:
     def __str__(self):
         nombres_listas = []
         if self.listas == {}:
-            return("No hay listas disponibles")
+            return("\nNo hay listas disponibles\n")
         else:
             for lista in self.listas:
                 #Acá hay que imprimir cada una de las listas de reproducción

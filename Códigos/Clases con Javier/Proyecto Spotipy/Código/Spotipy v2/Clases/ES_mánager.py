@@ -86,7 +86,7 @@ class IO_mánager:
         if teclado == "1":
             teclado = input("Coloca el nombre de la canción a buscar:")
             canción = usuario.buscar_canciones(teclado)
-            print(canción) #Probar esta variante para casos exitosos y fracasos
+            print("\n{}".format(canción)) #Probar esta variante para casos exitosos y fracasos
             if type(canción) != str:
                 return canción
             else:
@@ -110,14 +110,14 @@ class IO_mánager:
             opción = self.pos_inicio(usuario)
             self.canción_encontrada(opción,usuario)
         if teclado == "3":
-            print("Opción no disponible en esta versión de Spotipy")
+            print("\nOpción no disponible en esta versión de Spotipy")
             self.pos_inicio(usuario)
 
     def canción_encontrada(self,canción,usuario):
             print("¿Qué desea hacer?")
             teclado = input("1. Reproducir\n2. Agregar a lista de reproducción\n3. Buscar otra canción\n4. Cerrar Sesión\n")
             if teclado == "1":
-                print(canción.letra)
+                print("\n{}\n".format(canción.letra))
                 self.canción_encontrada(canción,usuario)
             if teclado == "2":
                 if len(usuario.listas_usuario) == 0:
@@ -161,5 +161,5 @@ class IO_mánager:
             if teclado == "4":
                 print("Cerrando sesión...")
                 time.sleep(1)
-                exit
+                exit()
                 #teclado = self.iniciar() esto require más revisión
